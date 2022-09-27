@@ -1,8 +1,8 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile: CZ_Address
-Parent: Address
-Id: cz-address
-Title: "Address (CZ)"
+Profile:    CZ_Address
+Parent:     Address
+Id:         cz-address
+Title:      "Address (CZ)"
 Description: "Czech national profile on address, to provide the possibility in the 'line' element to provide a seperate streetname, housenumber and postal box. It is always RECOMMENDED to give these elements seperately."
 //-------------------------------------------------------------------------------------------
 

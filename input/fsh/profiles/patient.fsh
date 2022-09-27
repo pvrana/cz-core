@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  CZ_Patient
-Parent:   ips_Patient
+Parent:   $ips_Patient
 Id:       cz-patient
 Title:    "Patient (CZ)"
 Description: "This profile defines how to represent Patient in FHIR for the purpose of the Czech national interoperability standards."
@@ -26,7 +26,7 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * identifier[RC] ^definition = "An identifier for this patient according to National Birth Registry\r\n\r\nWhen needed to express a RC, it SHALL be done according to these guidelines. Other ways to identify a patient using coding systems remain also possible."
 * identifier[RC].system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis" (exactly)  // could be also "urn:oid:2.16.840.1.113883.2.40.1"
 * identifier[RC].value 1..1
-* identifier contains RID 0..1   // DASTA zavedla zkratku RIP
+* identifier contains RID 0..1
 * identifier[RID] ^definition = "An unique patient identifier (resortní identifikátor) according to the National Patient Register"
 * identifier[RID].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid" (exactly)
 * identifier[RID].value 1..1
