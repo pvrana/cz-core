@@ -1,5 +1,5 @@
 ValueSet: CZ_AdministrativeGenderVS
-Id: cz-AdministrativeGenderVS
+Id: cz-administrative-gender-VS
 Title: "AdministrativeGender (CZ)"
 Description: "Úředně stanovené pohlaví (může být odlišné od pohlaví biologického)"
 * ^language = #cs-CZ
