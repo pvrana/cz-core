@@ -8,4 +8,5 @@ Description: "Úředně stanovené pohlaví (může být odlišné od pohlaví b
 * ^version = "1.0.0"
 * ^status = #active
 * ^date = "2022-08-11"
+* ^publisher = "NCEZ"
 * include codes from system CZ_AdministrativeGender
