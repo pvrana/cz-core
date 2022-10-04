@@ -49,7 +49,7 @@ Description: "Czech national code system for the gender of a person used for adm
 
 
 * #M "muž" "Muž"
-* #M ^designation[0].language = #cs-CZ
+* #M ^designation[0].language = #cs
 * #M ^designation[=].value = "muž"
 * #M ^designation[+].language = #en
 * #M ^designation[=].value = "Male"
@@ -57,7 +57,7 @@ Description: "Czech national code system for the gender of a person used for adm
 * #M ^property[=].valueCode = #active
 
 * #F "žena" "Žena"
-* #F ^designation[0].language = #cs-CZ
+* #F ^designation[0].language = #cs
 * #F ^designation[=].value = "žena"
 * #F ^designation[+].language = #en
 * #F ^designation[=].value = "Female"
@@ -65,7 +65,7 @@ Description: "Czech national code system for the gender of a person used for adm
 * #F ^property[=].valueCode = #active
 
 * #X "nerozlišeno" "Pohlaví osoby není možné jednoznačně rozlišit.\r\nZadává se administrativní údaj (neřeší se klinicky realizované změny pohlaví a jejich varianty). Údaj se může výjimečně v čase změnit."
-* #X ^designation[0].language = #cs-CZ
+* #X ^designation[0].language = #cs
 * #X ^designation[=].value = "nerozlišeno"
 * #X ^designation[+].language = #en
 * #X ^designation[=].value = "Undifferentiated"
