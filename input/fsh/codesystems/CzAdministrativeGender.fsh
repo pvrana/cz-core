@@ -11,7 +11,6 @@ Description: "Czech national code system for the gender of a person used for adm
 * ^publisher = "DASTA"
 * ^caseSensitive = true
 * ^content = #complete
-* ^url = "https://www.ncez.mzcr.cz/standards/CodeSystem/cz-administreativeGender"
 
 * ^property[0].extension[0].url = "http://terminology.hl7.org/StructureDefinition/ext-mif-relationship-symmetry"
 * ^property[=].extension[=].valueCode = #antisymmetric
