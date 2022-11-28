@@ -8,11 +8,11 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 //-------------------------------------------------------------------------------------------
 * ^description = "Information about an individual receiving health care services"
 * ^version = "1.0.0"
+
+/*
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-
-/*
 * extension[birthPlace] ^definition = "The birth place for a patient.\r\n\r\nThis extension SHALL be used when needed to express the place of birth of the patient."
 * extension[birthPlace].value[x] only Address
 */
