@@ -29,12 +29,10 @@ Description: "Czech national profile for an organization."
 * type ^slicing.discriminator.type = #value
 * type ^slicing.discriminator.path = "coding.system"
 * type ^slicing.rules = #open
-* type ^definition = "The kind(s) of organization that this is.\r\n\r\nProposed use of CD-HCPARTY to type the organisation using dept... or org... codes. Other systems remain allowed.\r\nIn typical use, RECOMMENDED to type the organization.\r\nIn the future, specific other systems might also be proposed from a federal level to better type an organization."
-/*
-* type contains CD-HCPARTY 0..*
-* type[CD-HCPARTY].coding.system = "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty" (exactly)
-* type[CD-HCPARTY].coding.code 1..1
-*/
+* type ^definition = "The kind(s) of organization that this is.\r\n\r\n. Type should be taken from DRZAR value set."
+* type contains DRZAR 0..*
+* type[DRZAR].coding.system = "https://ncez.mzcr.cz/standards/fhir/core/CodeSystem/drzar" (exactly)
+* type[DRZAR].coding.code 1..1
 * telecom ^definition = "A contact detail for the organization.\r\n\r\nIt is RECOMMENDED to at least add one phone or email address."
 * address only CZ_Address
 * address ^definition = "An address for the organization.\r\n\r\nIt is RECOMMENDED to include this when available"
