@@ -1,11 +1,12 @@
 Instance: Mracena
 InstanceOf: CZ_Patient
 Usage: #example
+Description: "Pacientka, kontaktní informace a praktický lékař"
 * identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis"
 * identifier[=].value = "7161264528"
 * identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid"
 * identifier[=].value = "456789123"
-* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ "Česká republika"
+* extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
 * name.use = #usual
 * name.family = "Mrakomorová"
 * name.given = "Mračena"
@@ -52,7 +53,7 @@ Usage: #example
 * contact[=].address[=].postalCode = "123 45"
 * contact[=].address[=].country = "SK"
 
-* communication.language = urn:ietf:bcp:47#cs_CZ "Čeština"
+* communication.language = urn:ietf:bcp:47#cs
 * generalPractitioner.identifier.system = "https://ncez.mzcr.cz/standards/fhir/sid/nrzp"
 * generalPractitioner.identifier.value = "123456789"
 * generalPractitioner.display = "MUDr. Josef Švejk"

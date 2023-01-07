@@ -1,6 +1,7 @@
 Instance: Practitioner-123456789
 InstanceOf: CZ_Practitioner
 Usage: #example
+Description: "Zdravotnický pracovník id(NRZP)=123456789"
 * identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/nrzp"
 * identifier[=].value = "123456789"
 //* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/clk"
@@ -24,4 +25,4 @@ Usage: #example
 * address[=].city = "Praha 6"
 * address[=].postalCode = "160 00"
 * address[=].country = "CZ"
-* communication = urn:ietf:bcp:47#cs_CZ "Čeština"
+* communication = urn:ietf:bcp:47#cs

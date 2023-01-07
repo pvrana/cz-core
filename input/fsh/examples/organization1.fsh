@@ -1,10 +1,9 @@
 Instance: Organization-1
 InstanceOf: CZ_Organization
 Usage: #example
+Description: "Příklad orgnizace poskytovatele"
 * identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/ico"
 * identifier[=].value = "27520536"
-//* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/clk"
-//* identifier[=].value = "4567891230"
 * type[+] = $drzar#102 "Nemocnice"
 * name = "Nemocnice Chrudim"
 * telecom.system = #phone
