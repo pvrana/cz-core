@@ -7,9 +7,14 @@ Description: "Czech national profile for an practitioner role."
 //-------------------------------------------------------------------------------------------
 * ^version = "1.0.0"
 * ^status = #active
+
 * practitioner only Reference(CZ_Practitioner)
+
 * organization only Reference(CZ_Organization)
+* organization MS
+
 * code MS
+* code only CZ_CodeableConcept
 * code ^slicing.discriminator.type = #value
 * code ^slicing.discriminator.path = "coding.system"
 * code ^slicing.rules = #open
@@ -18,10 +23,12 @@ Description: "Czech national profile for an practitioner role."
     DRZAR 0..* and
     SNOMED-CT 0..*
 * code[DRZAR] ^definition = "Roles which this practitioner is authorized to perform for the organization."
-* code[DRZAR].coding.system = "https://ncez.mzcr.cz/standards/fhir/core/CodeSystem/drzar" (exactly)
+* code[DRZAR].coding.system = $drzar (exactly)
 * code[DRZAR].coding.code 1..
 * code[SNOMED-CT].coding.system = $sct (exactly)
 * code[SNOMED-CT].coding.code 1..
+
+* specialty only CZ_CodeableConcept
 * specialty ^slicing.discriminator.type = #value
 * specialty ^slicing.discriminator.path = "coding.system"
 * specialty ^slicing.rules = #open
