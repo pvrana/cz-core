@@ -1,7 +1,8 @@
 CodeSystem: CZ_DrzarCS
-Id: cz-drzar-cs
+Id: cz-drzar
 Title: "Druh zařízení"
 Description: "Czech national code system for type of healthcare facility."
+
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:1.2.203.24341.11.2.10.1"
 * ^version = "1.0"
@@ -11,6 +12,7 @@ Description: "Czech national code system for type of healthcare facility."
 * ^publisher = "DASTA"
 * ^caseSensitive = true
 * ^content = #complete
+* ^url = "https://ncez.mzcr.cz/standards/fhir/ig/core/CodeSystem/cz-drzar"
 
 * #010 "Sdružení zdravotnických zařízení"
 * #101 "Fakultní nemocnice"
