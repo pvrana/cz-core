@@ -5,8 +5,11 @@ Id:         cz-organization
 Title:      "Organization (CZ)"
 Description: "Czech national profile for an organization."
 //-------------------------------------------------------------------------------------------
+* ^publisher = "NCEZ"
 * ^version = "1.0.0"
 * ^status = #active
+* ^experimental = false
+* ^purpose = "This profile constrains the representation of address in the context of the Czech national interoperability project."
 
 * identifier MS
 * identifier ^slicing.discriminator.type = #value

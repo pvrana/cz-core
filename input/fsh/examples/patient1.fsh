@@ -14,7 +14,7 @@ Description: "Pacientka, kontaktní informace a praktický lékař"
 * telecom.value = "+420 603 853 227"
 * telecom.use = #home
 * gender = #female
-* birthDate = "1985-04-25"
+* birthDate = "1971-11-26"
 * address[+].use = #home
 * address[=].type = #physical
 * address[=].text = "Malé náměstí 13a, 150 00, Praha 5"

@@ -5,8 +5,10 @@ Id:         cz-practitionerrole
 Title:      "Practitioner Role (CZ)"
 Description: "Czech national profile for an practitioner role."
 //-------------------------------------------------------------------------------------------
+* ^publisher = "NCEZ"
 * ^version = "1.0.0"
 * ^status = #active
+* ^experimental = false
 
 * practitioner only Reference(CZ_Practitioner)
 

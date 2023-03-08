@@ -5,8 +5,11 @@ Id: cz-practitioner
 Title: "Practitioner (CZ)"
 Description: "Czech national profile for practitioner."
 //-------------------------------------------------------------------------------------------
+* ^publisher = "NCEZ"
 * ^version = "1.0.0"
 * ^status = #active
+* ^experimental = false
+
 * identifier MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"

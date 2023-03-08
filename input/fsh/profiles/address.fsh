@@ -5,9 +5,12 @@ Id:         cz-address
 Title:      "Address (CZ)"
 Description: "Czech national profile on address, to provide the possibility in the 'line' element to provide a seperate streetname, housenumber and postal box. It is always RECOMMENDED to give these elements seperately."
 //-------------------------------------------------------------------------------------------
-
+* ^publisher = "NCEZ"
 * ^version = "1.0.0"
+* ^experimental = false
 * . ^comment = "Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](location.html#) resource)."
+* ^purpose = "This profile constrains the representation of address in the context of the Czech national interoperability project."
+
 * line ^definition = "This component contains the house number, apartment number, street name, street direction, P.O. Box number, delivery hints, and similar address information. It is always RECOMMENDED to give these elements seperately using the defined extensions."
 * line.extension ^slicing.discriminator.type = #value
 * line.extension ^slicing.discriminator.path = "url"

@@ -3,6 +3,8 @@ Parent: Coding
 Id: cz-coding
 Title: "Coding data type"
 Description: """This profile adds must-support constraints to the coding data type."""
+* ^publisher = "NCEZ"
+* ^version = "1.0.0"
 * system MS
 * code MS
 * display MS

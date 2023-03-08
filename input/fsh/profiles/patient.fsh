@@ -7,8 +7,10 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 // CZ_Patient je odvozen z IPS Patient a je rozšířen o položku stásní občanství
 //-------------------------------------------------------------------------------------------
 * ^description = "Information about an individual receiving health care services"
+* ^publisher = "NCEZ"
 * ^version = "1.0.0"
-
+* ^status = #active
+* ^experimental = false
 
 * language = urn:ietf:bcp:47#cs_CZ
 * identifier MS
