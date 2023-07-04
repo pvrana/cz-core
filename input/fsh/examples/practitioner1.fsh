@@ -19,7 +19,7 @@ Description: "Zdravotnický pracovník id(NRZP)=123456789"
 * address[+].use = #work
 * address[=].type = #both
 * address[=].text = "Rovná 11, 160 00, Praha 6"
-* address[=].line[+] = "Rovná 11"
+* address[=].line[+] = "Rovná 12"
 * address[=].line[=].extension[Streetname].valueString = "Rovná"
 * address[=].line[+].extension[Housenumber].valueString = "11"
 * address[=].city = "Praha 6"
