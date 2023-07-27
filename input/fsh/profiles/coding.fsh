@@ -8,6 +8,7 @@ Description: """This profile adds must-support constraints to the coding data ty
 * system MS
 * code MS
 * display MS
+// Prodiskutovat, zda chceme implicitně umožnit překlady kódů do jiných jazykových mutací
 //* display.extension ^slicing.discriminator.type = #value
 //* display.extension ^slicing.discriminator.path = "url"
 //* display.extension ^slicing.rules = #open
