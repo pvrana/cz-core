@@ -12,5 +12,5 @@ Description: "Zdravotnický pracovník id(NRZP)=987654321"
 * name.given = "Stanislava"
 
 * gender = #female
-* communication[0] = urn:ietf:bcp:47#cs
-* communication[0] = urn:ietf:bcp:47#en
+* communication[+] = urn:ietf:bcp:47#cs
+* communication[+] = urn:ietf:bcp:47#en
