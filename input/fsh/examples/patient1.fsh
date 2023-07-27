@@ -53,7 +53,11 @@ Description: "Pacientka, kontaktní informace a praktický lékař"
 * contact[=].address[=].postalCode = "123 45"
 * contact[=].address[=].country = "SK"
 
-* communication.language = urn:ietf:bcp:47#cs
+* communication[+].language = urn:ietf:bcp:47#cs
+* communication[=].preferred = true
+* communication[+].language = urn:ietf:bcp:47#en
+* communication[+].language = urn:ietf:bcp:47#de
+
 * generalPractitioner.identifier.system = "https://ncez.mzcr.cz/standards/fhir/sid/nrzp"
 * generalPractitioner.identifier.value = "123456789"
 * generalPractitioner.display = "MUDr. Josef Švejk"
