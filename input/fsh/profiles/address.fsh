@@ -24,3 +24,10 @@ Description: "Czech national profile on address, to provide the possibility in t
 * line.extension[Housenumber].value[x] only string
 * line.extension[Postbox].value[x] only string
 * country ^definition = "Country, the FHIR specification defines its country field as a string and suggests using a ISO 3166 2 or 3 letter codes. Use of 2-letter code to express country is RECOMMENDED"
+
+* obeys text-or-ctry
+
+Invariant: text-or-ctry
+Description: "Address must contain at least text or country element / Adresa musí obsahovat minimálně element text a země"
+//Expression: "( (line.empty() and city.empty() ) or entry.resource.ofType(Composition).subject = entry.resource.ofType(DiagnosticReport).subject )"
+Severity:    #error
