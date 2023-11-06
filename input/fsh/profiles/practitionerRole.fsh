@@ -9,6 +9,7 @@ Description: "Czech national profile for an practitioner role."
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
+* insert SetFmmandStatusRule ( 1, draft )
 
 * practitioner only Reference(CZ_Practitioner)
 
