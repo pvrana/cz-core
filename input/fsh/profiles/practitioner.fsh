@@ -9,6 +9,7 @@ Description: "Czech national profile for practitioner."
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
+* insert SetFmmandStatusRule ( 1, draft )
 
 * identifier MS
 * identifier ^slicing.discriminator.type = #value
