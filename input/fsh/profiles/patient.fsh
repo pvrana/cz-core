@@ -11,6 +11,7 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
+* insert SetFmmandStatusRule ( 1, draft )
 
 * language = urn:ietf:bcp:47#cs_CZ
 * identifier MS
@@ -26,11 +27,19 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * identifier[RID] ^definition = "An unique patient identifier (resortní identifikátor) according to the National Patient Register"
 * identifier[RID].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid" (exactly)
 * identifier[RID].value 1..1
+* identifier contains CPOJ 0..1 MS
+* identifier[CPOJ] ^definition = "An unique patient identifier (číslo pojištěnce) according to the National Health Insurance Register"
+* identifier[CPOJ].system = "https://ncez.mzcr.cz/standards/fhir/sid/cpoj" (exactly)
+* identifier[CPOJ].value 1..1
 
-* name 1..* MS
+* name 1..* MS  // patient name element must be provided
+* name only HumanNameCz  // HumanNameCz adds extensions for spanish and portugal name parts
 * name obeys cz-pat-1
 * name ^definition = "A name associated with the individual. \n\nIt is RECOMMENDED to give at least one familyname and at least one given name when possible and define an 'official' use. When names are given, a consumer SHALL NOT ignore it."
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a alias or nickname.\r\nThe Alphabetic representation of the name SHALL be always provided"
+* name.extension contains $ext-data-absent-reason named name-absent-reason 0..*
+* name.extension[name-absent-reason] ^short = "Reason for not providing the name"
+* name.extension[name-absent-reason] ^definition = "Reason for not providing the name"
 * name.text MS
 * name.text ^definition = "Text representation of the full name. Due to the cultural variance around the world a consuming system may not know how to present the name correctly; moreover not all the parts of the name go in given or family. Creators are therefore strongly encouraged to provide through this element a presented version of the name. Future versions of this guide may require this element"
 * name.text ^min = 0
@@ -58,6 +67,7 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * address MS
 * address only CZ_Address
 * address ^definition = "An address for the individual. \n\nIt is RECOMMENDED to include an address when available. When needed to express the availablity of a Patient at home (e.g. only Wednesdays), another solution will be defined."
+* address obeys cnt-2or3-char
 
 * generalPractitioner MS  // general practicioner must be supported
 * generalPractitioner only Reference(CZ_Organization or CZ_Practitioner or CZ_PractitionerRole)
