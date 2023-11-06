@@ -9,6 +9,7 @@ Description: "Czech national profile for an organization."
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
+* insert SetFmmandStatusRule ( 1, draft )
 * ^purpose = "This profile constrains the representation of address in the context of the Czech national interoperability project."
 
 * identifier MS
