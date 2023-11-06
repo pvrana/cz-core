@@ -8,6 +8,7 @@ Description: "Czech national profile on address, to provide the possibility in t
 * ^publisher = "NCEZ"
 * ^version = "1.0.0"
 * ^experimental = false
+* insert SetFmmandStatusRule ( 1, draft )
 * . ^comment = "Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](location.html#) resource)."
 * ^purpose = "This profile constrains the representation of address in the context of the Czech national interoperability project."
 
