@@ -31,8 +31,8 @@ publisher:
 #     id: mcode
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
-# dependencies:
-#  hl7.fhir.uv.ips: current
+dependencies:
+  hl7.fhir.uv.ips: current
 #  hl7.fhir.us.mcode: current
 #
 #
@@ -64,7 +64,42 @@ publisher:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #
-# parameters:
+parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+#  special-url:
+# path-resource:
+#    - input/resources
+#    - fsh-generated/resources
+#  path-pages:
+#    - input/pagecontentinformation-reci
+#    - input/intro-notes
+#  path-tx-cache:
+#  expansion-parameter:
+#  rule-broken-links:
+#  generate-xml:
+#  generate-json:
+#  generate-turtle:
+#  html-template:
+#  active-tables: false
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  apply-version: true
+  show-inherited-invariants: true
+  usage-stats-opt-out: true
+  # excludexml: false
+  # excludejson: false
+  # excludettl: true
+  # excludemap: true
+ # no-narrative:
+ #   - Patient/example-targeted-provenance
+ #   - Bundle/docref-example-1
+  # no-validate:
+  #   - '*/*'  # does not seems to work
+  #   - 'StructureDefinition/*'
+ # version-comparison:
+ #    - 5.0.1
+ #    - 4.0.0
+
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
 #
