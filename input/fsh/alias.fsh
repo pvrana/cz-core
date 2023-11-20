@@ -19,6 +19,8 @@ Alias: $humanname-fathers-family = http://hl7.org/fhir/StructureDefinition/human
 Alias: $CZ_AdministrativegenderVS = https://ncez.mzcr.cz/standards/fhir/ig/core/ValueSet/cz-administrative-gender-vs
 Alias: $cz-contactperson-relation = https://ncez.mzcr.cz/standards/fhir/ig/core/ValueSet/cz-contact-person-relation-vs
 Alias: $MedicalDevicesSnomedAbsentUnknownUvIps = http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-snomed-absent-unknown-uv-ips
+Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
+
 //Alias: $bodySite = http://hl7.org/fhir/StructureDefinition/bodySite
 //Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail
 //Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
