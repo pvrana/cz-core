@@ -4,7 +4,7 @@ Parent:   Patient
 Id:       cz-patient
 Title:    "Patient (CZ)"
 Description: "This profile defines how to represent Patient in FHIR for the purpose of the Czech national interoperability standards."
-// CZ_Patient je odvozen z IPS Patient a je rozšířen o položku stásní občanství
+// CZ_Patient je odvozen z IPS Patient a je rozšířen o položku státní občanství
 //-------------------------------------------------------------------------------------------
 * ^description = "Information about an individual receiving health care services"
 * ^publisher = "NCEZ"
@@ -20,15 +20,21 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * identifier ^slicing.rules = #open
 * identifier ^definition = "An identifier for this patient.\r\n\r\nTypically, when National birth Id (RC) is available it is used. Organizations will most likely want to also include a local identifier, using its own system. A type can be added if needed."
 * identifier contains RC 0..1 MS
-* identifier[RC] ^definition = "An identifier for this patient according to National Birth Registry\r\n\r\nWhen needed to express a RC, it SHALL be done according to these guidelines. Other ways to identify a patient using coding systems remain also possible."
+* identifier[RC]
+  * ^short = "Rodné číslo"
+  * ^definition = "An identifier for this patient according to National Birth Registry\r\n\r\nWhen needed to express a RC, it SHALL be done according to these guidelines. Other ways to identify a patient using coding systems remain also possible."
 * identifier[RC].system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis" (exactly)  // could be also "urn:oid:2.16.840.1.113883.2.40.1"
 * identifier[RC].value 1..1
 * identifier contains RID 0..1 MS
-* identifier[RID] ^definition = "An unique patient identifier (resortní identifikátor) according to the National Patient Register"
+* identifier[RID]
+  * ^short = "Resortní identifikátor"
+  * ^definition = "An unique patient identifier (resortní identifikátor) according to the National Patient Register"
 * identifier[RID].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid" (exactly)
 * identifier[RID].value 1..1
 * identifier contains CPOJ 0..1 MS
-* identifier[CPOJ] ^definition = "An unique patient identifier (číslo pojištěnce) according to the National Health Insurance Register"
+* identifier[CPOJ]
+  * ^short = "Číslo pojištěnce zdravotního pojištění"
+  * ^definition = "An unique patient identifier (číslo pojištěnce) according to the National Health Insurance Register"
 * identifier[CPOJ].system = "https://ncez.mzcr.cz/standards/fhir/sid/cpoj" (exactly)
 * identifier[CPOJ].value 1..1
 
@@ -38,8 +44,9 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * name ^definition = "A name associated with the individual. \n\nIt is RECOMMENDED to give at least one familyname and at least one given name when possible and define an 'official' use. When names are given, a consumer SHALL NOT ignore it."
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a alias or nickname.\r\nThe Alphabetic representation of the name SHALL be always provided"
 * name.extension contains $ext-data-absent-reason named name-absent-reason 0..*
-* name.extension[name-absent-reason] ^short = "Reason for not providing the name"
-* name.extension[name-absent-reason] ^definition = "Reason for not providing the name"
+* name.extension[name-absent-reason]
+  * ^short = "Reason for not providing the name"
+  * ^definition = "Reason for not providing the name"
 * name.text MS
 * name.text ^definition = "Text representation of the full name. Due to the cultural variance around the world a consuming system may not know how to present the name correctly; moreover not all the parts of the name go in given or family. Creators are therefore strongly encouraged to provide through this element a presented version of the name. Future versions of this guide may require this element"
 * name.text ^min = 0
@@ -67,24 +74,25 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * address MS
 * address only CZ_Address
 * address ^definition = "An address for the individual. \n\nIt is RECOMMENDED to include an address when available. When needed to express the availablity of a Patient at home (e.g. only Wednesdays), another solution will be defined."
-* address obeys cnt-2or3-char
+* address obeys cnt-2-char
 
 * generalPractitioner MS  // general practicioner must be supported
+  * ^definition = "Patient's nominated care provider.\n\nTake note this does not automatically imply any legal form of therapeutic link or consent relationship with this GP. It is RECOMMENDED to include this when available if the flow is in any way medical. Please note this is an element of the Reference datatype. This means when it is available it will contain either a relative or absolute URL where this GP can be found. Alternatively, there is only an internal reference and the GP is included as a ‘contained resource’ (cfr. the HL7 FHIR specifications in what cases this applies)."
+  * ^comment = "This may be the registering primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disability setting, or even organization that will provide people to perform the care provider roles. It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.\nMultiple GPs may be recorded against the patient for various reasons, such as a student that has his home GP listed along with the GP at university during the school semesters, or a \"fly-in/fly-out\" worker that has the onsite GP also included with his home GP to remain aware of medical issues.\n\nJurisdictions may decide that they can profile this down to 1 if desired, or 1 per type. Note in the FHIR base definition of this element that the scope of this element might be wider then just the general practicioner."
 * generalPractitioner only Reference(CZ_Organization or CZ_Practitioner or CZ_PractitionerRole)
-* generalPractitioner ^definition = "Patient's nominated care provider.\n\nTake note this does not automatically imply any legal form of therapeutic link or consent relationship with this GP. It is RECOMMENDED to include this when available if the flow is in any way medical. Please note this is an element of the Reference datatype. This means when it is available it will contain either a relative or absolute URL where this GP can be found. Alternatively, there is only an internal reference and the GP is included as a ‘contained resource’ (cfr. the HL7 FHIR specifications in what cases this applies)."
-* generalPractitioner ^comment = "This may be the registering primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disability setting, or even organization that will provide people to perform the care provider roles. It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.\nMultiple GPs may be recorded against the patient for various reasons, such as a student that has his home GP listed along with the GP at university during the school semesters, or a \"fly-in/fly-out\" worker that has the onsite GP also included with his home GP to remain aware of medical issues.\n\nJurisdictions may decide that they can profile this down to 1 if desired, or 1 per type. Note in the FHIR base definition of this element that the scope of this element might be wider then just the general practicioner."
 
 * managingOrganization only Reference(CZ_Organization)
 * managingOrganization ^definition = "Organization that is the custodian of the patient record.\n\nThis SHOULD be included when available.Please note this is an element of the Reference datatype. This means when it is available it will contain either a relative or absolute URL where this Organization can be found. Alternatively, there is only an internal reference and the Organization is included as a ‘contained resource’ (cfr. the HL7 FHIR specifications in what cases this applies)."
 * managingOrganization ^comment = "There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association)."
 
 * extension contains http://hl7.org/fhir/StructureDefinition/patient-nationality named nationality 0..*
-* extension[nationality] ^short = "Nationality/Státní občanství"
-* extension[nationality] ^definition = "Státní občanství dle zákona 186/2013. Státní občanství, jak je uváděno na oficiálních dokladech k prokázání identity."
+* extension[nationality]
+  * ^short = "Nationality/Státní občanství"
+  * ^definition = "Státní občanství dle zákona 186/2013. Státní občanství, jak je uváděno na oficiálních dokladech k prokázání identity."
 * extension[nationality].extension[code].value[x] only CZ_CodeableConcept
 * extension[nationality].extension[period].value[x] only Period
 * extension[nationality].extension[code].valueCodeableConcept 1..1 MS
-* extension[nationality].extension[code].valueCodeableConcept from https://www.hl7.org/fhir/valueset-country.html
+* extension[nationality].extension[code].valueCodeableConcept from $iso3166-1-2
 
 * contact ^definition = "A contact party (e.g. guardian, partner, friend) for the patient.\n\nIt is RECOMMENDED to include this when available and considered relevant for the patientcare. (e.g. a parent of a young patient)"
 * contact ^comment = "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact."
