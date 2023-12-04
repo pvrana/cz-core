@@ -40,7 +40,9 @@ It is always RECOMMENDED to give these elements seperately. The national specifi
 * line.extension[postBox].value[x] only string
 //* country ^definition = "Country, the FHIR specification defines its country field as a string and suggests using a ISO 3166 2 or 3 letter codes. Use of 2-letter code to express country is RECOMMENDED"
 * country ^short = "Země"
-* country ^definition = """Země (dvoumístný kód země dle ISO nebo volným textem).\n\nPovinné použití kódu země může být stanoveno v jednotlivých odvozených profilech. / Country (two-digit ISO country code or free text).\n\nMandatory use of the country code may be specified in specific derived profiles."""
+* country ^definition = """Země (dvoumístný kód země dle ISO 3166-1 Alfa-2 nebo volným textem). Element Address.country bude obsahovat název země, dvoupísmenný kód země bude uveden v extenzi.
+Povinné použití kódu země může být stanoveno v jednotlivých odvozených profilech.
+\n\nCountry (two-character ISO 3166-1 Alpha-2 country code or free text).\n\nAddress.country element will inclide name of the country while code will be included in the extension. Mandatory use of the country code may be specified in specific derived profiles."""
   * extension contains $iso21090-SC-coding named countryCode 0..1
   * extension[countryCode].valueCoding from $iso3166-1-2 (preferred)
 * obeys text-or-ctry and POB-and-PCS and street-and-city and POB-only-postal and POB-ext-only
