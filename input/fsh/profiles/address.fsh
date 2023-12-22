@@ -25,6 +25,7 @@ It is always RECOMMENDED to give these elements seperately. The national specifi
 * extension ^slicing.rules = #open
 * extension contains AddressPointCz named addressPoint 0..1 and AddresaTrvalehoPobytuCz named trvalyPobyt 0..1
 
+* extension[addressPoint] ^definition = "Pokud je uveden kód RUIAN i adresa, musí oba údaje odpovídat."
 * use ^definition = """Způsob použití adresy /  Address use"""
 * line ^definition = """Tato položka umožňuje zadat číslo domu, číslo bytu, název ulice, směr ulice, číslo P.O. Boxu, pokyny pro doručování a podobné informace o adrese. Tyto prvky se vždy DOPORUČUJE uvádět samostatně pomocí definovaných extenzí. \n\n This component contains the house number, apartment number, street name, street direction, P.O. Box number, delivery hints, and similar address information. It is always RECOMMENDED to give these elements seperately using the defined extensions."""
 * line.extension ^slicing.discriminator.type = #value
