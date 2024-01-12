@@ -1,7 +1,7 @@
 Instance: cz-administrative-gender-vs
 InstanceOf: ValueSet
 Usage: #definition
-* url = "https://ncez.mzcr.cz/standards/fhir/ig/core/ValueSet/cz-administrative-gender-vs"
+* url = "https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-administrative-gender-vs"
 * version = "1.0.0"
 * status = #active
 * date = "2022-12-26"
