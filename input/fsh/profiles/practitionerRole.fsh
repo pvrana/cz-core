@@ -22,12 +22,12 @@ Description: "Czech national profile for an practitioner role."
 * code ^slicing.discriminator.path = "coding.system"
 * code ^slicing.rules = #open
 * code ^definition = "Roles which this practitioner is authorized to perform for the organization.\r\n\r\nFor compatibility reasons, CD-HCPARTY is described here to express the role of the practitioner. Other coding systems remain allowed.\r\nTowards the future, the use of SNOMED-CT codes is also RECOMMENDED here. In the future, other ways to codfy might however be also proposed.\r\n\r\nWhen available, a provider SHOULD include it. When given, a consumer SHALL record this in its consuming system."
-* code contains
-    DRZAR 0..* and
+* code contains  // TO-DO: zvážit ISCO urn:oid:2.16.840.1.113883.2.9.6.2.7
+//    DRZAR 0..* and
     SNOMED-CT 0..*
-* code[DRZAR] ^definition = "Roles which this practitioner is authorized to perform for the organization."
-* code[DRZAR].coding.system = $drzar (exactly)
-* code[DRZAR].coding.code 1..
+//* code[DRZAR] ^definition = "Roles which this practitioner is authorized to perform for the organization."
+//* code[DRZAR].coding.system = $drzar (exactly)
+//* code[DRZAR].coding.code 1..
 * code[SNOMED-CT].coding.system = $sct (exactly)
 * code[SNOMED-CT].coding.code 1..
 
