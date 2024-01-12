@@ -6,6 +6,11 @@ Description: "Pacientka, kontaktní informace a praktický lékař"
 * identifier[=].value = "7161264528"
 * identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid"
 * identifier[=].value = "456789123"
+* identifier[+].system = "http://hl7.org/fhir/sid/passport-CZE"
+* identifier[=].value = "23476533"
+* identifier[+].system = "http://hl7.org/fhir/sid/passport-SVK"
+* identifier[=].value = "88476522"
+
 * extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
 * name.use = #usual
 * name.family = "Mrakomorová"
@@ -26,7 +31,7 @@ Description: "Pacientka, kontaktní informace a praktický lékař"
 * address[=].country = "CZ"
 
 * contact[+].relationship.coding[+] = $v3-RoleCode#MTH "matka"
-* contact[=].relationship.coding[+] = $v2-0131#N "příbuzný"
+* contact[=].relationship.coding[+] = $v2-0131#N "Příbuzný"
 * contact[=].name.use = #usual
 * contact[=].name.family = "Mrakomorová"
 * contact[=].name.given[+] = "Biologická"
