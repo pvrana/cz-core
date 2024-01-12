@@ -16,13 +16,13 @@ This profile represents the constraints applied to the Device resource by the Cz
 * type 0..1 MS
 * type only CZ_CodeableConcept
 * type from $MedicalDevicesSnomedAbsentUnknownUvIps (preferred)
-* type ^short = "Typ zdravotnického prostředku.\r\nPřednostně se uvádí pomocí kódu SNOMED CT. \r\nAbsence informací nebo nepřítomnost zdravotnického prostředku se výslovně uvede pomocí kódůz číselníku absent-or-unknown-devices-uv-ips. / Type of device.\r\nPreferably valued by using SNOMED CT.\r\nThe absence of information, or absence of devices, shall be explicitly stated by using the codes included in the absent-or-unknown-devices-uv-ips value set."
+* type ^short = "Typ zdravotnického prostředku.\r\nPřednostně se uvádí pomocí kódu SNOMED CT. \r\nAbsence informací nebo nepřítomnost zdravotnického prostředku se výslovně uvede pomocí kódů z číselníku absent-or-unknown-devices-uv-ips. / Type of device.\r\nPreferably valued by using SNOMED CT.\r\nThe absence of information, or absence of devices, shall be explicitly stated by using the codes included in the absent-or-unknown-devices-uv-ips value set."
 * type ^binding.extension[0].extension[0].url = "purpose"
 * type ^binding.extension[=].extension[=].valueCode = #candidate
 * type ^binding.extension[=].extension[+].url = "valueSet"
 * type ^binding.extension[=].extension[=].valueCanonical = "http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-snomed-ct-ips-free-set"
 * type ^binding.extension[=].extension[+].url = "documentation"
-* type ^binding.extension[=].extension[=].valueMarkdown = "Kód pro zdravotnického prostředku z číselníku SNOMED IPS Free Set / Codes for medical devices in SNOMED IPS Free Set"
+* type ^binding.extension[=].extension[=].valueMarkdown = "Kód zdravotnického prostředku z číselníku SNOMED IPS Free Set / Codes for medical devices in SNOMED IPS Free Set"
 * type ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * type ^binding.extension[+].extension[0].url = "purpose"
 * type ^binding.extension[=].extension[=].valueCode = #candidate
