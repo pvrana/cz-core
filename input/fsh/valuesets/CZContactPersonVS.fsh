@@ -10,6 +10,7 @@ Description: "Vztah kontaktní osoby k subjektu"
 * ^date = "2022-12-26"
 * ^publisher = "NCEZ"
 * ^experimental = false
+* ^url = "https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-contact-person-relation-vs"
 
 * include codes from system $v2-0131 where concept is-not-a "O"
 * $v3-RoleCode#AUNT "teta"
