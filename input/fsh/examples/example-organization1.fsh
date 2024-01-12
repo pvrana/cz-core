@@ -4,7 +4,7 @@ Usage: #example
 Description: "Příklad orgnizace poskytovatele"
 * identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/ico"
 * identifier[=].value = "27520536"
-* type[+] = $drzar#102 "Nemocnice"
+* type[DRZAR] = $drzar#102 "Nemocnice"
 * name = "Nemocnice Chrudim"
 * telecom.system = #phone
 * telecom.value = "+420 603 853 227"
