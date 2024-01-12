@@ -42,7 +42,8 @@ Description: "Český národní profil pro resource Organization. / Czech nation
 * type only CZ_CodeableConcept
 * type contains DRZAR 0..*
 * type[DRZAR].coding.system = $drzar (exactly)
-* type[DRZAR].coding.code 1..1
+* type[DRZAR].coding.code 1..
+* type[DRZAR] from CZ_DrzarVS (required)
 
 * telecom ^definition = "Kontaktní údaje organizace.\r\n\r\nDOPORUČUJE SE uvést alespoň jeden telefon nebo e-mailovou adresu. / A contact detail for the organization.\r\n\r\nIt is RECOMMENDED to at least add one phone or email address."
 
