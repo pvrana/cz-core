@@ -10,3 +10,4 @@ Description: "Tato extenze umožňuje zápis příznaku označujícího adresu t
 
 * value[x] 1..1
 * value[x] only boolean or CodeableConcept
+* value[x] from $iso3166-1-2 (preferred)
