@@ -7,7 +7,7 @@ Description: "Český národní profil pro resource Organization. / Czech nation
 //-------------------------------------------------------------------------------------------
 * ^publisher = "NCEZ"
 * ^version = "1.0.0"
-* ^status = #active
+//* ^status = #active
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
 * ^purpose = "Tento profil vymezuje způsob reprezentace organizace v kontextu českého národního projektu interoperability. / This profile constrains the representation of organization in the context of the Czech national interoperability project."
