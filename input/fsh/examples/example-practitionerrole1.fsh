@@ -10,8 +10,8 @@ Description: "Ordinace praktického lékaře"
 * period.start = "2022-08-01T00:00:00.000Z"
 * period.end = "2022-12-31T00:00:00.000Z"
 * practitioner = Reference(Practitioner/Practitioner-2) "MUDr. Stanislava Kubšová"
-* organization = Reference(Organization/Organization-2) "MUDr. Stanislava Kubšová"
-* code = $drzar#320 "Samost. ordinace všeob. prakt. lékaře"
+* organization = Reference(Organization/Organization-2) "Ordinace praktického lékaře, MUDr. Stanislava Kubšová"
+* code = $nrzp_povolani#L00 "Lékař"
 
 * specialty = $sct#419772000 "Family practice"
 * availableTime[0].daysOfWeek[0] = #mon
