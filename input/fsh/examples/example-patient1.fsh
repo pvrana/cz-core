@@ -2,14 +2,18 @@ Instance: Mracena
 InstanceOf: CZ_Patient
 Usage: #example
 Description: "Pacientka, kontaktní informace a praktický lékař"
-* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis"
-* identifier[=].value = "7161264528"
-* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid"
-* identifier[=].value = "456789123"
-* identifier[+].system = "http://hl7.org/fhir/sid/passport-CZE"
-* identifier[=].value = "23476533"
+* identifier[RC][+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis"
+* identifier[RC][=].value = "7161264528"
+* identifier[RID][+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid"
+* identifier[RID][=].value = "456789123"
+* identifier[PAS][+].system = "http://hl7.org/fhir/sid/passport-CZE"
+* identifier[PAS][=].value = "23476533"
+* identifier[PAS][=].use = #official
+* identifier[PAS][=].type = $v2-0203#PPN
 * identifier[+].system = "http://hl7.org/fhir/sid/passport-SVK"
 * identifier[=].value = "88476522"
+* identifier[=].use = #official
+* identifier[=].type = $v2-0203#PPN
 
 * extension[nationality].extension[code].valueCodeableConcept = urn:iso:std:iso:3166#CZ
 * name.use = #usual
