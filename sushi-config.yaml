@@ -69,7 +69,9 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
     - https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-administrative-gender-vs
     - https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-contact-person-relation-vs
     - https://ncez.mzcr.cz/standards/fhir/CodeSystem/cz-drzar
+    - https://ncez.mzcr.cz/standards/fhir/CodeSystem/nrzp-povolani
     - https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-drzar-vs
+    - https://ncez.mzcr.cz/standards/fhir/ValueSet/nrzp-povolani-vs
 #    - https://ncez.mzcr.cz/standards/fhir/CodeSystem/role-code-supplement
 #    - https://ncez.mzcr.cz/standards/fhir/CodeSystem/contact-role-supplement
 #    - http://ncez.mzcr.cz/standards/fhir/StructureDefinition/address-point-cz
