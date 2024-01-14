@@ -1,7 +1,7 @@
 Profile: CZ_Rodcis_Identifier
 Parent: Identifier
 Id: cz-rodcis-identifier
-Title: "Rodné číslo / Czech national birth number "
+Title: "Rodné číslo / Czech national birth number"
 Description: "Tato struktura obsahuje český identifikátor osoby (rodné číslo)"
 * use = #official (exactly)
 * system 1..
