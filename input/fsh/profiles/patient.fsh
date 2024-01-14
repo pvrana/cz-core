@@ -9,7 +9,7 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 * ^description = "Informace o osobě, které jsou poskytovány zdravotní služby / Information about an individual receiving health care services"
 * ^publisher = "NCEZ"
 * ^version = "1.0.0"
-* ^status = #active
+//* ^status = #active
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
 
@@ -46,11 +46,12 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
   * ^definition = "Jedinečný identifikátor pacienta (číslo občanského průkazu) vydaného ministerstvem vnitra. / An unique patient identifier (National ID Card Number) issued by the ministry of interior"
 * identifier[OP].system = "https://ncez.mzcr.cz/standards/fhir/sid/op" (exactly)
 * identifier[OP].value 1..1
-* identifier contains PAS 0..1 MS
+* identifier contains PAS 0..* MS
 * identifier[PAS]
   * ^short = "Číslo pasu (Passport Number)"
   * ^definition = "Jedinečný identifikátor pacienta (číslo pasu). / An unique patient identifier (Passport Number)"
-* identifier[PAS].system = "http://hl7.org/fhir/sid/passport-CZE"
+//* identifier[PAS].system = "http://hl7.org/fhir/sid/passport-CZE"
+* identifier[PAS].system from PassportNSVS
   * ^short = "Jmenný prostor dle vydavatele pasu. FHIR eviduje jmenné prostory pro pasy ve formátu http://hl7.org/fhir/sid/passport-XXX, kde XXX je třípísmenný kód země dle ISO 3166"
 * identifier[PAS].use = #official
 * identifier[PAS].type = $v2-0203#PPN
@@ -139,3 +140,9 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 * contact.address only CZ_Address
 * contact.organization only Reference(CZ_Organization)
 * contact.gender from $CZ_AdministrativegenderVS
+
+// zvážit zda přidat:
+// - místo narození (patient-birthPlace)
+// - národnost (česká, moravská ...)
+// - zaměstnání
+// - vzdělání
