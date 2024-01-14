@@ -7,7 +7,7 @@ Description: "Czech national profile for practitioner."
 //-------------------------------------------------------------------------------------------
 * ^publisher = "NCEZ"
 * ^version = "1.0.0"
-* ^status = #active
+//* ^status = #active
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
 
