@@ -1,11 +1,11 @@
 Profile: CZ_MedicalDevice
 Parent: Device
 Id: cz-medical-device
-Title: "Device (CZ)"
+Title: "Medical device (CZ)"
 Description: """Tento profil představuje požadavky na Device v rámci českého národního projektu interoperability.
 
 This profile represents the constraints applied to the Device resource by the Czech national interoperability project."""
-* ^status = #active
+//* ^status = #active
 * ^experimental = false
 * ^publisher = "NCEZ"
 * ^version = "1.0.0"
