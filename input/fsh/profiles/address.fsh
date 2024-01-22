@@ -23,7 +23,9 @@ It is always RECOMMENDED to give these elements seperately. The national specifi
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension contains AddressPointCz named addressPoint 0..1 and AddresaTrvalehoPobytuCz named trvalyPobyt 0..1
+* extension contains
+  AddressPointCz named addressPoint 0..1 and
+  AddresaTrvalehoPobytuCz named trvalyPobyt 0..1
 
 * extension[addressPoint] ^definition = "Pokud je uveden kód RUIAN i adresa, musí oba údaje odpovídat."
 * use ^definition = """Způsob použití adresy /  Address use"""
