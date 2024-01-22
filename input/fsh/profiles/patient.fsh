@@ -22,7 +22,7 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 * extension[birthPlace]
   * ^short = "Místo narození / Birth place"
 //  * ^definition = ""
-//* extension[birthPlace].value[x] only CZ_Address
+* extension[birthPlace].value[x] only CZ_Address
 
 * language = urn:ietf:bcp:47#cs_CZ
 * identifier MS
