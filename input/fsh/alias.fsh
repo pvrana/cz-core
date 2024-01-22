@@ -19,6 +19,9 @@ Alias: $ext-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-ab
 Alias: $humanname-mothers-family = http://hl7.org/fhir/StructureDefinition/humanname-mothers-family
 Alias: $humanname-fathers-family = http://hl7.org/fhir/StructureDefinition/humanname-fathers-family
 Alias: $patient-animal = http://hl7.org/fhir/StructureDefinition/patient-animal
+Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
+Alias: $sex-for-clinical-use = http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse
+Alias: $nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
 
 // Valuesets:
 Alias: $CZ_AdministrativegenderVS = https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-administrative-gender-vs

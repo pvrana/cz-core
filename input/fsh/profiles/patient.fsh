@@ -13,8 +13,17 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
 
-* extension contains http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse named sex-for-clinical-use 0..*
+* extension contains
+  $sex-for-clinical-use named sex-for-clinical-use 0..* and
+  $patient-birthPlace named birthPlace 0..1 and
+  $nationality named nationality 0..*
+
 * extension[sex-for-clinical-use] ^mustSupport = false
+* extension[birthPlace]
+  * ^short = "Místo narození / Birth place"
+//  * ^definition = ""
+//* extension[birthPlace].value[x] only CZ_Address
+
 * language = urn:ietf:bcp:47#cs_CZ
 * identifier MS
 * identifier ^slicing.discriminator.type = #value
@@ -116,7 +125,6 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 * managingOrganization ^definition = "Organizace, která je správcem záznamu o pacientovi.\n\nTento údaj by měl být uveden, pokud je k dispozici. Upozorňujeme, že se jedná o prvek datového typu Reference. To znamená, že pokud je k dispozici, bude obsahovat buď relativní, nebo absolutní adresu URL, kde lze tuto organizaci nalézt. Případně je zde pouze interní odkaz a Organizace je zahrnuta jako 'contined resource' (viz specifikace HL7 FHIR, v jakých případech se uplatňuje).\n\nOrganization that is the custodian of the patient record.\n\nThis SHOULD be included when available. Please note this is an element of the Reference datatype. This means when it is available it will contain either a relative or absolute URL where this Organization can be found. Alternatively, there is only an internal reference and the Organization is included as a ‘contained resource’ (cfr. the HL7 FHIR specifications in what cases this applies)."
 * managingOrganization ^comment = "Pro konkrétní záznam pacienta existuje pouze jedna organizace, která jej spravuje. Ostatní organizace budou mít svůj vlastní záznam pacienta a mohou použít element Link ke spárování záznamů (nebo resource Person, který může obsahovat hodnocení důvěryhodnosti pro toto spojení).\n\nThere is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association)."
 
-* extension contains http://hl7.org/fhir/StructureDefinition/patient-nationality named nationality 0..*
 * extension[nationality]
   * ^short = "Státní občanství / Nationality"
   * ^definition = "Státní občanství dle zákona 186/2013. Státní občanství, jak je uváděno na oficiálních dokladech k prokázání identity."
@@ -124,6 +132,12 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 * extension[nationality].extension[period].value[x] only Period
 * extension[nationality].extension[code].valueCodeableConcept 1..1 MS
 * extension[nationality].extension[code].valueCodeableConcept from $iso3166-1-2
+
+* extension[nationality]
+  * ^short = "Státní občanství / Nationality"
+  * ^definition = "Státní občanství dle zákona 186/2013. Státní občanství, jak je uváděno na oficiálních dokladech k prokázání identity."
+
+
 
 * contact ^definition = "Kontaktní osoba (např. opatrovník, partner, přítel) pacienta.\n\nDOPORUČUJE SE uvést ji, pokud je k dispozici a pokud je považována za relevantní pro péči o pacienta. (např. rodič dítěte).\n\nA contact party (e.g. guardian, partner, friend) for the patient.\n\nIt is RECOMMENDED to include this when available and considered relevant for the patientcare. (e.g. a parent of a young patient)"
 * contact ^comment = "Kontakt zahrnuje všechny druhy kontaktních osob: rodinné příslušníky, obchodní kontakty, opatrovníky, pečovatele. Nevztahuje se na evidenci rodokmenu a rodinných vazeb mimo rámec použití týkající se kontaktů.\n\nContact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact."
