@@ -11,6 +11,7 @@ Description: "Vztah kontaktní osoby k subjektu"
 * ^publisher = "NCEZ"
 * ^experimental = false
 * ^url = "https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-contact-person-relation-vs"
+* insert SetFmmandStatusRule(2, trial-use)
 
 * include codes from system $v2-0131 where concept is-not-a "O"
 * $v3-RoleCode#AUNT "teta"
