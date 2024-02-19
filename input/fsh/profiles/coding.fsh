@@ -7,6 +7,7 @@ Description: """Tento profil rozšiřuje možnosti datového typu coding o podpo
 It relies on the Translation extension."""
 * ^publisher = "NCEZ"
 * ^version = "1.0.0"
+* insert SetFmmandStatusRule(1, draft)
 * system MS
 * code MS
 * display MS
