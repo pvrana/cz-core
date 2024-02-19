@@ -2,8 +2,9 @@ Instance: Mracena
 InstanceOf: CZ_Patient
 Usage: #example
 Description: "Pacientka, kontaktní informace a praktický lékař"
-* identifier[RC][+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis"
-* identifier[RC][=].value = "7161264528"
+
+* contained[+] = RegisteringProviderExample
+* identifier[RC] = rodnecislo_7161264528
 * identifier[RID][+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid"
 * identifier[RID][=].value = "456789123"
 * identifier[PAS][+].system = "http://hl7.org/fhir/sid/passport-CZE"
@@ -70,3 +71,18 @@ Description: "Pacientka, kontaktní informace a praktický lékař"
 * generalPractitioner.identifier.system = "https://ncez.mzcr.cz/standards/fhir/sid/nrzp"
 * generalPractitioner.identifier.value = "123456789"
 * generalPractitioner.display = "MUDr. Josef Švejk"
+
+* extension[registeringProvider].extension[value].valueReference = Reference (Organization/RegisteringProviderExample)
+* extension[registeringProvider].extension[category].valueCodeableConcept = cz-tab-ta#4 "registrující lékař"
+
+Instance: RegisteringProviderExample
+InstanceOf: Organization
+Title: "Organization: Registering healthcare provider example"
+Description: "Example of registering healthcare provider"
+Usage: #inline
+
+* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/ico"
+* identifier[=].value = "456789655"
+* type[+] = $drzar#320 "Samost. ordinace všeob. prakt. lékaře"
+* name = "MUDr. Stanislava Kubšová"
+
