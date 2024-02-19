@@ -10,6 +10,9 @@ This is used to identify the species when a specimen is collected from an animal
 * insert SetFmmandStatusRule ( 1, draft )
 * extension contains $patient-animal named patient-animal 1..1
 * extension[patient-animal].extension[species]
+* extension contains $recordedSexOrGender named recordedSexOrGender 0..1
+* extension[recordedSexOrGender]
+
 * telecom ..0
   * ^short = "Pužití: contact.telecom"
   * ^comment = "Zvířata nemají telefony, ale kontaktní osoby ano. Je třeba použít Contact.telecom.\n\nAnimals do not have phones, their contacts do. Contact.telecom should be used."
