@@ -11,4 +11,6 @@ Description: "Druh (zdravotnického) zařízení"
 * ^publisher = "NCEZ"
 * ^experimental = false
 * ^url = "https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-drzar-vs"
+* insert SetFmmandStatusRule(2, trial-use)
+
 * include codes from system CZ_DrzarCS
