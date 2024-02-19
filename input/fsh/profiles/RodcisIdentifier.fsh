@@ -3,10 +3,11 @@ Parent: Identifier
 Id: cz-rodcis-identifier
 Title: "Rodné číslo / Czech national birth number"
 Description: "Tato struktura obsahuje český identifikátor osoby (rodné číslo)"
+* insert SetFmmandStatusRule(1, draft)
 * use = #official (exactly)
-* system 1..
+* system 1..1
 * system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis" (exactly)
-* value 1..
+* value 1..1
   * obeys rc
   * ^maxLength = 10
   * ^mustSupport = false
