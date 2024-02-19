@@ -11,4 +11,6 @@ Description: "Povolání zdravotnického pracovníka evidované v národním reg
 * ^publisher = "NCEZ"
 * ^experimental = false
 * ^url = "https://ncez.mzcr.cz/standards/fhir/ValueSet/nrzp-povolani-vs"
+* insert SetFmmandStatusRule(2, trial-use)
+
 * include codes from system NRZP_PovolaniCS
