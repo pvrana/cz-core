@@ -16,15 +16,31 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 * extension contains
   $sex-for-clinical-use named sex-for-clinical-use 0..* and
   $patient-birthPlace named birthPlace 0..1 and
-  $nationality named nationality 0..*
+  $nationality named nationality 0..* and
+  registering-provider-cz named registeringProvider 0..3 //V každém okamžiku může mít pacient nejvýše jednoho registrujícího praktického lékaře a nejvýše jednoho registrujícího zubaře. Pacientky mohou mít také nejvýše jednoho registrujícího gynekologa.
 
 * extension[sex-for-clinical-use] ^mustSupport = false
+
 * extension[birthPlace]
   * ^short = "Místo narození / Birth place"
 //  * ^definition = ""
 * extension[birthPlace].value[x] only CZ_Address
 
+* extension[nationality]
+  * ^short = "Státní občanství / Nationality"
+  * ^definition = "Státní občanství dle zákona 186/2013. Státní občanství, jak je uváděno na oficiálních dokladech k prokázání identity."
+* extension[nationality].extension[code].value[x] only CZ_CodeableConcept
+* extension[nationality].extension[period].value[x] only Period
+* extension[nationality].extension[code].valueCodeableConcept 1..1 MS
+* extension[nationality].extension[code].valueCodeableConcept from $iso3166-1-2
+
+* extension[registeringProvider]
+  * ^short = "Registrující poskytovatel primární ambulantní péče / Registering primary outpatient healthcare provider"
+  * ^definition = "Registrujícím poskytovatelem se rozumí poskytovatel ambulantní péče v oboru všeobecné praktické lékařství, v oboru praktické lékařství pro děti a dorost, v oboru zubní lékařství nebo v oboru gynekologie a porodnictví, který přijal pacienta do péče za účelem poskytnutí primární ambulantní péče."
+  * ^comment = """V každém okamžiku může mít pacient nejvýše jednoho registrujícího poskytovatele v oboru všeobecné praktické lékařství nebo v oboru praktické lékařství pro děti a dorost a jednoho registrujícího poskytovatele v oboru zubního lékařství. Pacientky mohou mít také nejvýše jednoho registrujícího poskytovatele v oboru gynekologie a porodnictví.\n\nAt any one time, a patient may have no more than one general practitioner or paediatric and adolescent practitioner and one dental registrar. Female patients may also have no more than one registered provider in gynaecology and obstetrics."""
+
 * language = urn:ietf:bcp:47#cs_CZ
+
 * identifier MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -65,7 +81,6 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 * identifier[PAS].use = #official
 * identifier[PAS].type = $v2-0203#PPN
 * identifier[PAS].value 1..1
-
 
 * name 1..* MS  // patient name element must be provided
 * name only HumanNameCz  // HumanNameCz adds extensions for spanish and portugal name parts
@@ -117,27 +132,15 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 * address obeys cnt-2-char
 
 * generalPractitioner MS  // general practicioner must be supported
+  * ^short = "Lékař či poskytovatel určený pacientem"
   * ^definition = "Praktický lékař či jiný poskytovatel určený pacientem. / Patient's nominated care provider.\n\nUpzorňujeme, že se jedná pouze o informační údaj, který nemusí znamenat jakýkoliv právně závazný terapeutický vztah mezi pacientem a lékařem či poskytovatelem či souhlas pacienta s poskytováním informací. Doporučujeme tento údaj uvést, pokud je k dispozici a pokud se jedná o informaci související s lékařskou péčí. Upozorňujeme, že se jedná o prvek datového typu Reference. To znamená, že pokud je k dispozici, bude obsahovat buď relativní, nebo absolutní adresu URL, kde lze tohoto praktického lékaře nalézt. Případně je k dispozici pouze interní odkaz a GP je zahrnut jako \"obsažený zdroj\" (viz specifikace HL7 FHIR)./ Take note this does not automatically imply any legal form of therapeutic link or consent relationship with this GP. It is RECOMMENDED to include this when available if the flow is in any way medical. Please note this is an element of the Reference datatype. This means when it is available it will contain either a relative or absolute URL where this GP can be found. Alternatively, there is only an internal reference and the GP is included as a ‘contained resource’ (cfr. the HL7 FHIR specifications in what cases this applies)."
-  * ^comment = "Může to být registrující poskytovatel primární péče (PL, PLDD, gynekolog), nebo to může být pacientem určený pečovatel v komunitním prostředí či prostředí pro osoby se zdravotním postižením, nebo organizace, která poskytne osoby, kteří budou plnit roli poskytovatele péče. Nemá se používat k evidenci týmů péče, ty by měly být ve zdroji CareTeam, který může být propojen se zdroji CarePlan nebo EpisodeOfCare. \nU pacienta může být z různých důvodů zaznamenáno více praktických lékařů, například student, který má svého domácího praktického lékaře uvedeného spolu s praktickým lékařem na univerzitě, nebo pracovník, který má vedle svého domácího praktického lékaře uvedeného také praktického lékaře na pracovišti, aby byl informován o zdravotních problémech.\n\nThis may be the registering primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disability setting, or even organization that will provide people to perform the care provider roles. It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.\nMultiple GPs may be recorded against the patient for various reasons, such as a student that has his home GP listed along with the GP at university during the school semesters, or a \"fly-in/fly-out\" worker that has the onsite GP also included with his home GP to remain aware of medical issues.\n\nJurisdictions may decide that they can profile this down to 1 if desired, or 1 per type."
+  * ^comment = """Může to být poskytovatel primární či specializované ambulantní péče, nebo to může být pacientem určený pečovatel v komunitním prostředí či prostředí pro osoby se zdravotním postižením, nebo organizace, která poskytne osoby, kteří budou plnit roli poskytovatele péče. Pokud jde o registrujícího poskytovatele, bude odkaz zároveň uveden v extenzi \"registeringProvider\". Tento element se nemá používat k evidenci týmů péče, ty by měly být ve zdroji CareTeam, který může být propojen se zdroji CarePlan nebo EpisodeOfCare. \nU pacienta může být z různých důvodů zaznamenáno více poskytovatelů, například student, který má svého domácího praktického lékaře uvedeného spolu s praktickým lékařem na univerzitě, nebo pracovník, který má vedle svého domácího praktického lékaře uvedeného také praktického lékaře na pracovišti, aby byl informován o zdravotních problémech.\n\nThis may be a primary or specialist outpatient care provider, or it may be a patient-designated carer in a community or disability setting, or an organisation that provides people to act as care providers. If it is a registering provider, the reference will also be included in the \"registeringProvider\" extension. This element should not be used to register care teams, these should be in the CareTeam resource, which can be linked to the CarePlan or EpisodeOfCare resources. \n Multiple providers may be recorded for a patient for different reasons, for example a student who has their GP listed alongside their GP at the university, or a worker who has a GP listed alongside their GP at the workplace to keep them informed of health issues."""
 * generalPractitioner only Reference(CZ_Organization or CZ_Practitioner or CZ_PractitionerRole)
 
 * managingOrganization only Reference(CZ_Organization)
-* managingOrganization ^definition = "Organizace, která je správcem záznamu o pacientovi.\n\nTento údaj by měl být uveden, pokud je k dispozici. Upozorňujeme, že se jedná o prvek datového typu Reference. To znamená, že pokud je k dispozici, bude obsahovat buď relativní, nebo absolutní adresu URL, kde lze tuto organizaci nalézt. Případně je zde pouze interní odkaz a Organizace je zahrnuta jako 'contined resource' (viz specifikace HL7 FHIR, v jakých případech se uplatňuje).\n\nOrganization that is the custodian of the patient record.\n\nThis SHOULD be included when available. Please note this is an element of the Reference datatype. This means when it is available it will contain either a relative or absolute URL where this Organization can be found. Alternatively, there is only an internal reference and the Organization is included as a ‘contained resource’ (cfr. the HL7 FHIR specifications in what cases this applies)."
-* managingOrganization ^comment = "Pro konkrétní záznam pacienta existuje pouze jedna organizace, která jej spravuje. Ostatní organizace budou mít svůj vlastní záznam pacienta a mohou použít element Link ke spárování záznamů (nebo resource Person, který může obsahovat hodnocení důvěryhodnosti pro toto spojení).\n\nThere is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association)."
-
-* extension[nationality]
-  * ^short = "Státní občanství / Nationality"
-  * ^definition = "Státní občanství dle zákona 186/2013. Státní občanství, jak je uváděno na oficiálních dokladech k prokázání identity."
-* extension[nationality].extension[code].value[x] only CZ_CodeableConcept
-* extension[nationality].extension[period].value[x] only Period
-* extension[nationality].extension[code].valueCodeableConcept 1..1 MS
-* extension[nationality].extension[code].valueCodeableConcept from $iso3166-1-2
-
-* extension[nationality]
-  * ^short = "Státní občanství / Nationality"
-  * ^definition = "Státní občanství dle zákona 186/2013. Státní občanství, jak je uváděno na oficiálních dokladech k prokázání identity."
-
-
+  * ^short = "Organizace, která je správcem elektronického záznamu / Organization that is the custodian of the patient record"
+  * ^definition = "Organizace, která je správcem záznamu o pacientovi.\n\nTento údaj by měl být uveden, pokud je k dispozici. Upozorňujeme, že se jedná o prvek datového typu Reference. To znamená, že pokud je k dispozici, bude obsahovat buď relativní, nebo absolutní adresu URL, kde lze tuto organizaci nalézt. Případně je zde pouze interní odkaz a Organizace je zahrnuta jako 'contined resource' (viz specifikace HL7 FHIR, v jakých případech se uplatňuje).\n\nOrganization that is the custodian of the patient record.\n\nThis SHOULD be included when available. Please note this is an element of the Reference datatype. This means when it is available it will contain either a relative or absolute URL where this Organization can be found. Alternatively, there is only an internal reference and the Organization is included as a ‘contained resource’ (cfr. the HL7 FHIR specifications in what cases this applies)."
+  * ^comment = "Pro konkrétní záznam pacienta existuje pouze jedna organizace, která jej spravuje. Ostatní organizace budou mít svůj vlastní záznam pacienta a mohou použít element Link ke spárování záznamů (nebo resource Person, který může obsahovat hodnocení důvěryhodnosti pro toto spojení).\n\nThere is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association)."
 
 * contact ^definition = "Kontaktní osoba (např. opatrovník, partner, přítel) pacienta.\n\nDOPORUČUJE SE uvést ji, pokud je k dispozici a pokud je považována za relevantní pro péči o pacienta. (např. rodič dítěte).\n\nA contact party (e.g. guardian, partner, friend) for the patient.\n\nIt is RECOMMENDED to include this when available and considered relevant for the patientcare. (e.g. a parent of a young patient)"
 * contact ^comment = "Kontakt zahrnuje všechny druhy kontaktních osob: rodinné příslušníky, obchodní kontakty, opatrovníky, pečovatele. Nevztahuje se na evidenci rodokmenu a rodinných vazeb mimo rámec použití týkající se kontaktů.\n\nContact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact."
@@ -156,7 +159,6 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 * contact.gender from $CZ_AdministrativegenderVS
 
 // zvážit zda přidat:
-// - místo narození (patient-birthPlace)
 // - národnost (česká, moravská ...)
 // - zaměstnání
 // - vzdělání
