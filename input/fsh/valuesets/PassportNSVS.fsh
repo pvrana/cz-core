@@ -1,13 +1,16 @@
 ValueSet: PassportNSVS
 Id: passport-NS-VS
 Description: "Číselník jmenných prostorů pasů"
-//* ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
-* ^url = "https://ncez.mzcr.cz/standards/fhir/ig/core/CodeSystem/cz-drzar"
+* ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+* ^title = "Standardní jmenné prostory pro cestovní pasy"
+* ^url = "https://ncez.mzcr.cz/standards/fhir/ValueSet/PassportNS-vs"
 * ^version = "1.0.0"
-* ^status = #active
+* ^status = #draft
 * ^experimental = false
 * ^date = "2023-01-01"
 * ^publisher = "NCEZ"
+//* ^language = #cs
+* insert SetFmmandStatusRule(1, draft)
 
 * $uri#http://hl7.org/fhir/sid/passport-AFG "Pas: Afghanistan"
 * $uri#http://hl7.org/fhir/sid/passport-ALB "Pas: Albania"
