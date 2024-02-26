@@ -72,8 +72,10 @@ Description: "Pacientka, kontaktní informace a praktický lékař"
 * generalPractitioner.identifier.value = "123456789"
 * generalPractitioner.display = "MUDr. Josef Švejk"
 
-* extension[registeringProvider].extension[value].valueReference = Reference (Organization/RegisteringProviderExample)
-* extension[registeringProvider].extension[category].valueCodeableConcept = cz-tab-ta#4 "registrující lékař"
+* extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
+* extension[registeringProvider][=].extension[category].valueCodeableConcept = cz-tab-ta#4 "registrující lékař"
+* extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
+* extension[registeringProvider][=].extension[category].valueCodeableConcept = cz-tab-ta#4 "registrující lékař"
 
 Instance: RegisteringProviderExample
 InstanceOf: Organization
