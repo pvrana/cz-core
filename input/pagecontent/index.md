@@ -9,3 +9,20 @@ Níže je uveden seznam hlavních profilů CZ Core. Každý profil identifikuje,
 Jednoduchý popisný souhrn obsahuje požadavky a pokyny pro každý profil. Formální hierarchická tabulka představuje [logický pohled] na obsah jak v rozdílovém pohledu, tak i ve snímku a jsou uvedeny odkazy na příslušnou terminologii a příklady.
 
 {% include sd-list-generator.md %}
+
+### Závislosti
+
+{% include dependency-table.xhtml %}
+
+### Cross Version Analysis
+
+{% include cross-version-analysis.xhtml %}
+
+### Globální Profily
+
+{% include globals-table.xhtml %}
+
+### IP statements
+
+{% include ip-statements.xhtml %}
+
