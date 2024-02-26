@@ -23,6 +23,7 @@ Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-bir
 Alias: $sex-for-clinical-use = http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse
 Alias: $recordedSexOrGender = http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender
 Alias: $nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
+Alias: $registering-provider = https://ncez.mzcr.cz/standards/fhir/ig/core/StructureDefinition/registering-provider-cz
 
 // Valuesets:
 Alias: $CZ_AdministrativegenderVS = https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-administrative-gender-vs
