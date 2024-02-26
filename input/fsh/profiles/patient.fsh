@@ -17,7 +17,7 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
   $sex-for-clinical-use named sex-for-clinical-use 0..* and
   $patient-birthPlace named birthPlace 0..1 and
   $nationality named nationality 0..* and
-  registering-provider-cz named registeringProvider 0..3 //V každém okamžiku může mít pacient nejvýše jednoho registrujícího praktického lékaře a nejvýše jednoho registrujícího zubaře. Pacientky mohou mít také nejvýše jednoho registrujícího gynekologa.
+  $registering-provider named registeringProvider 0.. //V každém okamžiku může mít pacient nejvýše jednoho registrujícího praktického lékaře a nejvýše jednoho registrujícího zubaře. Pacientky mohou mít také nejvýše jednoho registrujícího gynekologa.
 
 * extension[sex-for-clinical-use] ^mustSupport = false
 
@@ -38,6 +38,7 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
   * ^short = "Registrující poskytovatel primární ambulantní péče / Registering primary outpatient healthcare provider"
   * ^definition = "Registrujícím poskytovatelem se rozumí poskytovatel ambulantní péče v oboru všeobecné praktické lékařství, v oboru praktické lékařství pro děti a dorost, v oboru zubní lékařství nebo v oboru gynekologie a porodnictví, který přijal pacienta do péče za účelem poskytnutí primární ambulantní péče."
   * ^comment = """V každém okamžiku může mít pacient nejvýše jednoho registrujícího poskytovatele v oboru všeobecné praktické lékařství nebo v oboru praktické lékařství pro děti a dorost a jednoho registrujícího poskytovatele v oboru zubního lékařství. Pacientky mohou mít také nejvýše jednoho registrujícího poskytovatele v oboru gynekologie a porodnictví.\n\nAt any one time, a patient may have no more than one general practitioner or paediatric and adolescent practitioner and one dental registrar. Female patients may also have no more than one registered provider in gynaecology and obstetrics."""
+* obeys(cz-pat-2)
 
 * language = urn:ietf:bcp:47#cs_CZ
 
@@ -128,8 +129,8 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 */
 * address MS
 * address only CZ_Address
-* address ^definition = "Adresa fyzické osoby. / An address for the individual. \n\nDOPORUČUJE SE uvést adresu, pokud je k dispozici. / It is RECOMMENDED to include an address when available."
-* address obeys cnt-2-char
+  * ^definition = "Adresa fyzické osoby. / An address for the individual. \n\nDOPORUČUJE SE uvést adresu, pokud je k dispozici. / It is RECOMMENDED to include an address when available."
+  * obeys cnt-2-char
 
 * generalPractitioner MS  // general practicioner must be supported
   * ^short = "Lékař či poskytovatel určený pacientem"
