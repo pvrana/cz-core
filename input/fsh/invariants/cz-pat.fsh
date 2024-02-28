@@ -6,4 +6,4 @@ Expression: "family.exists() or given.exists() or text.exists() or extension('ht
 Invariant: cz-pat-2
 Description: "Pacient může mít pouze jednoho registrujícího lékaře daného typu"
 Severity: #error
-Expression: "extension('$registering-provider').exists() implies extension('$registering-provider').category.IsDistinct()"
+Expression: "extension('$registering-provider').extension('category').isDistinct()"
