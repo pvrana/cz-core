@@ -10,11 +10,15 @@ Description: "Číselník typů registrujících lékařů"
 * ^date = "2024-01-23"
 * ^publisher = "NCEZ"
 * ^experimental = false
-* ^url = "https://ncez.mzcr.cz/standards/fhir/ValueSet/typ-registrujiciho-lekare-vs"
+* ^url = "https://ncez.mzcr.cz/fhir/ValueSet/typ-registrujiciho-lekare-vs"
 * insert SetFmmandStatusRule(1, draft)
 
-* cz-tab-ta#4 "registrující lékař"
-* cz-tab-ta#G "registrující gynekolog"
-* cz-tab-ta#M "registrující stomatolog"
-
+//* include codes from system snomed-supplement-service-type
+//* include codes from system snomed-supplement-service-type--1.0.0
+//* cz-tab-ta#4 "registrující lékař"
+//* cz-tab-ta#G "registrující gynekolog"
+//* cz-tab-ta#M "registrující stomatolog"
+* $sct#700232004 "Všeobecné lékařské služby"
+* $sct#310060005 "Gynekologické a porodnické služby"
+* $sct#722176000 "Stomatologické služby"
 

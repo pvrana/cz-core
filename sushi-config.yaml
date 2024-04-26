@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ncez.cz.fhir.core
-canonical: https://ncez.mzcr.cz/standards/fhir/ig/core
+canonical: https://ncez.mzcr.cz/fhir/core
 name: CzCoreImplementationGuide
 title: Czech Core Resources IG
 description: Czech National Core Resources Implementation Guide
@@ -32,7 +32,8 @@ publisher:
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 dependencies:
-  hl7.fhir.uv.ips: current
+  # hl7.fhir.uv.ips: current
+  hl7.fhir.uv.ips: 1.1.0
 #  hl7.fhir.us.mcode: current
 #
 #
@@ -66,18 +67,19 @@ dependencies:
 #
 parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   special-url:
-    - https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-administrative-gender-vs
-    - https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-contact-person-relation-vs
-    - https://ncez.mzcr.cz/standards/fhir/CodeSystem/cz-drzar
-    - https://ncez.mzcr.cz/standards/fhir/CodeSystem/nrzp-povolani
-    - https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-drzar-vs
-    - https://ncez.mzcr.cz/standards/fhir/ValueSet/nrzp-povolani-vs
-    - https://ncez.mzcr.cz/standards/fhir/ValueSet/PassportNS-vs
-    - https://ncez.mzcr.cz/standards/fhir/CodeSystem/cz-tab-ta
-    - https://ncez.mzcr.cz/standards/fhir/ValueSet/typ-registrujiciho-lekare-vs
-    - https://ncez.mzcr.cz/standards/fhir/CodeSystem/role-code-supplement
-    - https://ncez.mzcr.cz/standards/fhir/CodeSystem/contact-role-supplement
-#    - http://ncez.mzcr.cz/standards/fhir/StructureDefinition/address-point-cz
+    - https://ncez.mzcr.cz/fhir/ValueSet/cz-administrative-gender-vs
+    - https://ncez.mzcr.cz/fhir/ValueSet/cz-contact-person-relation-vs
+    - https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
+    - https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani
+    - https://ncez.mzcr.cz/fhir/ValueSet/cz-drzar-vs
+    - https://ncez.mzcr.cz/fhir/ValueSet/nrzp-povolani-vs
+    - https://ncez.mzcr.cz/fhir/ValueSet/PassportNS-vs
+    - https://ncez.mzcr.cz/fhir/CodeSystem/cz-tab-ta
+    - https://ncez.mzcr.cz/fhir/ValueSet/typ-registrujiciho-lekare-vs
+    - https://ncez.mzcr.cz/fhir/CodeSystem/role-code-supplement
+    - https://ncez.mzcr.cz/fhir/CodeSystem/contact-role-supplement
+    - https://ncez.mzcr.cz/fhir/CodeSystem/snomed-supplement-service-type
+#    - http://ncez.mzcr.cz/fhir/StructureDefinition/address-point-cz
 # path-resource:
 #    - input/resources
 #    - fsh-generated/resources

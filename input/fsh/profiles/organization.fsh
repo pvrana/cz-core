@@ -22,13 +22,13 @@ Description: "Český národní profil pro resource Organization. / Czech nation
     ICO 0..1 and
     ICZ 0..1 and
     ICP 0..1
-* identifier[NRPZS].system = "https://ncez.mzcr.cz/standards/fhir/sid/nrpzs" (exactly)
+* identifier[NRPZS].system = "https://ncez.mzcr.cz/fhir/sid/nrpzs" (exactly)
 * identifier[NRPZS].value 1..
-* identifier[ICO].system = "https://ncez.mzcr.cz/standards/fhir/sid/ico" (exactly)
+* identifier[ICO].system = "https://ncez.mzcr.cz/fhir/sid/ico" (exactly)
 * identifier[ICO].value 1..
-* identifier[ICZ].system = "https://ncez.mzcr.cz/standards/fhir/sid/icz" (exactly)
+* identifier[ICZ].system = "https://ncez.mzcr.cz/fhir/sid/icz" (exactly)
 * identifier[ICZ].value 1..
-* identifier[ICP].system = "https://ncez.mzcr.cz/standards/fhir/sid/icp" (exactly)
+* identifier[ICP].system = "https://ncez.mzcr.cz/fhir/sid/icp" (exactly)
 * identifier[ICP].value 1..
 
 * active ^definition = "Informace o tom, zda je záznam organizace stále aktivně používán. / Whether the organization's record is still in active use."

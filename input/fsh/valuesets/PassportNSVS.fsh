@@ -3,7 +3,7 @@ Id: passport-NS-VS
 Description: "Číselník jmenných prostorů pasů"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
 * ^title = "Standardní jmenné prostory pro cestovní pasy"
-* ^url = "https://ncez.mzcr.cz/standards/fhir/ValueSet/PassportNS-vs"
+* ^url = "https://ncez.mzcr.cz/fhir/ValueSet/PassportNS-vs"
 * ^version = "1.0.0"
 * ^status = #draft
 * ^experimental = false

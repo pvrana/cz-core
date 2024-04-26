@@ -8,4 +8,4 @@ Description: "Tato extenze umožňuje zápis kódu adresního místa dle registr
 
 //* ^url = "http://ncez.mzcr.cz/standards/fhir/StructureDefinition/address-point-cz"
 * value[x] only Identifier
-* value[x].system = "https://ncez.mzcr.cz/standards/fhir/sid/ruian" (exactly)
+* value[x].system = "https://ncez.mzcr.cz/fhir/sid/ruian" (exactly)

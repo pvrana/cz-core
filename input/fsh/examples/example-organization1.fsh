@@ -2,7 +2,7 @@ Instance: Organization-1
 InstanceOf: CZ_Organization
 Usage: #example
 Description: "Příklad orgnizace poskytovatele"
-* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/ico"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "27520536"
 * type[DRZAR] = $drzar#102 "Nemocnice"
 * name = "Nemocnice Chrudim"

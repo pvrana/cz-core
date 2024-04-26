@@ -20,11 +20,11 @@ Description: "Czech national profile for practitioner."
     NRZP 0..* and
     CLK 0..* and
     CLeK 0..*
-* identifier[NRZP].system = "https://ncez.mzcr.cz/standards/fhir/sid/nrzp" (exactly)
+* identifier[NRZP].system = "https://ncez.mzcr.cz/fhir/sid/nrzp" (exactly)
 * identifier[NRZP].value 1..
-* identifier[CLK].system = "https://ncez.mzcr.cz/standards/fhir/sid/clk" (exactly)
+* identifier[CLK].system = "https://ncez.mzcr.cz/fhir/sid/clk" (exactly)
 * identifier[CLK].value 1..
-* identifier[CLeK].system = "https://ncez.mzcr.cz/standards/fhir/sid/clek" (exactly)
+* identifier[CLeK].system = "https://ncez.mzcr.cz/fhir/sid/clek" (exactly)
 * identifier[CLeK].value 1..
 * active ^definition = "Whether this practitioner's record is in active use. \r\n\r\nIt is RECOMMENDED to keep the value ‘true’ as long as the practitioner is still being treated by the provider of the data."
 

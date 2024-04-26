@@ -2,7 +2,7 @@ Instance: Organization-2
 InstanceOf: CZ_Organization
 Usage: #example
 Description: "Příklad organizace poskytovatele, praktického lékaře"
-* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/ico"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"
 * type[+] = $drzar#320 "Samost. ordinace všeob. prakt. lékaře"
 * name = "MUDr. Stanislava Kubšová"

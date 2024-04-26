@@ -12,7 +12,7 @@ Description: "Czech national code system for type of healthcare facility."
 * ^publisher = "DASTA"
 * ^caseSensitive = true
 * ^content = #complete
-* ^url = "https://ncez.mzcr.cz/standards/fhir/CodeSystem/cz-drzar"
+* ^url = "https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar"
 * insert SetFmmandStatusRule(2, trial-use)
 
 * #010

@@ -2,7 +2,7 @@ CodeSystem: RoleCodeSupplement
 Id: role-code-supplement
 Description: "CodeSystem Supplement pro PersonalRelationship"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://ncez.mzcr.cz/standards/fhir/CodeSystem/role-code-supplement"
+* ^url = "https://ncez.mzcr.cz/fhir/CodeSystem/role-code-supplement"
 * ^title = "Kódový systém osobních a příbuzenských vztahů k subjektu"
 * ^version = "1.0.0"
 * ^status = #active

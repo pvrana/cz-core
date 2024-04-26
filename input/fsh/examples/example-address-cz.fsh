@@ -2,7 +2,7 @@ Instance: cz-patient-addr-example-1
 InstanceOf: CZ_Patient
 Usage: #example
 Description: "Adresa typu \"both\" (fyzická i doručovací)"
-* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
@@ -23,7 +23,7 @@ InstanceOf: CZ_Patient
 Usage: #example
 Description: "Adresa s P.O.Boxem"
 
-* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
@@ -42,7 +42,7 @@ InstanceOf: CZ_Patient
 Usage: #example
 Description: "Adresa trvalého pobytu"
 
-* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
@@ -63,7 +63,7 @@ InstanceOf: CZ_Patient
 Usage: #example
 Description: "Adresa trvalého pobytu mimo ČR"
 
-* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
@@ -83,7 +83,7 @@ Instance: cz-patient-addr-example-5
 InstanceOf: CZ_Patient
 Usage: #example
 Description: "Adresa s uvedením adresního místa dle RUIAN"
-* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
@@ -97,7 +97,7 @@ Description: "Adresa s uvedením adresního místa dle RUIAN"
 * address.city = "Praha"
 * address.postalCode = "15000"
 * address.country = "CZ"
-//* address.extension[addressPoint].valueIdentifier.system = "https://ncez.mzcr.cz/standards/fhir/sid/ruian"
+//* address.extension[addressPoint].valueIdentifier.system = "https://ncez.mzcr.cz/fhir/sid/ruian"
 * address.extension[addressPoint].valueIdentifier.value = "27318508"
 
 

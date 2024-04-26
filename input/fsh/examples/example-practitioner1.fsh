@@ -2,9 +2,9 @@ Instance: Practitioner-123456789
 InstanceOf: CZ_Practitioner
 Usage: #example
 Description: "Zdravotnický pracovník id(NRZP)=123456789"
-* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/nrzp"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/nrzp"
 * identifier[=].value = "123456789"
-//* identifier[+].system = "https://ncez.mzcr.cz/standards/fhir/sid/clk"
+//* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/clk"
 //* identifier[=].value = "4567891230"
 * name.use = #usual
 * name.prefix = "MUDr."

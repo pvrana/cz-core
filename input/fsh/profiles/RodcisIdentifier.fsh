@@ -6,7 +6,7 @@ Description: "Tato struktura obsahuje český identifikátor osoby (rodné čís
 * insert SetFmmandStatusRule(1, draft)
 * use = #official (exactly)
 * system 1..1
-* system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis" (exactly)
+* system = "https://ncez.mzcr.cz/fhir/sid/rcis" (exactly)
 * value 1..1
   * obeys rc
   * ^maxLength = 10

@@ -40,7 +40,7 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
   * ^comment = """V každém okamžiku může mít pacient nejvýše jednoho registrujícího poskytovatele v oboru všeobecné praktické lékařství nebo v oboru praktické lékařství pro děti a dorost a jednoho registrujícího poskytovatele v oboru zubního lékařství. Pacientky mohou mít také nejvýše jednoho registrujícího poskytovatele v oboru gynekologie a porodnictví.\n\nAt any one time, a patient may have no more than one general practitioner or paediatric and adolescent practitioner and one dental registrar. Female patients may also have no more than one registered provider in gynaecology and obstetrics."""
 * obeys(cz-pat-2)
 
-* language = urn:ietf:bcp:47#cs_CZ
+* language = urn:ietf:bcp:47#cs
 
 * identifier MS
 * identifier ^slicing.discriminator.type = #value
@@ -52,25 +52,25 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
   * ^short = "Rodné číslo (Personal Number)"
   * ^definition = "Identifikátor pacienta přidělený podle zákona o evidenci obyvatel. / Patient identifier assigned under the Czech Population Registration Act."
 * identifier[RC] only CZ_Rodcis_Identifier
-//* identifier[RC].system = "https://ncez.mzcr.cz/standards/fhir/sid/rcis" (exactly)  // could be also "urn:oid:2.16.840.1.113883.2.40.1"
+//* identifier[RC].system = "https://ncez.mzcr.cz/fhir/sid/rcis" (exactly)  // could be also "urn:oid:2.16.840.1.113883.2.40.1"
 //* identifier[RC].value 1..1
 * identifier contains RID 0..1 MS
 * identifier[RID]
   * ^short = "Resortní identifikátor (National Health Identifier)"
   * ^definition = "Jedinečný identifikátor pacienta (resortní identifikátor) podle Národního registru pacientů. / An unique patient identifier (resortní identifikátor) according to the National Patient Register"
-* identifier[RID].system = "https://ncez.mzcr.cz/standards/fhir/sid/rid" (exactly)
+* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid" (exactly)
 * identifier[RID].value 1..1
 * identifier contains CPOJ 0..1 MS
 * identifier[CPOJ]
   * ^short = "Číslo pojištěnce zdravotního pojištění (Health Insurance Number)"
   * ^definition = "Jedinečný identifikátor pacienta (číslo pojištěnce) podle Národního registru zdravotního pojištění. / An unique patient identifier (číslo pojištěnce) according to the National Health Insurance Register"
-* identifier[CPOJ].system = "https://ncez.mzcr.cz/standards/fhir/sid/cpoj" (exactly)
+* identifier[CPOJ].system = "https://ncez.mzcr.cz/fhir/sid/cpoj" (exactly)
 * identifier[CPOJ].value 1..1
 * identifier contains OP 0..1 MS
 * identifier[OP]
   * ^short = "Číslo občanského průkazu (National Identity Card Number)"
   * ^definition = "Jedinečný identifikátor pacienta (číslo občanského průkazu) vydaného ministerstvem vnitra. / An unique patient identifier (National ID Card Number) issued by the ministry of interior"
-* identifier[OP].system = "https://ncez.mzcr.cz/standards/fhir/sid/op" (exactly)
+* identifier[OP].system = "https://ncez.mzcr.cz/fhir/sid/op" (exactly)
 * identifier[OP].value 1..1
 * identifier contains PAS 0..* MS
 * identifier[PAS]

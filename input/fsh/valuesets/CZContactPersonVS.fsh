@@ -10,7 +10,7 @@ Description: "Vztah kontaktní osoby k subjektu"
 * ^date = "2022-12-26"
 * ^publisher = "NCEZ"
 * ^experimental = false
-* ^url = "https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-contact-person-relation-vs"
+* ^url = "https://ncez.mzcr.cz/fhir/ValueSet/cz-contact-person-relation-vs"
 * insert SetFmmandStatusRule(2, trial-use)
 
 * include codes from system $v2-0131 where concept is-not-a "O"

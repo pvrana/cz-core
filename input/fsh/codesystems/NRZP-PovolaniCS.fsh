@@ -12,7 +12,7 @@ Description: "Národní registr zdravotnických pracovníků (NRZP) - Národní 
 * ^publisher = "DASTA"
 * ^caseSensitive = true
 * ^content = #complete
-* ^url = "https://ncez.mzcr.cz/standards/fhir/CodeSystem/nrzp-povolani"
+* ^url = "https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani"
 * insert SetFmmandStatusRule(2, trial-use)
 
 * #L1

@@ -12,7 +12,7 @@ Description: "Kódový systém typů adresy DASTA / Czech national code system (
 * ^publisher = "DASTA"
 * ^caseSensitive = true
 * ^content = #complete
-* ^url = "https://ncez.mzcr.cz/standards/fhir/CodeSystem/cz-tab-ta"
+* ^url = "https://ncez.mzcr.cz/fhir/CodeSystem/cz-tab-ta"
 * insert SetFmmandStatusRule(2, trial-use)
 
 * #1

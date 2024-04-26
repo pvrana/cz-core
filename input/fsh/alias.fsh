@@ -4,8 +4,8 @@ Alias: $sct =  http://snomed.info/sct
 Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
-Alias: $drzar = https://ncez.mzcr.cz/standards/fhir/CodeSystem/cz-drzar
-Alias: $nrzp_povolani = https://ncez.mzcr.cz/standards/fhir/CodeSystem/nrzp-povolani
+Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
+Alias: $nrzp_povolani = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani
 Alias: $uri = urn:ietf:rfc:3986
 Alias: $oid = urn:ietf:rfc:1155
 
@@ -23,11 +23,11 @@ Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-bir
 Alias: $sex-for-clinical-use = http://hl7.org/fhir/StructureDefinition/patient-sexParameterForClinicalUse
 Alias: $recordedSexOrGender = http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender
 Alias: $nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
-Alias: $registering-provider = https://ncez.mzcr.cz/standards/fhir/ig/core/StructureDefinition/registering-provider-cz
+Alias: $registering-provider = https://ncez.mzcr.cz/fhir/core/StructureDefinition/registering-provider-cz
 
 // Valuesets:
-Alias: $CZ_AdministrativegenderVS = https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-administrative-gender-vs
-Alias: $cz-contactperson-relation = https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-contact-person-relation-vs
+Alias: $CZ_AdministrativegenderVS = https://ncez.mzcr.cz/fhir/ValueSet/cz-administrative-gender-vs
+Alias: $cz-contactperson-relation = https://ncez.mzcr.cz/fhir/ValueSet/cz-contact-person-relation-vs
 Alias: $MedicalDevicesSnomedAbsentUnknownUvIps = http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-snomed-absent-unknown-uv-ips
 Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 

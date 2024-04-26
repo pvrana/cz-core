@@ -10,7 +10,7 @@ Description: "Druh (zdravotnického) zařízení"
 * ^date = "2022-12-26"
 * ^publisher = "NCEZ"
 * ^experimental = false
-* ^url = "https://ncez.mzcr.cz/standards/fhir/ValueSet/cz-drzar-vs"
+* ^url = "https://ncez.mzcr.cz/fhir/ValueSet/cz-drzar-vs"
 * insert SetFmmandStatusRule(2, trial-use)
 
 * include codes from system CZ_DrzarCS

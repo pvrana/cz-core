@@ -2,12 +2,12 @@ CodeSystem: ContactRoleSupplement
 Id: contact-role-supplement
 Description: "CodeSystem Supplement pro kódový systém ContactRole"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-* ^url = "https://ncez.mzcr.cz/standards/fhir/CodeSystem/contact-role-supplement"
-* ^title = "Kódový systém typu kontaktní osoby pacienta"
+* ^url = "https://ncez.mzcr.cz/fhir/CodeSystem/contact-role-supplement"
+* ^title = "Kódový systém typů kontaktních osob pacienta"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-01-08"
+* ^date = "2024-01-01"
 * ^publisher = "NCEZ"
 * ^content = #supplement
 * ^supplements = "http://terminology.hl7.org/CodeSystem/v2-0131"
