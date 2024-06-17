@@ -5,8 +5,8 @@ Id: cz-practitioner
 Title: "Practitioner (CZ)"
 Description: "Czech national profile for practitioner."
 //-------------------------------------------------------------------------------------------
-* ^publisher = "NCEZ"
-* ^version = "1.0.0"
+//* ^publisher = "HL7 CZ"
+//* ^version = "1.0.0"
 //* ^status = #active
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )

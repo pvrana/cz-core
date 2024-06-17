@@ -7,8 +7,8 @@ Description: """Tento profil představuje požadavky na Device v rámci českéh
 This profile represents the constraints applied to the Device resource by the Czech national interoperability project."""
 //* ^status = #active
 * ^experimental = false
-* ^publisher = "NCEZ"
-* ^version = "1.0.0"
+//* ^publisher = "HL7 CZ"
+//* ^version = "1.0.0"
 * ^purpose = "Tento profil vymezuje reprezentaci zdravotnického prostředku, který je používán pacientem nebo je pacientovi implantován. / This profile constrains the representation of a medical device used by or impanted on the patient."
 * . ^comment = "Tento profil aplikuje pravidla definovaná NCEZ pro reprezentaci UDI ve standardu FHIR dokumentem \"HL7 IG: UDI Pattern R2\". / This profile applies the rules defined by NCEZ for representing the UDI in the FHIR standard, by the document \"HL7 IG: UDI Pattern R2\""
 * insert SetFmmandStatusRule ( 1, draft )

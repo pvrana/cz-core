@@ -9,8 +9,8 @@ Národní specifikace dále obsahuje možnost zadání adresního místa dle reg
 Czech national profile on address, to provide the possibility in the 'line' element to provide a seperate streetname, housenumber and postal box.
 It is always RECOMMENDED to give these elements seperately. The national specification also includes the option of entering the address location according to the RUIAN register and marking the address as the permanent residence address."""
 //-------------------------------------------------------------------------------------------
-* ^publisher = "NCEZ"
-* ^version = "1.0.0"
+//* ^publisher = "HL7 CZ"
+//* ^version = "1.0.0"
 * ^experimental = false
 
 * . ^comment = "Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the [Location](location.html#) resource)."

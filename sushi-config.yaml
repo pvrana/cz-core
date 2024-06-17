@@ -3,23 +3,26 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: ncez.cz.fhir.core
-canonical: https://ncez.mzcr.cz/fhir/core
-name: CzCoreImplementationGuide
-title: Czech Core Resources IG
-description: Czech National Core Resources Implementation Guide
+id: hl7.fhir.cz.core
+canonical: https://hl7.cz/fhir/core
+name: HL7CzCoreImplementationGuide
+title: HL7 Czech Core Resources IG
+description: HL7 Czech Core Resources Implementation Guide
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2022+
+copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: Národní centrum elektronického zdravotnictví (NCEZ)
-  url: https://ncez.mzcr.cz
+  name: HL7 Czech Republic
+  url: https://hl7.cz
   # email: test@example.org
+
+copyright: >-
+  Used by permission of HL7 Czeh Republic, all rights reserved Creative Commons License
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced

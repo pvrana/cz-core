@@ -7,8 +7,8 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 // CZ_Patient je odvozen z IPS Patient a je rozšířen o položku státní občanství
 //-------------------------------------------------------------------------------------------
 * ^description = "Informace o osobě, které jsou poskytovány zdravotní služby / Information about an individual receiving health care services"
-* ^publisher = "NCEZ"
-* ^version = "1.0.0"
+//* ^publisher = "HL7 CZ"
+//* ^version = "1.0.0"
 //* ^status = #active
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )

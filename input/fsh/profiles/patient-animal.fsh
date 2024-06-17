@@ -5,8 +5,8 @@ Title:    "Pacient: Zvíře / Patient: Animal"
 Description: """Tento profil definuje, jak reprezentovat zvíře jako pacienta v systému FHIR.
 Používá se k identifikaci druhu zvířete, když je zvířeti odebrán vzorek.\n\nThis profile defines how to represent an Animal as subject of care in FHIR for the purpose of this guide.
 This is used to identify the species when a specimen is collected from an animal"""
-// * ^publisher = "NCEZ"
-// * ^copyright = "NCEZ"
+// * ^publisher = "HL7 CZ"
+// * ^copyright = "HL7 CZ"
 * insert SetFmmandStatusRule ( 1, draft )
 * extension contains $patient-animal named patient-animal 1..1
 * extension[patient-animal].extension[species]

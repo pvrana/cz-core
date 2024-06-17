@@ -5,8 +5,8 @@ Id:         cz-organization
 Title:      "Organization (CZ)"
 Description: "Český národní profil pro resource Organization. / Czech national profile for an organization."
 //-------------------------------------------------------------------------------------------
-* ^publisher = "NCEZ"
-* ^version = "1.0.0"
+//* ^publisher = "HL7 CZ"
+//* ^version = "1.0.0"
 //* ^status = #active
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )

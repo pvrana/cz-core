@@ -1,7 +1,7 @@
 Profile: HumanNameCz
 Parent: HumanName
 Id: HumanName-cz
-Title: "HumanName (Eu)"
+Title: "HumanName (Cz)"
 Description: """Evropský profil datového typu HumanName. Obsahuje rozšíření pro podporu více příjmení.
 
 European profile on HumanName data type. It includes extensions to support multiple family names."""
