@@ -163,3 +163,4 @@ Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro ú
 // - národnost (česká, moravská ...)
 // - zaměstnání
 // - vzdělání
+//
