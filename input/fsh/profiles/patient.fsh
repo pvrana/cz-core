@@ -4,7 +4,7 @@ Parent:   Patient
 Id:       cz-patient
 Title:    "Pacient/Patient (CZ)"
 Description: "Tento profil definuje způsob reprezentace pacienta ve FHIR pro účely českých národních standardů interoperability. / This profile defines how to represent Patient in FHIR for the purpose of the Czech national interoperability standards."
-// CZ_Patient je odvozen z IPS Patient a je rozšířen o položku státní občanství
+// CZ_Patient je odvozen z IPS Patient a je rozšířen o položku státní občanství (nationality)
 //-------------------------------------------------------------------------------------------
 * ^description = "Informace o osobě, které jsou poskytovány zdravotní služby / Information about an individual receiving health care services"
 //* ^publisher = "HL7 CZ"
