@@ -12,6 +12,7 @@ Description: "Číselník typů registrujících lékařů"
 * ^experimental = false
 * ^url = "https://ncez.mzcr.cz/fhir/ValueSet/typ-registrujiciho-lekare-vs"
 * insert SetFmmandStatusRule(1, draft)
+* insert SNOMEDCopyrightForVS
 
 //* include codes from system snomed-supplement-service-type
 //* include codes from system snomed-supplement-service-type--1.0.0
