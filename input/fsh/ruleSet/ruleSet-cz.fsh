@@ -34,3 +34,6 @@ RuleSet: NIBSCCopyrightForVS
 * ^copyright = "This material contains content from the NIBSC Product list (https://nibsc.org/NIBSC%20Product%20List%20-%20Feb%2024.pdf). The National Institute for Biological Standards and Control part of the UK Medicines and Healthcare products Regulatory Agency (MHRA)."
 * ^experimental = true
  */
+
+RuleSet: ImposeProfile ( profile )
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile].valueCanonical = {profile}
