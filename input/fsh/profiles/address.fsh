@@ -41,7 +41,7 @@ It is always RECOMMENDED to give these elements seperately. The national specifi
 * line.extension[streetName].value[x] only string
 * line.extension[houseNumber].value[x] only string
 * line.extension[postBox].value[x] only string
-//* country ^definition = "Country, the FHIR specification defines its country field as a string and suggests using a ISO 3166 2 or 3 letter codes. Use of 2-letter code to express country is RECOMMENDED"
+//*  country ^definition = "Country, the FHIR specification defines its country field as a string and suggests using a ISO 3166 2 or 3 letter codes. Use of 2-letter code to express country is RECOMMENDED"
 * country ^short = "Země"
 * country ^definition = """Země (dvoumístný kód země dle ISO 3166-1 Alfa-2 nebo volným textem). Element Address.country bude obsahovat název země, dvoupísmenný kód země bude uveden v extenzi.
 Povinné použití kódu země může být stanoveno v jednotlivých odvozených profilech.
