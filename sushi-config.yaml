@@ -6,7 +6,7 @@
 id: hl7.fhir.cz.core
 canonical: https://hl7.cz/fhir/core
 name: HL7CzCoreImplementationGuide
-title: HL7 Czech Core Resources IG
+title: HL7 Czech Core Implementation Guide
 description: HL7 Czech Core Resources Implementation Guide
 status: draft # draft | active | retired | unknown
 version: 0.1.0
@@ -18,7 +18,7 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: HL7 Czech Republic
-  url: https://hl7.cz
+  url: https://www.hl7.cz/
   # email: test@example.org
 
 #copyright: >-
@@ -60,6 +60,21 @@ dependencies:
 #     simpleExamples.xml:
 #     complexExamples.xml:
 #
+pages:
+  index.md:
+    title: Home
+  general-guidance.md:
+    title: General Guidance
+  identifiers.md:
+    title: Identifiers
+  artifacts.xml:
+    title: Summary artifacts
+  profiles-and-extensions.md:
+    title: Profiles and extensions
+  terminology.md:
+    title: Terminology
+  downloads.md:
+    title: Download
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -130,8 +145,15 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Artifacts: artifacts.html
-  Downloads: downloads.html
+  Guidance:
+    General guidance: general-guidance.html
+    Identifiers: identifiers.html
+  Artifacts: 
+    Czech core artifacts: artifacts.html
+    Profiles and extensions: profiles-and-extensions.html
+    Terminology: terminology.html
+  About:
+    Downloads: downloads.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

@@ -1,26 +1,31 @@
-### Úvod
+### Introduction 
+The CZ Core implementation guide is based on [FHIR version R4]. It defines the minimum rules for interoperability and national customization of FHIR resources, which is applied when creating national profiles for specific use cases. The establishment of "core" standards to support interoperability and their implementation in information systems creates a common basis for the interoperable exchange of health data.
 
-Implementační návod CZ Core vychází z [FHIR verze R4]. Definuje minimální pravidla interoperability a národní přizpůsobení zdrojů FHIR, která se uplatní při vytváření národních profilů pro konkrétní případy užití. Stanovení „základních“ norem na podporu interoperability a jejich implementace v informačních systémech vytváří společný základ pro interoperabilní výměnu zdravotních dat.
+In this implementation guide, you will find the rules for creating national profiles, the use of identifiers and basic information components.
 
-### Profily CZ Core
+### Scope
+This document presents Czech use concepts defined via FHIR processable artefacts; these are collaborative outputs with agreed approaches to varied kinds of healthcare related information based on the core FHIR R4 specification.
 
-Níže je uveden seznam hlavních profilů CZ Core. Každý profil identifikuje, které základní prvky, rozšíření, slovníky a sady hodnot **MUSÍ** být přítomny ve zdroji při použití tohoto profilu. Společně podporují interoperabilitu a představují společný základ pro vývoj standardů pro konkrétní případy použití.
+This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
-Jednoduchý popisný souhrn obsahuje požadavky a pokyny pro každý profil. Formální hierarchická tabulka představuje [logický pohled] na obsah jak v rozdílovém pohledu, tak i ve snímku a jsou uvedeny odkazy na příslušnou terminologii a příklady.
+- [Home](index.html): This page provides the introduction and scope for this guide.
+- [Guidance](guidance.html):  These pages list the guidance for this guide.
+  - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
+  - [Identifiers](identifiers.html): This page provides guidance on using identifiers.
+- [Artifacts](fhirartefacts.html): These pages provide detailed descriptions and formal definitions for all the Czech Core artefacts defined in this guide.
+  - [Artifacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
+  - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to represent Australian local concepts using FHIR. Each profile page includes a narrative description, guidance, and formal definition. Although the guidance typically focuses on the profiled elements and seeks to provide a ‘how-to’ guide when representing concepts, it may also may focus on un-profiled elements to aid with implementation.
+  - [Terminology](terminology.html): This page lists the value sets and code systems localised in this guide.
+- [About](support.html): These pages provide supporting material for implementation of Czech Core.
+  - [Downloads](downloads.html): This page provides links to downloadable artefacts.
 
-{% include sd-list-generator.md %}
-
-### Závislosti
+### Dependencies
 
 {% include dependency-table.xhtml %}
 
 ### Cross Version Analysis
 
 {% include cross-version-analysis.xhtml %}
-
-### Globální Profily
-
-{% include globals-table.xhtml %}
 
 ### IP statements
 
