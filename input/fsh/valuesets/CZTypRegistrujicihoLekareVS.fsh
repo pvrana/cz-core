@@ -1,7 +1,7 @@
 ValueSet: CZ_TypRegistrujicihoLekareVS
 Id: typ-registrujiciho-lekare-vs
-Title: "Typ registrujícího lékaře / Type of registering physician"
-Description: "Číselník typů registrujících lékařů"
+Title: "Type of registering physician"
+Description: "Valueset of types of registering physician"
 * ^language = #cs
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:1.2.203.24341.11.1.10"

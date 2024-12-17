@@ -25,7 +25,7 @@ Description: "Czech national profile for an practitioner role."
 * code contains  // TO-DO: zvážit ISCO urn:oid:2.16.840.1.113883.2.9.6.2.7 a zjistit, zda v této oblasti existuje použitelný kódový systém NZIS
     NRZP_POVOLANI 0..* //and
     //SNOMED-CT 0..*
-* code[NRZP_POVOLANI] ^definition = "Role/povolání ke kterým je zdravotnický pracovník oprávněn v rámci poskytovatele dle NRZP.\n\nRoles which this practitioner is authorized to perform for the organization according to the National registry of healthcare practitioners."
+* code[NRZP_POVOLANI] ^definition = "Roles which this practitioner is authorized to perform for the organization according to the National registry of healthcare practitioners."
 * code[NRZP_POVOLANI].coding.system = $nrzp_povolani (exactly)
 * code[NRZP_POVOLANI].coding.code 1..
 * code[NRZP_POVOLANI] from NRZP_PovolaniVS (required)

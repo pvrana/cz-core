@@ -2,10 +2,8 @@ Profile: HumanNameCz
 Parent: HumanName
 Id: HumanName-cz
 Title: "HumanName (Cz)"
-Description: """Evropský profil datového typu HumanName. Obsahuje rozšíření pro podporu více příjmení.
-
-European profile on HumanName data type. It includes extensions to support multiple family names."""
-* ^purpose = "Tento profil HumanName umožňuje vyjádřit více příjmení, jak požadují některé jurisdikce. / This profile of the HumanName allows for expressing multiple family names, as requested by some jurisdictions."
+Description: "European profile on HumanName data type. It includes extensions to support multiple family names."
+* ^purpose = "This profile of the HumanName allows for expressing multiple family names, as requested by some jurisdictions."
 * insert SetFmmandStatusRule ( 1, draft )
 
 * family ^example.label = "spanish name"

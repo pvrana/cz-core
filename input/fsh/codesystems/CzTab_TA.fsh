@@ -1,7 +1,7 @@
 CodeSystem: CZ_TabTaCS
 Id: cz-tab-ta
-Title: "Typ adresy DASTA"
-Description: "Kódový systém typů adresy DASTA / Czech national code system (DASTA) for type of address."
+Title: "Type of address (DASTA)"
+Description: "Czech national code system (DASTA) for type of address."
 
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:1.2.203.24341.11.2.4.4"

@@ -8,7 +8,7 @@ Usage: #definition
 * publisher = "NCEZ"
 * name = "AdministrativeGender"
 * title = "AdministrativeGender"
-* description = "Pohlaví pro úřední účely"
+* description = "Gender for administrative purposes"
 * experimental = false
 * compose.include[0].system = "http://hl7.org/fhir/administrative-gender"
 * compose.include[=].concept[0].code = #male

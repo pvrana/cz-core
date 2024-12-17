@@ -71,8 +71,6 @@ pages:
     title: Summary artifacts
   profiles-and-extensions.md:
     title: Profiles and extensions
-  terminology.md:
-    title: Terminology
   downloads.md:
     title: Download
 #
@@ -151,7 +149,6 @@ menu:
   Artifacts: 
     Czech core artifacts: artifacts.html
     Profiles and extensions: profiles-and-extensions.html
-    Terminology: terminology.html
   About:
     Downloads: downloads.html
 

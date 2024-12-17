@@ -1,9 +1,9 @@
 CodeSystem: SnomedCtSupplementServiceType
 Id: snomed-supplement-service-type
-Description: "CodeSystem Supplement 1 pro kódový systém Snomed CT"
+Description: "CodeSystem Supplement for the Snomed CT code system"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://ncez.mzcr.cz/fhir/CodeSystem/snomed-supplement-service-type"
-* ^title = "SNOMED CT Supplement typu registrujícího poskytovatele"
+* ^title = "SNOMED CT Supplement type for registering provider"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false

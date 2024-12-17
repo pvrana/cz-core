@@ -9,14 +9,13 @@ This document presents Czech use concepts defined via FHIR processable artefacts
 This guide is divided into several pages which are listed at the top of each page in the menu bar.
 
 - [Home](index.html): This page provides the introduction and scope for this guide.
-- [Guidance](guidance.html):  These pages list the guidance for this guide.
+- [Guidance]:
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
   - [Identifiers](identifiers.html): This page provides guidance on using identifiers.
-- [Artifacts](fhirartefacts.html): These pages provide detailed descriptions and formal definitions for all the Czech Core artefacts defined in this guide.
-  - [Artifacts Summary](artifacts.html): This page lists the FHIR artefacts defined in this guide.
-  - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to represent Australian local concepts using FHIR. Each profile page includes a narrative description, guidance, and formal definition. Although the guidance typically focuses on the profiled elements and seeks to provide a ‘how-to’ guide when representing concepts, it may also may focus on un-profiled elements to aid with implementation.
-  - [Terminology](terminology.html): This page lists the value sets and code systems localised in this guide.
-- [About](support.html): These pages provide supporting material for implementation of Czech Core.
+- [Artifacts]:
+  - [Artifacts Summary](artifacts.html): These page lists detailed descriptions and formal definitions for all the Czech Core artifacts defined in this guide.
+  - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to represent Czech local concepts using FHIR. Each profile page includes a narrative description, guidance, and formal definition. Although the guidance typically focuses on the profiled elements and seeks to provide a ‘how-to’ guide when representing concepts, it may also may focus on un-profiled elements to aid with implementation.
+- [About]:
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
 
 ### Dependencies
