@@ -1,5 +1,5 @@
-Extension: AddresaTrvalehoPobytuCz
-Id:   addresa-trvaleho-pobytu-cz
+Extension: PermanentResidenceAddressCz
+Id:   permanent-residencer-address-cz
 Title:  "Address permanent residence"
 Description: "This extension provides a link to the order [(Reference(ServiceRequest)] or requisition [ServiceRequest.requisition (i.e., 'Request.groupIdentifier')] that this report document is based on and fulfills."
 // publisher, contact, and other metadata here using caret (^) syntax (omitted)

@@ -6,6 +6,7 @@ Description: "Address of both typu (physical and delivery)"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
+* birthDate = "1971-11-26"
 
 * address.use = #home
 * address.type = #both
@@ -27,6 +28,7 @@ Description: "Address of P.O.Boxem"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
+* birthDate = "1971-11-26"
 
 //* address[+].use = #home
 * address[+].type = #postal
@@ -46,6 +48,7 @@ Description: "Address of permanent residence"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
+* birthDate = "1971-11-26"
 
 * address.use = #home
 * address.type = #both
@@ -56,7 +59,7 @@ Description: "Address of permanent residence"
 * address.city = "Praha"
 * address.postalCode = "15000"
 * address.country = "CZ"
-* address.extension[AddresaTrvalehoPobytuCz].valueBoolean = true
+* address.extension[PermanentResidenceAddressCz].valueBoolean = true
 
 Instance: cz-patient-addr-example-4
 InstanceOf: CZ_Patient
@@ -67,6 +70,7 @@ Description: "Address of permanent residence outside the Czech Republic"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
+* birthDate = "1971-11-26"
 
 * address.use = #home
 * address.type = #both
@@ -76,8 +80,8 @@ Description: "Address of permanent residence outside the Czech Republic"
 * address.line[=].extension[houseNumber].valueString = "13a"
 * address.city = "Žilina"
 * address.country = "SK"
-* address.extension[AddresaTrvalehoPobytuCz].valueCodeableConcept.coding.system = "urn:iso:std:iso:3166"
-* address.extension[AddresaTrvalehoPobytuCz].valueCodeableConcept.coding.code = #SK
+* address.extension[PermanentResidenceAddressCz].valueCodeableConcept.coding.system = "urn:iso:std:iso:3166"
+* address.extension[PermanentResidenceAddressCz].valueCodeableConcept.coding.code = #SK
 
 Instance: cz-patient-addr-example-5
 InstanceOf: CZ_Patient
@@ -87,6 +91,7 @@ Description: "Address indicating the place of address according to RUIAN"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
+* birthDate = "1971-11-26"
 
 * address.use = #home
 * address.type = #both

@@ -97,7 +97,7 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * name.text ^min = 0
 * name.family 0..1 MS
 * name.given MS
-* name.given ^min = 0
+* name.given ^min = 1
 
 * telecom MS
 * telecom
@@ -108,7 +108,7 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
   * ^definition = "Gender for official purposes"
 * gender from $CZ_AdministrativegenderVS (required)
 
-* birthDate MS
+* birthDate 1..1 MS
 * birthDate ^definition = "The date of birth for the individual.\n\nIt is RECOMMENDED to give the birthdate when available."
 * birthDate.extension ^slicing.discriminator.type = #value
 * birthDate.extension ^slicing.discriminator.path = "url"

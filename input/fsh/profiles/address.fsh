@@ -21,7 +21,7 @@ It is always RECOMMENDED to give these elements seperately. The national specifi
 * extension ^slicing.rules = #open
 * extension contains
   AddressPointCz named addressPoint 0..1 and
-  AddresaTrvalehoPobytuCz named trvalyPobyt 0..1
+  PermanentResidenceAddressCz named permanentResidence 0..1
 
 * extension[addressPoint] ^definition = "If both the RUIAN code and the address are given, both must match."
 * use ^definition = "Address use"

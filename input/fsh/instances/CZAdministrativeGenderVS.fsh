@@ -7,7 +7,7 @@ Usage: #definition
 * date = "2022-12-26"
 * publisher = "NCEZ"
 * name = "AdministrativeGender"
-* title = "AdministrativeGender"
+* title = "Administrative Gender"
 * description = "Gender for administrative purposes"
 * experimental = false
 * compose.include[0].system = "http://hl7.org/fhir/administrative-gender"

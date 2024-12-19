@@ -2,15 +2,15 @@
 CZ Core Identifiers are used extensively to consistently identify real world entities across systems, contexts of use, and other formats in CZ Core profiles.
 
 Defined in this implementation guide are profiles for identifiers for use in populating the following data elements:
-* Patient.identifier
-* Device.identifier
-* Document.identifier
-* Organisation.identifier
-* Practitioner.identifier
+* Patient.Identifier
+* Device.Identifier
+* DocumentIdentifier
+* Organization.Identifier
+* Practitioner.Identifier
 
 For all described identifiers, it must be unique within the given identifier type. It is mandatory to enter at least one national or international identifier.
 
-#### Patient identifier
+#### Patient Identifier
 If it is known, it is mandatory to enter at least one national or international identifier (birth number, passport number, etc.). Usually, if available, one of the national identifiers is used (patient number from the national patient register, birth number, insurance number).
 
 ##### Birth number
@@ -43,10 +43,10 @@ it is a number which is created by heath insurance provider. Namespace according
 ##### Ressort identifier
 Namespace according to the issuer of the identifier. Required value: https://ncez.mzcr.cz/fhir/sid/rid
 
-#### Device identifier
+#### Device Identifier
 This is a unique device identifier that is standardized according to EU Regulation 2017/745.
 
-#### Document identifier
+#### Document Identifier
 Document identifier enables the unique identification of medical documentation. It is recommended to use identifiers such as GUID (recommended), URI or OID.
 
 ##### GUID
@@ -62,7 +62,7 @@ The OID (Object Identifier), which is used for unique identification in IT, is s
 
 OID enables unambiguous identification and addressing of data elements and entities within different systems and facilitates interoperability and resource management.
 
-#### Organisation identifier
+#### Organization Identifier
 Within the organization, it is necessary to use at least one national unique Identifier, which is used to identify the organization. Typically, the NRPZS value and/or the IČO value are stated. It is allowed to include information from other identification systems. The use of the identifier NRPZS is preferred.
 
 ##### NRPZS
@@ -72,9 +72,9 @@ This identification is according to the National Register of Health Service Prov
 Identification number of a person using the eight-digit identification number of a legal entity, a natural person doing business or an organizational component of the state.
 
 ##### Others
-There are three other possible types of identifier according to IČZ, ČLK and ČLéK. However, these identifiers are not required.
+There are two other possible types of identifier according to IČZ and IČP. However, these identifiers are not required.
 
-#### Practitioner identifier
+#### Practitioner Identifier
 National identification of the Clinician or Physician 
 
 Within the organization, it is necessary to use at least one national unique Identifier, which is used to identify the worker. Typically, the NRZP value is given. However, there are optional identifiers according to ČLK and ČLéK, which can be used here as well.

@@ -1,7 +1,7 @@
 Profile: HumanNameCz
 Parent: HumanName
 Id: HumanName-cz
-Title: "HumanName (Cz)"
+Title: "Human Name (CZ)"
 Description: "European profile on HumanName data type. It includes extensions to support multiple family names."
 * ^purpose = "This profile of the HumanName allows for expressing multiple family names, as requested by some jurisdictions."
 * insert SetFmmandStatusRule ( 1, draft )
