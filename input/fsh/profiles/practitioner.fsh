@@ -28,7 +28,7 @@ Description: "Czech national profile for practitioner."
 * identifier[CLeK].value 1..
 * active ^definition = "Whether this practitioner's record is in active use. \r\n\r\nIt is RECOMMENDED to keep the value ‘true’ as long as the practitioner is still being treated by the provider of the data."
 
-* name 1.. MS
+* name 0..1 MS
 * name.family MS
 * name.given MS
 * name ^definition = "The name(s) associated with the practitioner.\r\n\r\nTypically RECOMMENDED to include one familyname and at least one given name and to define this use as ‘official’."
