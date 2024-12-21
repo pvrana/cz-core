@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:    CZ_Organization
-Parent:     Organization
+Parent:     OrganizationEu
 Id:         cz-organization
 Title:      "Organization (CZ)"
 Description: "Czech national profile for an organization."

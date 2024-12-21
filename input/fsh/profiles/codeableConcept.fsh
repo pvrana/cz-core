@@ -1,5 +1,5 @@
 Profile: CZ_CodeableConcept
-Parent: CodeableConcept
+Parent: CodeableConceptIPS
 Id: cz-codeable-concept
 Title: "Codeable Concept (CZ)"
 Description: "This profile represents the constraint applied to the CodeableConcept data type by the Czech national FHIR Core Implementation Guide to use the CZ_Coding data type profile."

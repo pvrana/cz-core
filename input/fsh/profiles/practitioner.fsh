@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile: CZ_Practitioner
-Parent: Practitioner
+Parent: PractitionerEu
 Id: cz-practitioner
 Title: "Practitioner (CZ)"
 Description: "Czech national profile for practitioner."

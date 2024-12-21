@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  CZ_Patient
-Parent:   Patient
+Parent:   PatientEu
 Id:       cz-patient
 Title:    "Patient (CZ)"
 Description: "This profile defines how to represent Patient in FHIR for the purpose of the Czech national interoperability standards."
@@ -14,25 +14,7 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * insert SetFmmandStatusRule ( 1, draft )
 
 * extension contains
-  $sex-for-clinical-use named sex-for-clinical-use 0..* and
-  $patient-birthPlace named birthPlace 0..1 and
-  $nationality named nationality 0..* and
   $registering-provider named registeringProvider 0.. //V každém okamžiku může mít pacient nejvýše jednoho registrujícího praktického lékaře a nejvýše jednoho registrujícího zubaře. Pacientky mohou mít také nejvýše jednoho registrujícího gynekologa.
-
-* extension[sex-for-clinical-use] ^mustSupport = false
-
-* extension[birthPlace]
-  * ^short = "Birth place"
-//  * ^definition = ""
-* extension[birthPlace].value[x] only CZ_Address
-
-* extension[nationality]
-  * ^short = "Nationality"
-  * ^definition = "Citizenship according to Act No. 186/2013. Citizenship as shown on official identification documents."
-* extension[nationality].extension[code].value[x] only CZ_CodeableConcept
-* extension[nationality].extension[period].value[x] only Period
-* extension[nationality].extension[code].valueCodeableConcept 1..1 MS
-* extension[nationality].extension[code].valueCodeableConcept from $iso3166-1-2
 
 * extension[registeringProvider]
   * ^short = "Registering primary outpatient healthcare provider"
@@ -84,14 +66,10 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * identifier[PAS].value 1..1
 
 * name 1..* MS  // patient name element must be provided
-* name only HumanNameCz  // HumanNameCz adds extensions for spanish and portugal name parts
+* name only HumanNameEu
 * name obeys cz-pat-1
 * name ^definition = "A name associated with the individual. \n\nIt is RECOMMENDED to give at least one family name and at least one given name when possible and define an 'official' use. When names are given, a consumer SHALL NOT ignore it."
 * name ^requirements = "A patient may be known by several different names. An example is an official name and a nickname or pseudonym.\r\nIn all cases, the alphabetical representation of the name is always used."
-* name.extension contains $ext-data-absent-reason named name-absent-reason 0..*
-* name.extension[name-absent-reason]
-  * ^short = "Reason for not providing the name"
-  * ^definition = "Reason for not providing the name"
 * name.text MS
 * name.text ^definition = "Text representation of the full name. Due to the cultural variance around the world a consuming system may not know how to present the name correctly; moreover not all the parts of the name go in given or family. Creators are therefore strongly encouraged to provide through this element a presented version of the name. Future versions of this guide may require this element"
 * name.text ^min = 0

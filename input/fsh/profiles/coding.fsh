@@ -1,5 +1,5 @@
 Profile: CZ_Coding
-Parent: Coding
+Parent: CodingIPS
 Id: cz-coding
 Title: "Coding data type"
 //Description: "This profile adds must-support constraints to the coding data type."

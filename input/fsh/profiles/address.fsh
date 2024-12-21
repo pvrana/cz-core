@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:    CZ_Address
-Parent:     Address
+Parent:     AddressEu
 Id:         cz-address
 Title:      "Address (CZ)"
 Description: "Czech national profile on address, to provide the possibility in the 'line' element to provide a seperate streetname, housenumber and postal box.
@@ -25,23 +25,6 @@ It is always RECOMMENDED to give these elements seperately. The national specifi
 
 * extension[addressPoint] ^definition = "If both the RUIAN code and the address are given, both must match."
 * use ^definition = "Address use"
-* line ^definition = "This component contains the house number, apartment number, street name, street direction, P.O. Box number, delivery hints, and similar address information. It is always RECOMMENDED to give these elements seperately using the defined extensions."
-* line.extension ^slicing.discriminator.type = #value
-* line.extension ^slicing.discriminator.path = "url"
-* line.extension ^slicing.rules = #open
-* line.extension ^definition = "It is RECOMMENDED to use these extensions to define address elements."
-* line.extension contains
-    $iso21090-ADXP-streetName named streetName 0..* and
-    $iso21090-ADXP-houseNumber named houseNumber 0..* and
-    $iso21090-ADXP-postBox named postBox 0..*
-* line.extension[streetName].value[x] only string
-* line.extension[houseNumber].value[x] only string
-* line.extension[postBox].value[x] only string
-//*  country ^definition = "Country, the FHIR specification defines its country field as a string and suggests using a ISO 3166 2 or 3 letter codes. Use of 2-letter code to express country is RECOMMENDED"
-* country ^short = "Country"
-* country ^definition = "Country (two-character ISO 3166-1 Alpha-2 country code or free text). Address.country element will include name of the country while code will be included in the extension. Mandatory use of the country code may be specified in specific derived profiles."
-  * extension contains $iso21090-SC-coding named countryCode 0..1
-  * extension[countryCode].valueCoding from $iso3166-1-2 (preferred)
 * obeys text-or-ctry and POB-and-PCS and street-and-city and POB-only-postal and POB-ext-only
 
 Invariant: text-or-ctry

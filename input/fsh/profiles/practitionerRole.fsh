@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:    CZ_PractitionerRole
-Parent:     PractitionerRole
+Parent:     PractitionerRoleEu
 Id:         cz-practitionerrole
 Title:      "Practitioner Role (CZ)"
 Description: "Czech national profile for an practitioner role."
