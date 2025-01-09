@@ -21,6 +21,7 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
   * ^comment = "At any one time, a patient may have no more than one general practitioner or paediatric and adolescent practitioner and one dental registrar. Female patients may also have no more than one registered provider in gynaecology and obstetrics."
 * obeys(cz-pat-2) 
 
+
 * language = urn:ietf:bcp:47#cs
 
 * identifier MS
