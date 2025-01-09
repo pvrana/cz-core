@@ -2,25 +2,24 @@
 Profile:  CZ_Patient
 Parent:   PatientEu
 Id:       cz-patient
-Title:    "Patient (CZ)"
+Title:    "Patient (CZ base)"
 Description: "This profile defines how to represent Patient in FHIR for the purpose of the Czech national interoperability standards."
-// CZ_Patient je odvozen z IPS Patient a je rozšířen o položku státní občanství (nationality)
-//-------------------------------------------------------------------------------------------
-* ^description = "Information about an individual receiving health care services"
-//* ^publisher = "HL7 CZ"
+
+* ^description = "This profile defines how to represent Patient in FHIR for the purpose of the Czech national interoperability standards."
+* ^publisher = "HL7 CZ"
 //* ^version = "1.0.0"
 //* ^status = #active
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
 
 * extension contains
-  $registering-provider named registeringProvider 0.. //V každém okamžiku může mít pacient nejvýše jednoho registrujícího praktického lékaře a nejvýše jednoho registrujícího zubaře. Pacientky mohou mít také nejvýše jednoho registrujícího gynekologa.
+  $registering-provider named registeringProvider 0..
 
 * extension[registeringProvider]
   * ^short = "Registering primary outpatient healthcare provider"
   * ^definition = "A registering provider means an ambulatory care provider in the field of general practice medicine, in the field of practice medicine for children and adolescents, in the field of dentistry or in the field of gynecology and obstetrics, who accepted a patient for the purpose of providing primary ambulatory care."
   * ^comment = "At any one time, a patient may have no more than one general practitioner or paediatric and adolescent practitioner and one dental registrar. Female patients may also have no more than one registered provider in gynaecology and obstetrics."
-* obeys(cz-pat-2)
+* obeys(cz-pat-2) 
 
 * language = urn:ietf:bcp:47#cs
 

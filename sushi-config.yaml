@@ -6,10 +6,10 @@
 id: hl7.fhir.cz.core
 canonical: https://hl7.cz/fhir/core
 name: HL7CzCoreImplementationGuide
-title: HL7 Czech Core Implementation Guide
-description: HL7 Czech Core Resources Implementation Guide
+title: HL7 Czech Base and Core Implementation Guide
+description: HL7 Czech Base and Core Resources Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.2.0
+version: 0.2.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -146,7 +146,7 @@ menu:
     General guidance: general-guidance.html
     Identifiers: identifiers.html
   Artifacts: 
-    Czech core artifacts: artifacts.html
+    Czech artifacts: artifacts.html
     Profiles and extensions: profiles-and-extensions.html
   About:
     Downloads: downloads.html

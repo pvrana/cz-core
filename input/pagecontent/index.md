@@ -1,5 +1,5 @@
 ### Introduction 
-The CZ Core implementation guide is based on [FHIR version R4]. It defines the minimum rules for interoperability and national customization of FHIR resources, which is applied when creating national profiles for specific use cases. The establishment of "core" standards to support interoperability and their implementation in information systems creates a common basis for the interoperable exchange of health data.
+The CZ Base and Core implementation guide is based on [FHIR version R4]. It defines the minimum rules for interoperability and national customization of FHIR resources, which is applied when creating national profiles for specific use cases. The establishment of standards to support interoperability and their implementation in information systems creates a common basis for the interoperable exchange of health data.
 
 In this implementation guide, you will find the rules for creating national profiles, the use of identifiers and basic information components.
 
@@ -13,7 +13,7 @@ This guide is divided into several pages which are listed at the top of each pag
   - [General Guidance](general-guidance.html): This page provides guidance on using the profiles defined in this guide.
   - [Identifiers](identifiers.html): This page provides guidance on using identifiers.
 - [Artifacts]:
-  - [Artifacts Summary](artifacts.html): These page lists detailed descriptions and formal definitions for all the Czech Core artifacts defined in this guide.
+  - [Artifacts Summary](artifacts.html): These page lists detailed descriptions and formal definitions for all the Czech artifacts defined in this guide.
   - [Profiles and Extensions](profiles-and-extensions.html): This page describes the profiles and extensions that are defined in this guide to represent Czech local concepts using FHIR. Each profile page includes a narrative description, guidance, and formal definition. Although the guidance typically focuses on the profiled elements and seeks to provide a ‘how-to’ guide when representing concepts, it may also may focus on un-profiled elements to aid with implementation.
 - [About]:
   - [Downloads](downloads.html): This page provides links to downloadable artefacts.
