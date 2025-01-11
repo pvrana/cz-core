@@ -30,6 +30,11 @@ Alias: $cz-contactperson-relation = https://ncez.mzcr.cz/fhir/ValueSet/cz-contac
 Alias: $MedicalDevicesSnomedAbsentUnknownUvIps = http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-snomed-absent-unknown-uv-ips
 Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 
+// Profiles:
+Alias: $Organization-eu-core = http://hl7.eu/fhir/base/StructureDefinition/OrganizationEuCore
+Alias: $Patient-eu-core = http://hl7.eu/fhir/base/StructureDefinition/PatientEuCore
+Alias: $Practitioner-eu-core = http://hl7.eu/fhir/base/StructureDefinition/PractitionerEuCore
+Alias: $PractitionerRole-eu-core = http://hl7.eu/fhir/base/StructureDefinition/PractitionerRoleEuCore
 //Alias: $bodySite = http://hl7.org/fhir/StructureDefinition/bodySite
 //Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail
 //Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
