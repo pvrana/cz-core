@@ -18,7 +18,7 @@ Description: "This extension allows the registration of the registering healthca
 * extension[value] ^comment = "At any given time, a patient may have no more than one registering provider in general practice or pediatric practice and one registering provider in dentistry. Patients may also have a maximum of one registered provider in the field of gynecology and obstetrics."
 * extension[value].url only uri
 * extension[value].value[x] 1..1
-* extension[value].value[x] only Reference(CZ_Organization or CZ_PractitionerRole)
+* extension[value].value[x] only Reference(CZ_OrganizationCore or CZ_PractitionerRoleCore)
 
 * extension[category] only Extension
 * extension[category] ^short = "Type of registering healthcare provider"
