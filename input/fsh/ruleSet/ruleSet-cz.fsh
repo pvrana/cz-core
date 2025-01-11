@@ -35,5 +35,8 @@ RuleSet: NIBSCCopyrightForVS
 * ^experimental = true
  */
 
-RuleSet: ImposeProfile ( profile )
-* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile].valueCanonical = {profile}
+RuleSet: ImposeProfile ( profile, index )
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile][{index}].valueCanonical = {profile}
+
+RuleSet: ValuSetSupplementRule (codeSystem)
+* ^extension[http://hl7.org/fhir/StructureDefinition/valueset-supplement].valueCanonical = {codeSystem}
