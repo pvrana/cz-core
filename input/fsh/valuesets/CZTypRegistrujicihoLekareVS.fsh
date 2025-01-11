@@ -13,7 +13,7 @@ Description: "Valueset of types of registering physician"
 * ^url = "https://ncez.mzcr.cz/fhir/ValueSet/typ-registrujiciho-lekare-vs"
 * insert SetFmmandStatusRule(1, draft)
 * insert SNOMEDCopyrightForVS
-
+* insert ValuSetSupplementRule($sct)
 
 * include codes from system snomed-supplement-service-type
 //* include codes from system snomed-supplement-service-type--1.0.0
@@ -22,5 +22,5 @@ Description: "Valueset of types of registering physician"
 //* cz-tab-ta#M "registrující stomatolog"
 //TODO: Not working URI to SNOMED
 //* $sct#700232004 "Všeobecné lékařské služby"
-//* $sct#310060005 "Gynekologické a porodnické služby"  
+//* $sct#310060005 "Gynekologické a porodnické služby"
 //* $sct#722176000 "Stomatologické služby"
