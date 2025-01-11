@@ -1,7 +1,7 @@
 Instance: Pacemaker
 InstanceOf: CZ_MedicalDevice
 Usage: #example
-Description: "Srdeční kardiostimulátor Medtronic W1DR01"
+Description: "Heart pacemaker Medtronic W1DR01"
 
 * manufacturer = "Medtronic"
 * modelNumber = "W1DR01"

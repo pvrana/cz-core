@@ -1,6 +1,6 @@
 CodeSystem: CZ_DrzarCS
 Id: cz-drzar
-Title: "Druh zařízení"
+Title: "Type of healthcare facility"
 Description: "Czech national code system for type of healthcare facility."
 
 * ^identifier.system = "urn:ietf:rfc:3986"

@@ -1,7 +1,7 @@
 Instance: Mracena
 InstanceOf: CZ_Patient
 Usage: #example
-Description: "Pacientka, kontaktní informace a praktický lékař"
+Description: "Patient, contact information and practioner"
 
 * contained[+] = RegisteringProviderExample
 * identifier[RC] = rodnecislo_7161264528

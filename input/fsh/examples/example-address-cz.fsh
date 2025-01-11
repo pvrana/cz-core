@@ -1,11 +1,12 @@
 Instance: cz-patient-addr-example-1
 InstanceOf: CZ_Patient
 Usage: #example
-Description: "Adresa typu \"both\" (fyzická i doručovací)"
+Description: "Address of both typu (physical and delivery)"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
+* birthDate = "1971-11-26"
 
 * address.use = #home
 * address.type = #both
@@ -21,12 +22,13 @@ Description: "Adresa typu \"both\" (fyzická i doručovací)"
 Instance: cz-patient-addr-example-2
 InstanceOf: CZ_Patient
 Usage: #example
-Description: "Adresa s P.O.Boxem"
+Description: "Address of P.O.Boxem"
 
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
+* birthDate = "1971-11-26"
 
 //* address[+].use = #home
 * address[+].type = #postal
@@ -40,12 +42,13 @@ Description: "Adresa s P.O.Boxem"
 Instance: cz-patient-addr-example-3
 InstanceOf: CZ_Patient
 Usage: #example
-Description: "Adresa trvalého pobytu"
+Description: "Address of permanent residence"
 
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
+* birthDate = "1971-11-26"
 
 * address.use = #home
 * address.type = #both
@@ -56,17 +59,18 @@ Description: "Adresa trvalého pobytu"
 * address.city = "Praha"
 * address.postalCode = "15000"
 * address.country = "CZ"
-* address.extension[AddresaTrvalehoPobytuCz].valueBoolean = true
+* address.extension[PermanentResidenceAddressCz].valueBoolean = true
 
 Instance: cz-patient-addr-example-4
 InstanceOf: CZ_Patient
 Usage: #example
-Description: "Adresa trvalého pobytu mimo ČR"
+Description: "Address of permanent residence outside the Czech Republic"
 
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
+* birthDate = "1971-11-26"
 
 * address.use = #home
 * address.type = #both
@@ -76,17 +80,18 @@ Description: "Adresa trvalého pobytu mimo ČR"
 * address.line[=].extension[houseNumber].valueString = "13a"
 * address.city = "Žilina"
 * address.country = "SK"
-* address.extension[AddresaTrvalehoPobytuCz].valueCodeableConcept.coding.system = "urn:iso:std:iso:3166"
-* address.extension[AddresaTrvalehoPobytuCz].valueCodeableConcept.coding.code = #SK
+* address.extension[PermanentResidenceAddressCz].valueCodeableConcept.coding.system = "urn:iso:std:iso:3166"
+* address.extension[PermanentResidenceAddressCz].valueCodeableConcept.coding.code = #SK
 
 Instance: cz-patient-addr-example-5
 InstanceOf: CZ_Patient
 Usage: #example
-Description: "Adresa s uvedením adresního místa dle RUIAN"
+Description: "Address indicating the place of address according to RUIAN"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
 * identifier[=].value = "456789123"
 * name.family = "Příklad"
 * name.given = "Adam"
+* birthDate = "1971-11-26"
 
 * address.use = #home
 * address.type = #both

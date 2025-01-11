@@ -6,10 +6,10 @@
 id: hl7.fhir.cz.core
 canonical: https://hl7.cz/fhir/core
 name: HL7CzCoreImplementationGuide
-title: HL7 Czech Core Resources IG
-description: HL7 Czech Core Resources Implementation Guide
+title: HL7 Czech Base and Core Implementation Guide
+description: HL7 Czech Base and Core Resources Implementation Guide
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 0.2.1
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -18,7 +18,7 @@ releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | re
 jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: HL7 Czech Republic
-  url: https://hl7.cz
+  url: https://www.hl7.cz/
   # email: test@example.org
 
 #copyright: >-
@@ -35,9 +35,8 @@ publisher:
 #     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
 #     version: 1.0.0
 dependencies:
-  # hl7.fhir.uv.ips: current
   hl7.fhir.uv.ips: 1.1.0
-#  hl7.fhir.us.mcode: current
+  hl7.fhir.eu.base.r4: current
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -60,6 +59,19 @@ dependencies:
 #     simpleExamples.xml:
 #     complexExamples.xml:
 #
+pages:
+  index.md:
+    title: Home
+  general-guidance.md:
+    title: General Guidance
+  identifiers.md:
+    title: Identifiers
+  artifacts.xml:
+    title: Summary artifacts
+  profiles-and-extensions.md:
+    title: Profiles and extensions
+  downloads.md:
+    title: Download
 #
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -130,8 +142,14 @@ parameters:  #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Artifacts: artifacts.html
-  Downloads: downloads.html
+  Guidance:
+    General guidance: general-guidance.html
+    Identifiers: identifiers.html
+  Artifacts: 
+    Czech artifacts: artifacts.html
+    Profiles and extensions: profiles-and-extensions.html
+  About:
+    Downloads: downloads.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

@@ -1,8 +1,8 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:    CZ_Organization
-Parent:     OrganizationEu
-Id:         cz-organization
-Title:      "Organization (CZ base)"
+Profile:    CZ_OrganizationCore
+Parent:     OrganizationEuCore
+Id:         cz-organization-core
+Title:      "Organization (CZ core)"
 Description: "Czech national profile for an organization."
 //-------------------------------------------------------------------------------------------
 //* ^publisher = "HL7 CZ"

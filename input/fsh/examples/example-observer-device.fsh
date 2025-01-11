@@ -1,7 +1,7 @@
 Instance: LabAnalyzer
 InstanceOf: CZ_DeviceObserver
 Usage: #example
-Description: "Laboratorní analyzátor Beckman"
+Description: "Clinical analyzer Beckman"
 
 * manufacturer = "Beckman"
 * modelNumber = "DxC 700 AU"
