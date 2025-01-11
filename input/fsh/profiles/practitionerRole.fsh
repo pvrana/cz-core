@@ -1,7 +1,7 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:    CZ_PractitionerRole
+Profile:    CZ_PractitionerRoleBase
 Parent:     PractitionerRoleEu
-Id:         cz-practitionerrole
+Id:         cz-practitionerrole-base
 Title:      "Practitioner Role (CZ base)"
 Description: "Czech national profile for an practitioner role."
 //-------------------------------------------------------------------------------------------
@@ -11,9 +11,9 @@ Description: "Czech national profile for an practitioner role."
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
 
-* practitioner only Reference(CZ_Practitioner)
+* practitioner only Reference(CZ_PractitionerBase)
 
-* organization only Reference(CZ_Organization)
+* organization only Reference(CZ_OrganizationBase)
 * organization MS
 
 * code MS
