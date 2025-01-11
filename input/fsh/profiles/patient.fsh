@@ -1,9 +1,9 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  CZ_Patient
+Profile:  CZ_PatientBase
 Parent:   PatientEu
-Id:       cz-patient
+Id:       cz-patient-base
 Title:    "Patient (CZ base)"
-Description: "This profile defines how to represent Patient in FHIR for the purpose of the Czech national interoperability standards."
+Description: """This profile specifies how the HL7 FHIR Patient resource should be used to convey commonly used concepts in context of the Czech national interoperability standards."""
 
 * ^description = "This profile defines how to represent Patient in FHIR for the purpose of the Czech national interoperability standards."
 * ^publisher = "HL7 CZ"
@@ -11,16 +11,6 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 //* ^status = #active
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
-
-* extension contains
-  $registering-provider named registeringProvider 0..
-
-* extension[registeringProvider]
-  * ^short = "Registering primary outpatient healthcare provider"
-  * ^definition = "A registering provider means an ambulatory care provider in the field of general practice medicine, in the field of practice medicine for children and adolescents, in the field of dentistry or in the field of gynecology and obstetrics, who accepted a patient for the purpose of providing primary ambulatory care."
-  * ^comment = "At any one time, a patient may have no more than one general practitioner or paediatric and adolescent practitioner and one dental registrar. Female patients may also have no more than one registered provider in gynaecology and obstetrics."
-* obeys(cz-pat-2) 
-
 
 * language = urn:ietf:bcp:47#cs
 
@@ -58,13 +48,13 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * identifier[PAS]
   * ^short = "Passport Number"
   * ^definition = "An unique patient identifier (Passport Number)"
-//* identifier[PAS].system = "http://hl7.org/fhir/sid/passport-CZE"
 * identifier[PAS].system from PassportNSVS
   * ^short = "Name space according to the passport issuer. FHIR records namespaces for passports in the format - http://hl7.org/fhir/sid/passport-XXX, where XXX is the three-letter country code according to ISO 3166"
 * identifier[PAS].use = #official
 * identifier[PAS].type = $v2-0203#PPN
 * identifier[PAS].value 1..1
 
+/*
 * name 1..* MS  // patient name element must be provided
 * name only HumanNameEu
 * name obeys cz-pat-1
@@ -76,7 +66,8 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * name.family 0..1 MS
 * name.given MS
 * name.given ^min = 1
-
+*/
+/*
 * telecom MS
 * telecom
   * ^short = "A contact detail for the individual"
@@ -84,17 +75,19 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 
 * gender MS  // gender must be supported
   * ^definition = "Gender for official purposes"
+*/
 * gender from $CZ_AdministrativegenderVS (required)
-
-* birthDate 1..1 MS
-* birthDate ^definition = "The date of birth for the individual.\n\nIt is RECOMMENDED to give the birthdate when available."
+/*
+* birthDate 1..1 //MS
+* birthDate ^definition = "The date of birth for the patient.\n\nIt is RECOMMENDED to give the birthdate when available."
+*/
 * birthDate.extension ^slicing.discriminator.type = #value
 * birthDate.extension ^slicing.discriminator.path = "url"
 * birthDate.extension ^slicing.rules = #open
 * birthDate.extension contains $patient-birthTime named birthTime 0..1
 * birthDate.extension[birthTime].value[x] only dateTime
 
-* deceased[x] MS
+* deceased[x] //MS
   * ^short = "Death information either by symptom or date of death"
   * ^definition = "Death information either by symptom or date of death \n\nIt is RECOMMENDED to include death information in all relevant cases."
 /*
@@ -105,18 +98,18 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
   * ^short = "Datum úmrtí pacienta"
   * ^definition = "Datum a případně také čas úmrtí pacienta"
 */
-* address MS
+//* address MS
 * address only CZ_Address
   * ^definition = "An address for the individual. \n\nIt is RECOMMENDED to include an address when available."
   * obeys cnt-2-char
 
-* generalPractitioner MS  // general practicioner must be supported
+* generalPractitioner // MS  // general practicioner must be supported
   * ^short = "A physician or provider nominated by the patient"
   * ^definition = "Patient's nominated care provider.\n\nTake note this does not automatically imply any legal form of therapeutic link or consent relationship with this GP. It is RECOMMENDED to include this when available if the flow is in any way medical. Please note this is an element of the Reference datatype. This means when it is available it will contain either a relative or absolute URL where this GP can be found. Alternatively, there is only an internal reference and the GP is included as a ‘contained resource’ (cfr. the HL7 FHIR specifications in what cases this applies)."
   * ^comment = "This may be a primary or specialist outpatient care provider, or it may be a patient-designated carer in a community or disability setting, or an organisation that provides people to act as care providers. If it is a registering provider, the reference will also be included in the \"registeringProvider\" extension. This element should not be used to register care teams, these should be in the CareTeam resource, which can be linked to the CarePlan or EpisodeOfCare resources. \n Multiple providers may be recorded for a patient for different reasons, for example a student who has their GP listed alongside their GP at the university, or a worker who has a GP listed alongside their GP at the workplace to keep them informed of health issues."
-* generalPractitioner only Reference(CZ_Organization or CZ_Practitioner or CZ_PractitionerRole)
+* generalPractitioner only Reference(CZ_OrganizationBase or CZ_PractitionerBase or CZ_PractitionerRoleBase)
 
-* managingOrganization only Reference(CZ_Organization)
+* managingOrganization only Reference(CZ_OrganizationBase)
   * ^short = "Organization that is the custodian of the patient record"
   * ^definition = "Organization that is the custodian of the patient record.\n\nThis SHOULD be included when available. Please note this is an element of the Reference datatype. This means when it is available it will contain either a relative or absolute URL where this Organization can be found. Alternatively, there is only an internal reference and the Organization is included as a ‘contained resource’ (cfr. the HL7 FHIR specifications in what cases this applies)."
   * ^comment = "There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association)."
@@ -134,7 +127,7 @@ Description: "This profile defines how to represent Patient in FHIR for the purp
 * contact.relationship[C_REL] from CZ_ContactPersonRelationVS (extensible)
  */
 * contact.address only CZ_Address
-* contact.organization only Reference(CZ_Organization)
+* contact.organization only Reference(CZ_OrganizationBase)
 * contact.gender from $CZ_AdministrativegenderVS
 
 // zvážit zda přidat:
