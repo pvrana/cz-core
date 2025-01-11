@@ -23,6 +23,7 @@ It relies on the Translation extension."
 */
 
 // Prodiskutovat, zda chceme implicitně umožnit překlady kódů do jiných jazykových mutací
+/*
 * display.extension ^slicing.discriminator.type = #value
 * display.extension ^slicing.discriminator.path = "url"
 * display.extension ^slicing.rules = #open
@@ -30,3 +31,4 @@ It relies on the Translation extension."
 * display.extension[translation]
   * ^sliceName = "translation"
   * ^short = "Language Translation (Localization)"
+*/
