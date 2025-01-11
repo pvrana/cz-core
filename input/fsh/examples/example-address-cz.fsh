@@ -1,5 +1,5 @@
 Instance: cz-patient-addr-example-1
-InstanceOf: CZ_Patient
+InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Address of both typu (physical and delivery)"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
@@ -20,7 +20,7 @@ Description: "Address of both typu (physical and delivery)"
 
 // Příklad adresy s P.O.Boxem
 Instance: cz-patient-addr-example-2
-InstanceOf: CZ_Patient
+InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Address of P.O.Boxem"
 
@@ -40,7 +40,7 @@ Description: "Address of P.O.Boxem"
 * address[=].country = "CZ"
 
 Instance: cz-patient-addr-example-3
-InstanceOf: CZ_Patient
+InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Address of permanent residence"
 
@@ -62,7 +62,7 @@ Description: "Address of permanent residence"
 * address.extension[PermanentResidenceAddressCz].valueBoolean = true
 
 Instance: cz-patient-addr-example-4
-InstanceOf: CZ_Patient
+InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Address of permanent residence outside the Czech Republic"
 
@@ -84,7 +84,7 @@ Description: "Address of permanent residence outside the Czech Republic"
 * address.extension[PermanentResidenceAddressCz].valueCodeableConcept.coding.code = #SK
 
 Instance: cz-patient-addr-example-5
-InstanceOf: CZ_Patient
+InstanceOf: CZ_PatientCore
 Usage: #example
 Description: "Address indicating the place of address according to RUIAN"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"

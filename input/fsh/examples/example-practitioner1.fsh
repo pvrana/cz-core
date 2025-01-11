@@ -1,5 +1,5 @@
 Instance: Practitioner-123456789
-InstanceOf: CZ_Practitioner
+InstanceOf: CZ_PractitionerCore
 Usage: #example
 Description: "Practitioner id(NRZP)=123456789"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/nrzp"

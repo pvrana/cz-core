@@ -1,5 +1,5 @@
 Instance: practitionerrole1
-InstanceOf: CZ_PractitionerRole
+InstanceOf: CZ_PractitionerRoleCore
 Usage: #example
 Description: "General practitioner's office"
 * meta.versionId = "1"

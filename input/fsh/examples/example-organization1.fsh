@@ -1,5 +1,5 @@
 Instance: Organization-1
-InstanceOf: CZ_Organization
+InstanceOf: CZ_OrganizationCore
 Usage: #example
 Description: "An example of the organization of a provider"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
