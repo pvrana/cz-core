@@ -1,7 +1,7 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:    CZ_Organization
+Profile:    CZ_OrganizationBase
 Parent:     OrganizationEu
-Id:         cz-organization
+Id:         cz-organization-base
 Title:      "Organization (CZ base)"
 Description: "Czech national profile for an organization."
 //-------------------------------------------------------------------------------------------
@@ -10,9 +10,9 @@ Description: "Czech national profile for an organization."
 //* ^status = #active
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
-* ^purpose = "This profile constrains the representation of organization in the context of the Czech national interoperability project."
+* ^purpose = "This profile specifies how the HL7 FHIR Organization resource should be used for conveying commonly used concepts in the Czech national context."
 
-* identifier MS
+//* identifier MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
@@ -33,7 +33,7 @@ Description: "Czech national profile for an organization."
 
 * active ^definition = "Whether the organization's record is still in active use."
 
-* name MS
+//* name MS
 
 * type ^slicing.discriminator.type = #value
 * type ^slicing.discriminator.path = "coding.system"
@@ -45,7 +45,7 @@ Description: "Czech national profile for an organization."
 * type[DRZAR].coding.code 1..
 * type[DRZAR] from CZ_DrzarVS (required)
 
-* telecom ^definition = "A contact detail for the organization.\r\n\r\nIt is RECOMMENDED to at least add one phone or email address."
+//* telecom ^definition = "A contact detail for the organization.\r\n\r\nIt is RECOMMENDED to at least add one phone or email address."
 
 * address only CZ_Address
-* address ^definition = "An address for the organization.\r\n\r\nIt is RECOMMENDED to include this when available"
+//* address ^definition = "An address for the organization.\r\n\r\nIt is RECOMMENDED to include this when available"
