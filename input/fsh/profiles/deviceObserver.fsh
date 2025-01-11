@@ -11,4 +11,4 @@ This profile describes a device that plays the role of observer or performer."
 * identifier MS
 * manufacturer MS
 * modelNumber MS
-* patient only Reference(CZ_Patient)
+* patient only Reference(CZ_PatientCore)
