@@ -39,7 +39,7 @@ Description: "Czech national profile for an organization."
 * type ^slicing.discriminator.path = "coding.system"
 * type ^slicing.rules = #open
 * type ^definition = "The kind(s) of organization that this is.\r\n\r\n. Type should be taken from DRZAR value set."
-* type only CZ_CodeableConcept
+//* type only CZ_CodeableConcept
 * type contains DRZAR 0..*
 * type[DRZAR].coding.system = $drzar (exactly)
 * type[DRZAR].coding.code 1..
