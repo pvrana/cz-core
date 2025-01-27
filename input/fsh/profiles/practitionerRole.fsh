@@ -12,12 +12,11 @@ Description: "Czech national profile for an practitioner role."
 * insert SetFmmandStatusRule ( 1, draft )
 
 * practitioner only Reference(CZ_PractitionerBase)
-
 * organization only Reference(CZ_OrganizationBase)
-* organization MS
+//* organization
 
-* code MS
-* code only CZ_CodeableConcept
+* code
+//* code only CZ_CodeableConcept
 * code ^slicing.discriminator.type = #value
 * code ^slicing.discriminator.path = "coding.system"
 * code ^slicing.rules = #open
@@ -34,7 +33,7 @@ Description: "Czech national profile for an practitioner role."
 * code[SNOMED-CT].coding.system = $sct (exactly)
 * code[SNOMED-CT].coding.code 1..
 */
-* specialty only CZ_CodeableConcept
+//* specialty only CZ_CodeableConcept
 * specialty ^slicing.discriminator.type = #value
 * specialty ^slicing.discriminator.path = "coding.system"
 * specialty ^slicing.rules = #open
