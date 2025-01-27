@@ -11,8 +11,8 @@ Description: "This profile represents the constraints applied to the Device reso
 * . ^comment = "This profile applies the rules defined by NCEZ for representing the UDI in the FHIR standard, by the document \"HL7 IG: UDI Pattern R2\""
 * insert SetFmmandStatusRule ( 1, draft )
 
-* type 0..1 MS
-* type only CZ_CodeableConcept
+* type 0..1
+//* type only CZ_CodeableConcept
 * type from $MedicalDevicesSnomedAbsentUnknownUvIps (preferred)
 * type ^short = "Type of device.\r\nPreferably valued by using SNOMED CT.\r\nThe absence of information, or absence of devices, shall be explicitly stated by using the codes included in the absent-or-unknown-devices-uv-ips value set."
 * type ^binding.extension[0].extension[0].url = "purpose"
@@ -30,6 +30,6 @@ Description: "This profile represents the constraints applied to the Device reso
 * type ^binding.extension[=].extension[=].valueMarkdown = "Codes for absent or unknown medical devices"
 * type ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * type ^binding.description = "The type of device or a code for absent/unknown device"
-* patient 1.. MS
+* patient 1..
 * patient only Reference(CZ_PatientCore)
-* patient.reference 1.. MS
+* patient.reference 1..
