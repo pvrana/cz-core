@@ -15,10 +15,10 @@ Description: "CodeSystem Supplement for the Snomed CT code system"
 
 * #700232004
 * #700232004 ^designation[+].language = #cs
-* #700232004 ^designation[=].value = "Všeobecné lékařské služby"
+* #700232004 ^designation[=].value = "všeobecné lékařské služby"
 * #310060005
 * #310060005 ^designation.language = #cs
-* #310060005 ^designation.value = "Gynekologické a porodnické služby"
+* #310060005 ^designation.value = "gynekologické a porodnické služby"
 * #722176000
 * #722176000 ^designation.language = #cs
-* #722176000 ^designation.value = "Stomatologické služby"
+* #722176000 ^designation.value = "stomatologické služby"
