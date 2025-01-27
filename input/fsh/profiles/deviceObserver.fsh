@@ -8,7 +8,7 @@ This profile describes a device that plays the role of observer or performer."
 * ^purpose = "This profile constrains the representation of a device acting as observer in the Czech interoperability project."
 * insert SetFmmandStatusRule ( 1, draft )
 
-* identifier MS
-* manufacturer MS
-* modelNumber MS
+* identifier //MS
+* manufacturer //MS
+* modelNumber //MS
 * patient only Reference(CZ_PatientCore)
