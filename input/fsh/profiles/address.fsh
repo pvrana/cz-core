@@ -4,7 +4,7 @@ Parent:     AddressEu
 Id:         cz-address
 Title:      "Address (CZ)"
 Description: "Czech national profile on address, to provide the possibility in the 'line' element to provide a seperate streetname, housenumber and postal box.
-It is always RECOMMENDED to give these elements seperately. The national specification also includes the option of entering the address location according to the RUIAN register and marking the address as the permanent residence address."
+It is always RECOMMENDED to give these elements separately. The national specification also includes the option of entering the address location according to the RUIAN register and marking the address as the permanent residence address."
 //-------------------------------------------------------------------------------------------
 //* ^publisher = "HL7 CZ"
 //* ^version = "1.0.0"
