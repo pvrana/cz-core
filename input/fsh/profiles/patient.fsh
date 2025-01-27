@@ -14,37 +14,37 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 
 * language = urn:ietf:bcp:47#cs
 
-* identifier MS
+* identifier //MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^definition = "Patient identifier.\r\n\r\nWhen available, one of the national identifiers (patient number from the national patient register, birth number (RC), insurance number) is usually used. Organisations may also provide a local identifier using their own identification system. If necessary, the type of identifier can also be added."
-* identifier contains RC 0..1 MS
+* identifier contains RC 0..1 //MS
 * identifier[RC]
   * ^short = "Personal Number"
   * ^definition = "Patient identifier assigned under the Czech Population Registration Act."
 * identifier[RC] only CZ_Rodcis_Identifier
 //* identifier[RC].system = "https://ncez.mzcr.cz/fhir/sid/rcis" (exactly)  // could be also "urn:oid:2.16.840.1.113883.2.40.1"
 //* identifier[RC].value 1..1
-* identifier contains RID 0..1 MS
+* identifier contains RID 0..1 //MS
 * identifier[RID]
   * ^short = "National Health Identifier"
   * ^definition = "An unique patient identifier (resortní identifikátor) according to the National Patient Register"
 * identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid" (exactly)
 * identifier[RID].value 1..1
-* identifier contains CPOJ 0..1 MS
+* identifier contains CPOJ 0..1 //MS
 * identifier[CPOJ]
   * ^short = "Health Insurance Number"
   * ^definition = "An unique patient identifier (číslo pojištěnce) according to the National Health Insurance Register"
 * identifier[CPOJ].system = "https://ncez.mzcr.cz/fhir/sid/cpoj" (exactly)
 * identifier[CPOJ].value 1..1
-* identifier contains OP 0..1 MS
+* identifier contains OP 0..1 //MS
 * identifier[OP]
   * ^short = "National Identity Card Number"
   * ^definition = "An unique patient identifier (National ID Card Number) issued by the ministry of interior"
 * identifier[OP].system = "https://ncez.mzcr.cz/fhir/sid/op" (exactly)
 * identifier[OP].value 1..1
-* identifier contains PAS 0..* MS
+* identifier contains PAS 0..* //MS
 * identifier[PAS]
   * ^short = "Passport Number"
   * ^definition = "An unique patient identifier (Passport Number)"
@@ -116,7 +116,7 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 
 * contact ^definition = "A contact party (e.g. guardian, partner, friend) for the patient.\n\nIt is RECOMMENDED to include this when available and considered relevant for the patientcare. (e.g. a parent of a young patient)"
 * contact ^comment = "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact."
-* contact.relationship only CZ_CodeableConcept
+//* contact.relationship only CZ_CodeableConcept
 * contact.relationship from CZ_ContactPersonRelationVS
 /* * contact.relationship ^slicing.discriminator.type = #value
 * contact.relationship ^slicing.discriminator.path = "system"
