@@ -5,6 +5,7 @@ Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 Alias: $drzar = https://ncez.mzcr.cz/fhir/CodeSystem/cz-drzar
+Alias: $sct-supplement-service-type = https://ncez.mzcr.cz/fhir/CodeSystem/snomed-supplement-service-type
 Alias: $nrzp_povolani = https://ncez.mzcr.cz/fhir/CodeSystem/nrzp-povolani
 Alias: $uri = urn:ietf:rfc:3986
 Alias: $oid = urn:ietf:rfc:1155
