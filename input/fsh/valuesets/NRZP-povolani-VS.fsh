@@ -1,7 +1,7 @@
 ValueSet: NRZP_PovolaniVS
 Id: nrzp-povolani-vs
-Title: "Povolání zdravotnického pracovníka (CZ)"
-Description: "Povolání zdravotnického pracovníka evidované v národním registru zdravotnických pracovníků"
+Title: "Occupation of healthcare practitioner (CZ)"
+Description: "Occupation of health practitioner registered in the national register of health practitioner (NRZP)"
 * ^language = #cs
 //* ^identifier.system = "urn:ietf:rfc:3986"
 //* ^identifier.value = "urn:oid:1.2.203.24341.11.1.7"

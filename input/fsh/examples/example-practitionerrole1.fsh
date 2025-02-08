@@ -1,7 +1,7 @@
 Instance: practitionerrole1
-InstanceOf: CZ_PractitionerRole
+InstanceOf: CZ_PractitionerRoleCore
 Usage: #example
-Description: "Ordinace praktického lékaře"
+Description: "General practitioner's office"
 * meta.versionId = "1"
 * meta.lastUpdated = "2019-07-01T13:30:55.864+00:00"
 * identifier.system = "http://www.acme.org/practitioners"

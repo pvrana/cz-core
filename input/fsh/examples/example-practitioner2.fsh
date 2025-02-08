@@ -1,7 +1,7 @@
 Instance: Practitioner-2
-InstanceOf: CZ_Practitioner
+InstanceOf: CZ_PractitionerCore
 Usage: #example
-Description: "Zdravotnický pracovník id(NRZP)=987654321"
+Description: "Practitioner id(NRZP)=987654321"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/nrzp"
 * identifier[=].value = "987654321"
 //* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/clk"

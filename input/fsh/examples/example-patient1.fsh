@@ -1,7 +1,7 @@
 Instance: Mracena
-InstanceOf: CZ_Patient
+InstanceOf: CZ_PatientCore
 Usage: #example
-Description: "Pacientka, kontaktní informace a praktický lékař"
+Description: "Patient, contact information and practitioner"
 
 * contained[+] = RegisteringProviderExample
 * identifier[RC] = rodnecislo_7161264528
@@ -80,7 +80,7 @@ Description: "Pacientka, kontaktní informace a praktický lékař"
 * extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Gynekologické a porodnické služby"
 
 Instance: RegisteringProviderExample
-InstanceOf: Organization
+InstanceOf: CZ_OrganizationCore
 Title: "Organization: Registering healthcare provider example"
 Description: "Example of registering healthcare provider"
 Usage: #inline

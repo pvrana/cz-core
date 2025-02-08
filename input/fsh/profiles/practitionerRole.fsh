@@ -1,23 +1,22 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:    CZ_PractitionerRole
-Parent:     PractitionerRole
-Id:         cz-practitionerrole
-Title:      "Practitioner Role (CZ)"
+Profile:    CZ_PractitionerRoleBase
+Parent:     PractitionerRoleEu
+Id:         cz-practitionerrole-base
+Title:      "Practitioner Role (CZ base)"
 Description: "Czech national profile for an practitioner role."
 //-------------------------------------------------------------------------------------------
-* ^publisher = "NCEZ"
-* ^version = "1.0.0"
+//* ^publisher = "HL7 CZ"
+//* ^version = "1.0.0"
 //* ^status = #active
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
 
-* practitioner only Reference(CZ_Practitioner)
+* practitioner only Reference(CZ_PractitionerBase)
+* organization only Reference(CZ_OrganizationBase)
+//* organization
 
-* organization only Reference(CZ_Organization)
-* organization MS
-
-* code MS
-* code only CZ_CodeableConcept
+* code
+//* code only CZ_CodeableConcept
 * code ^slicing.discriminator.type = #value
 * code ^slicing.discriminator.path = "coding.system"
 * code ^slicing.rules = #open
@@ -25,7 +24,7 @@ Description: "Czech national profile for an practitioner role."
 * code contains  // TO-DO: zvážit ISCO urn:oid:2.16.840.1.113883.2.9.6.2.7 a zjistit, zda v této oblasti existuje použitelný kódový systém NZIS
     NRZP_POVOLANI 0..* //and
     //SNOMED-CT 0..*
-* code[NRZP_POVOLANI] ^definition = "Role/povolání ke kterým je zdravotnický pracovník oprávněn v rámci poskytovatele dle NRZP.\n\nRoles which this practitioner is authorized to perform for the organization according to the National registry of healthcare practitioners."
+* code[NRZP_POVOLANI] ^definition = "Roles which this practitioner is authorized to perform for the organization according to the National registry of healthcare practitioners."
 * code[NRZP_POVOLANI].coding.system = $nrzp_povolani (exactly)
 * code[NRZP_POVOLANI].coding.code 1..
 * code[NRZP_POVOLANI] from NRZP_PovolaniVS (required)
@@ -34,7 +33,7 @@ Description: "Czech national profile for an practitioner role."
 * code[SNOMED-CT].coding.system = $sct (exactly)
 * code[SNOMED-CT].coding.code 1..
 */
-* specialty only CZ_CodeableConcept
+//* specialty only CZ_CodeableConcept
 * specialty ^slicing.discriminator.type = #value
 * specialty ^slicing.discriminator.path = "coding.system"
 * specialty ^slicing.rules = #open

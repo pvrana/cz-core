@@ -1,0 +1,3 @@
+Below is a list of the main CZ Core profiles. Each profile identifies which core elements, extensions, dictionaries, and value sets MUST be present in the resource when using that profile. Together, they promote interoperability and represent a common basis for developing standards for specific use cases.
+
+A simple descriptive summary includes the requirements and instructions for each profile. A formal hierarchical table presents a [logical view] of the content in both a difference view and a snapshot, and references to relevant terminology and examples are provided.

@@ -1,7 +1,7 @@
 ValueSet: CZ_ContactPersonRelationVS
 Id: cz-contactperson-relation-vs
 Title: "Contact Person Relation (CZ)"
-Description: "Vztah kontaktní osoby k subjektu"
+Description: "Relationship of the contact person to the subject"
 * ^language = #cs
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:1.2.203.24341.11.1.8"

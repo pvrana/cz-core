@@ -1,7 +1,7 @@
 Instance: Organization-1
-InstanceOf: CZ_Organization
+InstanceOf: CZ_OrganizationCore
 Usage: #example
-Description: "Příklad orgnizace poskytovatele"
+Description: "An example of the organization of a provider"
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "27520536"
 * type[DRZAR] = $drzar#102 "Nemocnice"

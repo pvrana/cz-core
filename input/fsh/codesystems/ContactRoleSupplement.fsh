@@ -1,9 +1,9 @@
 CodeSystem: ContactRoleSupplement
 Id: contact-role-supplement
-Description: "CodeSystem Supplement pro kódový systém ContactRole"
+Description: "CodeSystem Supplement for code system ContactRole"
 * ^meta.profile = "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
 * ^url = "https://ncez.mzcr.cz/fhir/CodeSystem/contact-role-supplement"
-* ^title = "Kódový systém typů kontaktních osob pacienta"
+* ^title = "Code system of patient contact person types"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false

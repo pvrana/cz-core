@@ -1,7 +1,7 @@
 CodeSystem: NRZP_PovolaniCS
 Id: nrzp-povolani-cs
-Title: "NRZP - povolání zdravotnických pracovníků"
-Description: "Národní registr zdravotnických pracovníků (NRZP) - Národní kódový systém druhů povolání.\n\nCzech national code system for health professional occupation used in the national registry of healthcare practicioners."
+Title: "NRZP - Czech health professional occupation"
+Description: "Czech national code system for health professional occupation used in the national registry of healthcare practicioners."
 
 * ^identifier.system = "urn:ietf:rfc:3986"
 * ^identifier.value = "urn:oid:1.2.203.24341.11.2.10.2.1"
