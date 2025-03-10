@@ -30,8 +30,9 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 * identifier[RID]
   * ^short = "National Health Identifier"
   * ^definition = "An unique patient identifier (resortní identifikátor) according to the National Patient Register"
-* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid" (exactly)
-* identifier[RID].value 1..1
+* identifier[RID] only CZ_RID_Identifier
+//* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid" (exactly)
+//* identifier[RID].value 1..1
 * identifier contains CPOJ 0..1 //MS
 * identifier[CPOJ]
   * ^short = "Health Insurance Number"
@@ -117,7 +118,7 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 * contact ^definition = "A contact party (e.g. guardian, partner, friend) for the patient.\n\nIt is RECOMMENDED to include this when available and considered relevant for the patientcare. (e.g. a parent of a young patient)"
 * contact ^comment = "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact."
 //* contact.relationship only CZ_CodeableConcept
-* contact.relationship from CZ_ContactPersonRelationVS
+* contact.relationship from $PersonalRelationshipCzVS
 /* * contact.relationship ^slicing.discriminator.type = #value
 * contact.relationship ^slicing.discriminator.path = "system"
 * contact.relationship ^slicing.rules = #open

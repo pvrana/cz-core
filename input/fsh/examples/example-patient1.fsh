@@ -6,7 +6,7 @@ Description: "Patient, contact information and practitioner"
 * contained[+] = RegisteringProviderExample
 * identifier[RC] = rodnecislo_7161264528
 * identifier[RID][+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
-* identifier[RID][=].value = "456789123"
+* identifier[RID][=].value = "2066425387"
 * identifier[PAS][+].system = "http://hl7.org/fhir/sid/passport-CZE"
 * identifier[PAS][=].value = "23476533"
 * identifier[PAS][=].use = #official
@@ -74,8 +74,6 @@ Description: "Patient, contact information and practitioner"
 
 * extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
 * extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "Všeobecné lékařské služby"
-//* extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
-//* extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#700232004 "Všeobecné lékařské služby"
 * extension[registeringProvider][+].extension[value].valueReference = Reference (RegisteringProviderExample)
 * extension[registeringProvider][=].extension[category].valueCodeableConcept = $sct#310060005 "Gynekologické a porodnické služby"
 
@@ -83,7 +81,7 @@ Instance: RegisteringProviderExample
 InstanceOf: CZ_OrganizationCore
 Title: "Organization: Registering healthcare provider example"
 Description: "Example of registering healthcare provider"
-Usage: #inline
+Usage: #example //#inline
 
 * identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/ico"
 * identifier[=].value = "456789655"

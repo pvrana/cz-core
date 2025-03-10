@@ -15,7 +15,8 @@ copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
-jurisdiction: urn:iso:std:iso:3166#CZ "Czechia" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#203 "Czech Republic (CZE)"
+# jurisdiction: urn:iso:std:iso:3166#CZ  # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
   name: HL7 Czech Republic
   url: https://www.hl7.cz/
@@ -37,6 +38,7 @@ publisher:
 dependencies:
   hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.eu.base.r4: current
+  hl7.fhir.cz.terminology: current
 #
 #
 # The pages property corresponds to IG.definition.page. SUSHI can
@@ -145,7 +147,7 @@ menu:
   Guidance:
     General guidance: general-guidance.html
     Identifiers: identifiers.html
-  Artifacts: 
+  Artifacts:
     Czech artifacts: artifacts.html
     Profiles and extensions: profiles-and-extensions.html
   About:

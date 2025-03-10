@@ -43,7 +43,7 @@ Description: "Czech national profile for an organization."
 * type contains DRZAR 0..*
 * type[DRZAR].coding.system = $drzar (exactly)
 * type[DRZAR].coding.code 1..
-* type[DRZAR] from CZ_DrzarVS (required)
+* type[DRZAR] from DrzarVS (required)
 
 //* telecom ^definition = "A contact detail for the organization.\r\n\r\nIt is RECOMMENDED to at least add one phone or email address."
 

@@ -6,6 +6,7 @@ input-cache
 output
 temp
 template
+backup/
 _*.*
 *.bak
 ig-template/includes/.index.json

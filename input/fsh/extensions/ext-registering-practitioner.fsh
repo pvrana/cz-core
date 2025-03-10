@@ -27,4 +27,4 @@ Description: "This extension allows the registration of the registering healthca
 * extension[category].url only uri
 * extension[category].value[x] 1..1
 * extension[category].value[x] only CodeableConcept
-* extension[category].value[x] from typ-registrujiciho-lekare-vs
+* extension[category].value[x] from $RegisteringProviderServiceTypeCz

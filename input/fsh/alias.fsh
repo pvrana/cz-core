@@ -26,10 +26,11 @@ Alias: $nationality = http://hl7.org/fhir/StructureDefinition/patient-nationalit
 Alias: $registering-provider = https://hl7.cz/fhir/core/StructureDefinition/registering-provider-cz
 
 // Valuesets:
-Alias: $CZ_AdministrativegenderVS = https://ncez.mzcr.cz/fhir/ValueSet/cz-administrative-gender-vs
-Alias: $cz-contactperson-relation = https://ncez.mzcr.cz/fhir/ValueSet/cz-contact-person-relation-vs
+Alias: $CZ_AdministrativegenderVS = https://hl7.cz/fhir/ValueSet/administrative-gender-cz-vs
 Alias: $MedicalDevicesSnomedAbsentUnknownUvIps = http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-snomed-absent-unknown-uv-ips
 Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
+Alias: $PersonalRelationshipCzVS = https://hl7.cz/fhir/ValueSet/personal-relationship
+Alias: $RegisteringProviderServiceTypeCz = https://ncez.mzcr.cz/fhir/ValueSet/registering-provider-service-type-cz
 
 // Profiles:
 Alias: $Organization-eu-core = http://hl7.eu/fhir/base/StructureDefinition/OrganizationEuCore
