@@ -117,7 +117,6 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 
 * contact ^definition = "A contact party (e.g. guardian, partner, friend) for the patient.\n\nIt is RECOMMENDED to include this when available and considered relevant for the patientcare. (e.g. a parent of a young patient)"
 * contact ^comment = "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact."
-//* contact.relationship only CZ_CodeableConcept
 * contact.relationship from $hl7vs-contact-and-relationship-cz
 /* * contact.relationship ^slicing.discriminator.type = #value
 * contact.relationship ^slicing.discriminator.path = "system"
