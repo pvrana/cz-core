@@ -29,7 +29,7 @@ Alias: $registering-provider = https://hl7.cz/fhir/core/StructureDefinition/regi
 Alias: $CZ_AdministrativegenderVS = https://hl7.cz/fhir/ValueSet/administrative-gender-cz-vs
 Alias: $MedicalDevicesSnomedAbsentUnknownUvIps = http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-snomed-absent-unknown-uv-ips
 Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
-Alias: $PersonalRelationshipCzVS = https://hl7.cz/fhir/ValueSet/personal-relationship
+Alias: $hl7vs-contact-and-relationship-cz = https://hl7.cz/fhir/ValueSet/hl7vs-contact-and-relationship-cz
 Alias: $RegisteringProviderServiceTypeCz = https://ncez.mzcr.cz/fhir/ValueSet/registering-provider-service-type-cz
 
 // Profiles:
