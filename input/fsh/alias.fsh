@@ -31,6 +31,7 @@ Alias: $MedicalDevicesSnomedAbsentUnknownUvIps = http://hl7.org/fhir/uv/ips/Valu
 Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 Alias: $hl7vs-contact-and-relationship-cz = https://hl7.cz/fhir/ValueSet/hl7vs-contact-and-relationship-cz
 Alias: $RegisteringProviderServiceTypeCz = https://ncez.mzcr.cz/fhir/ValueSet/registering-provider-service-type-cz
+Alias: $PassportNSVS = http://hl7.org/fhir/ValueSet/passport-ns
 
 // Profiles:
 Alias: $Organization-eu-core = http://hl7.eu/fhir/base/StructureDefinition/OrganizationEuCore
