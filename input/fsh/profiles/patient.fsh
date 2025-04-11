@@ -24,21 +24,21 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
   * ^short = "Personal Number"
   * ^definition = "Patient identifier assigned under the Czech Population Registration Act."
 * identifier[RC] only CZ_Rodcis_Identifier
-//* identifier[RC].system = "https://ncez.mzcr.cz/fhir/sid/rcis" (exactly)  // could be also "urn:oid:2.16.840.1.113883.2.40.1"
-//* identifier[RC].value 1..1
 * identifier contains RID 0..1 //MS
 * identifier[RID]
   * ^short = "National Health Identifier"
   * ^definition = "An unique patient identifier (resortní identifikátor) according to the National Patient Register"
 * identifier[RID] only CZ_RID_Identifier
-//* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid" (exactly)
-//* identifier[RID].value 1..1
 * identifier contains CPOJ 0..1 //MS
 * identifier[CPOJ]
   * ^short = "Health Insurance Number"
   * ^definition = "An unique patient identifier (číslo pojištěnce) according to the National Health Insurance Register"
 * identifier[CPOJ].system = "https://ncez.mzcr.cz/fhir/sid/cpoj" (exactly)
 * identifier[CPOJ].value 1..1
+  * ^example.label = "CPOJ Example"
+  * ^example.valueString = "6309211234"
+//* identifier[CPOJ].value ^example.label = "CPOJ"
+//* identifier[CPOJ].value ^example.valueString = "6309211234"
 * identifier contains OP 0..1 //MS
 * identifier[OP]
   * ^short = "National Identity Card Number"
@@ -49,7 +49,7 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 * identifier[PAS]
   * ^short = "Passport Number"
   * ^definition = "An unique patient identifier (Passport Number)"
-* identifier[PAS].system from PassportNSVS
+* identifier[PAS].system from $PassportNSVS
   * ^short = "Name space according to the passport issuer. FHIR records namespaces for passports in the format - http://hl7.org/fhir/sid/passport-XXX, where XXX is the three-letter country code according to ISO 3166"
 * identifier[PAS].use = #official
 * identifier[PAS].type = $v2-0203#PPN
