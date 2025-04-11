@@ -12,14 +12,6 @@ Description: "This structure contains the Czech identifier of a person (personal
   * ^maxLength = 10
 //  * ^mustSupport = true
 
-/*
-Invariant: rid_rule
-Description: "Czech national RID rule"
-Severity: #error
-Expression: "matches('D\d{9}|[1-9]\d{9}')"
-* requirements = "Czech national RID rules."
-*/
-
 
 Invariant: rid-rule
 Description: "Czech national personal ID rule"
