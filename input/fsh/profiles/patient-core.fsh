@@ -5,7 +5,7 @@ Id:       cz-patient-core
 Title:    "Patient (CZ core)"
 Description: "This profile sets minimum expectations for the Patient resource common to most of the use cases. It is based on EU Patient Core."
 
-* ^description = "This profile sets minimum expectations for the Patient resource common to most of the use cases. It is based on EU Patient Core."
+//* ^description = "This profile sets minimum expectations for the Patient resource common to most of the use cases. It is based on EU Patient Core."
 * ^publisher = "HL7 CZ"
 //* ^status = #active
 * ^experimental = false
@@ -21,7 +21,8 @@ Description: "This profile sets minimum expectations for the Patient resource co
   * ^definition = "A registering provider means an ambulatory care provider in the field of general practice medicine, in the field of practice medicine for children and adolescents, in the field of dentistry or in the field of gynecology and obstetrics, who accepted a patient for the purpose of providing primary ambulatory care."
   * ^comment = "At any one time, a patient may have no more than one general practitioner or paediatric and adolescent practitioner and one dental registrar. Female patients may also have no more than one registered provider in gynaecology and obstetrics."
 * obeys cz-pat-2
-
+* identifier 1..* //at least one identifier is required
+* identifier[RID] 1..1  // national health identifier is required
 * name 1..* //MS  // patient name element must be provided
 * name obeys cz-pat-1
 * name.given ^min = 1
