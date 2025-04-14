@@ -68,7 +68,7 @@ Description: "Patient, contact information and practitioner"
 * communication[+].language = urn:ietf:bcp:47#en
 * communication[+].language = urn:ietf:bcp:47#de
 
-* generalPractitioner.identifier.system = "https://ncez.mzcr.cz/fhir/sid/nrzp"
+* generalPractitioner.identifier.system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * generalPractitioner.identifier.value = "123456789"
 * generalPractitioner.display = "MUDr. Josef Švejk"
 

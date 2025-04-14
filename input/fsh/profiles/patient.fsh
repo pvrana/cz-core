@@ -12,7 +12,7 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 * ^experimental = false
 * insert SetFmmandStatusRule ( 1, draft )
 
-* language = urn:ietf:bcp:47#cs
+//* language = urn:ietf:bcp:47#cs  -- todo EJAZYK
 
 * identifier //MS
 * identifier ^slicing.discriminator.type = #value
@@ -24,11 +24,15 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
   * ^short = "Personal Number"
   * ^definition = "Patient identifier assigned under the Czech Population Registration Act."
 * identifier[RC] only CZ_Rodcis_Identifier
+* identifier[RC].system = "https://ncez.mzcr.cz/fhir/sid/rcis" (exactly)  // could be also "urn:oid:2.16.840.1.113883.2.40.1"
+* identifier[RC].value 1..1
 * identifier contains RID 0..1 //MS
 * identifier[RID]
   * ^short = "National Health Identifier"
   * ^definition = "An unique patient identifier (resortní identifikátor) according to the National Patient Register"
 * identifier[RID] only CZ_RID_Identifier
+* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid" (exactly)
+* identifier[RID].value 1..1
 * identifier contains CPOJ 0..1 //MS
 * identifier[CPOJ]
   * ^short = "Health Insurance Number"
@@ -55,7 +59,7 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 * identifier[PAS].type = $v2-0203#PPN
 * identifier[PAS].value 1..1
 
-/*
+
 * name 1..* MS  // patient name element must be provided
 * name only HumanNameEu
 * name obeys cz-pat-1
@@ -67,8 +71,8 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 * name.family 0..1 MS
 * name.given MS
 * name.given ^min = 1
-*/
-/*
+
+
 * telecom MS
 * telecom
   * ^short = "A contact detail for the individual"
@@ -76,12 +80,12 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 
 * gender MS  // gender must be supported
   * ^definition = "Gender for official purposes"
-*/
+
 * gender from $CZ_AdministrativegenderVS (required)
-/*
+
 * birthDate 1..1 //MS
 * birthDate ^definition = "The date of birth for the patient.\n\nIt is RECOMMENDED to give the birthdate when available."
-*/
+
 * birthDate.extension ^slicing.discriminator.type = #value
 * birthDate.extension ^slicing.discriminator.path = "url"
 * birthDate.extension ^slicing.rules = #open

@@ -13,5 +13,13 @@ Description: """Czech national profile for an organization. This profile sets mi
 * insert SetFmmandStatusRule ( 1, draft )
 * insert ImposeProfile($Organization-eu-core, 0)
 
-* name 1..
+* name 0..1
+* identifier 0..*
 * partOf only Reference (CZ_OrganizationCore)
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Invariant: cz-org-1
+Description: "Organization.name or Identifier.value MUST be filled."
+Severity: #error
+Expression: "name.text.exists() or identifier.value.exists()"
+

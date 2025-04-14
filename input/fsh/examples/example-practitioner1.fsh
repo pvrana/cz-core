@@ -1,8 +1,8 @@
 Instance: Practitioner-123456789
 InstanceOf: CZ_PractitionerCore
 Usage: #example
-Description: "Practitioner id(NRZP)=123456789"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/nrzp"
+Description: "Practitioner id(KRZP)=123456789"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/krzp"
 * identifier[=].value = "123456789"
 //* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/clk"
 //* identifier[=].value = "4567891230"
