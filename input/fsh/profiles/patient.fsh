@@ -39,6 +39,10 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
   * ^definition = "An unique patient identifier (číslo pojištěnce) according to the National Health Insurance Register"
 * identifier[CPOJ].system = "https://ncez.mzcr.cz/fhir/sid/cpoj" (exactly)
 * identifier[CPOJ].value 1..1
+  * ^example.label = "CPOJ Example"
+  * ^example.valueString = "6309211234"
+//* identifier[CPOJ].value ^example.label = "CPOJ"
+//* identifier[CPOJ].value ^example.valueString = "6309211234"
 * identifier contains OP 0..1 //MS
 * identifier[OP]
   * ^short = "National Identity Card Number"
@@ -49,7 +53,7 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 * identifier[PAS]
   * ^short = "Passport Number"
   * ^definition = "An unique patient identifier (Passport Number)"
-* identifier[PAS].system from PassportNSVS
+* identifier[PAS].system from $PassportNSVS
   * ^short = "Name space according to the passport issuer. FHIR records namespaces for passports in the format - http://hl7.org/fhir/sid/passport-XXX, where XXX is the three-letter country code according to ISO 3166"
 * identifier[PAS].use = #official
 * identifier[PAS].type = $v2-0203#PPN
@@ -117,8 +121,7 @@ Description: """This profile specifies how the HL7 FHIR Patient resource should 
 
 * contact ^definition = "A contact party (e.g. guardian, partner, friend) for the patient.\n\nIt is RECOMMENDED to include this when available and considered relevant for the patientcare. (e.g. a parent of a young patient)"
 * contact ^comment = "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact."
-//* contact.relationship only CZ_CodeableConcept
-* contact.relationship from $PersonalRelationshipCzVS
+* contact.relationship from $hl7vs-contact-and-relationship-cz
 /* * contact.relationship ^slicing.discriminator.type = #value
 * contact.relationship ^slicing.discriminator.path = "system"
 * contact.relationship ^slicing.rules = #open
