@@ -14,6 +14,6 @@ Description: "Czech national profile for a medication statement"
 * status from $hl7MedicationStatementStatus
 * medication[x]
 * medication[x] only Reference(Medication) or CodeableConcept
-* medicationCodeableConcept from $SNOMEDCTMedicationCodes
+//* medicationCodeableConcept from $SNOMEDCTMedicationCodes // doplnit DLP a ATC
 * dosage 
 * dosage only Dosage

@@ -24,5 +24,5 @@ Expression: "matches('D\d{9}|[1-9]\d{9}')"
 Invariant: rid-rule
 Description: "Czech national personal ID rule"
 Severity: #error
-Expression: "matches('(D\\d{9}|[1-9]\\d{9})')"
+Expression: "$this.toString().matches('(D\\\\d{9}|[1-9]\\\\d{9})')"
 * requirements = "Czech national personal ID rules."

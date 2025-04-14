@@ -2,7 +2,7 @@
 Profile:    CZ_Specimen
 Parent:     Specimen
 Id:         cz-specimen
-Title:      "Czech Specimen"
+Title:      "Specimen"
 Description: "Czech national profile for a specimen"
 //-------------------------------------------------------------------------------------------
 //* ^publisher = "HL7 CZ"

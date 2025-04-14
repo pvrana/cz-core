@@ -15,7 +15,7 @@ Description: "Czech national profile for a related person."
 * insert SetFmmandStatusRule ( 1, draft )
 * insert ImposeProfile($RelatedPerson, 0)
 
-* name 1..* //MS  // name element must be provided
+* name 0..1 //MS  // name element must be provided
 * name obeys cz-relPer-1
 * name.given ^min = 1
 

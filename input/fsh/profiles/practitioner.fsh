@@ -15,13 +15,13 @@ Description: "Czech national profile for practitioner."
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
-* identifier ^definition = "An identifier that applies to this person in this role.\r\nTypically, a NRZP value is given and/or CLK identifier provided by the Czech Medical Chamber or identifier of Pharmacist (PharmID) provided by the Czech Chamber of Pharmacists, however use of NRZP Id is preferred. Other systems remain allowed. Flows in organizations will most likely want to also include a local identifier, using its own system. A type can be added if needed. When it is given, a consumer SHALL NOT ignore it."
+* identifier ^definition = "An identifier that applies to this person in this role.\r\nTypically, a KRZP value is given and/or CLK identifier provided by the Czech Medical Chamber or identifier of Pharmacist (PharmID) provided by the Czech Chamber of Pharmacists, however use of KRZP Id is preferred. Other systems remain allowed. Flows in organizations will most likely want to also include a local identifier, using its own system. A type can be added if needed. When it is given, a consumer SHALL NOT ignore it."
 * identifier contains
-    NRZP 0..* and
+    KRZP 0..* and
     CLK 0..* and
     CLeK 0..*
-* identifier[NRZP].system = "https://ncez.mzcr.cz/fhir/sid/nrzp" (exactly)
-* identifier[NRZP].value 1..
+* identifier[KRZP].system = "https://ncez.mzcr.cz/fhir/sid/krzp" (exactly)
+* identifier[KRZP].value 1..
 * identifier[CLK].system = "https://ncez.mzcr.cz/fhir/sid/clk" (exactly)
 * identifier[CLK].value 1..
 * identifier[CLeK].system = "https://ncez.mzcr.cz/fhir/sid/clek" (exactly)

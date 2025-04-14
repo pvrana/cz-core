@@ -41,7 +41,7 @@ but who is not the target of healthcare, nor has a formal responsibility in the 
 * relationship 0..* //MS
 //* relationship contains $PersonalRelationshipCzVS
 
-* name 0..* //MS
+* name 0..1 //MS
 * name only HumanNameEu
 
 * address only CZ_Address

@@ -37,6 +37,7 @@ Alias: $hl7AllergyintoleranceType = http://hl7.org/fhir/ValueSet/allergy-intoler
 Alias: $hl7AllergyintoleranceCategory = http://hl7.org/fhir/ValueSet/allergy-intolerance-category
 Alias: $hl7MedicationStatementStatus = http://hl7.org/fhir/ValueSet/medication-statement-status
 Alias: $SNOMEDCTMedicationCodes = http://hl7.org/fhir/ValueSet/medication-codes
+Alias: $hl7OrganizationType = http://hl7.org/fhir/ValueSet/organization-type
 
 // Profiles:
 Alias: $Organization-eu-core = http://hl7.eu/fhir/base/StructureDefinition/OrganizationEuCore
