@@ -1,15 +1,24 @@
-### Identifiers
-This chapter discusses the general use of identifiers and nationally specific identifiers. CZ Identifiers are used extensively to consistently identify real world entities across systems, contexts of use, and other formats in CZ profiles.
+This chapter discusses the general use of identifiers and nationally specific identifiers. CZ Identifiers are used extensively to consistently identify real world entities across systems, contexts of use and other formats in CZ profiles.
 
-#### General identifiers
+This chapter addresses the widespread use of identifiers and includes specifications for Czech national identifiers. These identifiers are used to uniquely identify real-world entities across different systems and contexts.
 
-At the general level it is used identifiers in the URI format.
-The unique identifier URI (Uniform Resource Identifier) ​​is standardized by the RFC 3986 standard. It is a reference to a certain resource, such as a web page. A URI typically includes a scheme (eg https), an authority (eg domain), a path, and an object identifier. If a URI refers to the identification of a unique document, that URI may be considered a unique identifier.
+**Recommendations for Identifier Usage**
 
-The URI format allows the creation of identifiers of several types. In our national environment, these two types are mainly used:
+It is recommended to use unique identifiers for each type of entity and, where possible, to include at least one national or international identifier for these entities.
 
-##### UUID
-UUID (Universally Unique Identifier) ​​is represented by URI RFC 9562 (obsoleted RFC 4122). An identifier is generated to be virtually unique worldwide and is often used to identify objects and entities in various systems, databases and applications. A UUID is a 128-bit number that is usually represented as 32 hexadecimal numbers separated by dashes like: urn:uuid:c757873d-ec9a-4326-a141-556f43239520.
+**Scope of Identifiers**
+
+It is important to emphasize that the definition of identifiers is not restricted to those described in this section, and other identifiers not included in this list may also be used.
+
+### General identifiers
+
+At a general level, identifiers are used in the URI format. The Uniform Resource Identifier (URI) is standardized by RFC 3986. A URI typically includes a scheme (e.g., https), an authority (e.g., a domain name), a path, and an object identifier. If a URI identifies a unique document, it can be considered a unique identifier.
+
+Unless otherwise specified for identifying an object or subject, the use of a UUID (Universally Unique Identifier) type identifier is preferred.
+
+#### UUID
+
+UUID (Universally Unique Identifier) ​​is represented by URI [RFC 9562](https://datatracker.ietf.org/doc/html/rfc9562) [(obsoleted RFC 4122)](http://www.ietf.org/rfc/rfc4122.txt). An identifier is generated to be virtually unique worldwide and is often used to identify objects and entities in various systems, databases and applications. A UUID is a 128-bit number that is usually represented as 32 hexadecimal numbers separated by dashes like: urn:uuid:c757873d-ec9a-4326-a141-556f43239520.
 
 HL7 FHIR use UUID as a primitive data type as part of complex data types and represents it in the form of URI (universal resource identifier) according to RFC 4122. UUID shell be represented in lower case.
 
@@ -18,7 +27,8 @@ Format must match following regular expression:
 urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}
 ~~~
 
-##### OID
+#### OID
+
 The OID (Object Identifier), which is used for unique identification in IT, is standardized by ISO/IEC standards. It is a unique identifier used in information technology for unambiguously distinguishing objects, attributes and data structures within organizations, systems and standards. An OID is a hierarchical identifier in the form of numbers separated by dots that represent the path to a given object in a hierarchy defined by a given organizational or standardization system, such as ISO. 
 
 OID enables unambiguous identification and addressing of data elements and entities within different systems and facilitates interoperability and resource management.
@@ -28,7 +38,7 @@ Format must match following regular expression:
 urn:oid:[0-2](\.(0|[1-9][0-9]*))*
 ~~~
 
-#### Nationally specific identifier
+### Nationally specific identifier
 
 Defined in this implementation guide are profiles for identifiers for use in populating the following data elements:
 * Patient.Identifier
@@ -39,101 +49,199 @@ Defined in this implementation guide are profiles for identifiers for use in pop
 
 All identifiers must be unique within the identifier type.
 
-##### Patient Identifier
-If it is known, it is mandatory to enter at least one national or international identifier (birth number, passport number, etc.). Usually, if available, one of the national identifiers is used (patient number from the national patient register, birth number, insurance number).
+---
 
-###### Personal (National) Healthcare Identifier (RID, DRID)
-*RID* (Resortní Identifikátor) is a unique personal identifier of each patient in who has been in contact with health services in the Czech Republic and has been duly identified. The identifier is assigned when the patient is recorded in the national Master patient register (KRP). RID is a meaningless ten-digit number that cannot begin with zero, is divisible by 13, and is not divisible by 11.
+#### Patient Identifier
 
-Patients that cannot be duly identified due to different reasons are assigned a temporary healthcare identifier (DRID). DRID is generated by the Master patient register (KRP) on request of healthcare providers. DRID shares the same namespace with RID but its syntax is different: starts with letter "D" and contains 9 digit unique number which is not subject to any further restrictions.
+Usually, if available, one of the national identifiers is used (patient number from the national patient register, birth number, insurance number).
 
-The identifier namespace is: https://ncez.mzcr.cz/fhir/sid/rid.
+##### Personal (National) Healthcare Identifier (RID, DRID)
+
+**RID** (Resortní Identifikátor) is a unique personal identifier of each patient in who has been in contact with health services in the Czech Republic and has been duly identified. The identifier is assigned when the patient is recorded in the national Master patient register (KRP). RID is a meaningless ten-digit number that cannot begin with zero, is divisible by 13, and is not divisible by 11.
+
+Patients that cannot be duly identified due to different reasons are assigned a **DRID** (Dočasný resortní identifikátor - Temporary Healthcare Identifier). DRID is generated by the Master patient register (KRP) on request of healthcare providers. DRID shares the same namespace with RID but its syntax is different: starts with letter "D" and contains 9 digit unique number which is not subject to any further restrictions.
+
+DRID (Temporary Child Registration Identifier) is used for the identification of:
+- a newborn who is not yet registered in the basic registers (BR)
+- an individual not yet verified against the basic registers
+- an unknown or unidentifiable person
+
+The identifier namespace is: `https://ncez.mzcr.cz/fhir/sid/rid`.
 
 Format must match following regular expression:
 ~~~
 (D\d{9}|[1-9]\d{9})
 ~~~
 
-###### Birth Number
-Birth Numbers are assigned:
-* natural person upon birth or adoption of a minor natural person
-* a citizen who has not yet had a birth number, foreigners with a residence permit in the territory of the Czech Republic
-* a foreigner who has been granted international protection in the form of asylum or supplementary protection on the territory of the Czech Republic
-* a foreigner who applied for the allocation of a birth number in order to fulfill the conditions according to a special legal regulation, e.g. university studies, employment, etc.
-* a natural person for whom the Czech Social Security Administration or the District Social Security Administration has requested the allocation of a birth number in accordance with a special legal regulation.
+##### Birth Number
 
-It is required that the namespace be filled with the value: https://ncez.mzcr.cz/fhir/sid/rcis
+In many contexts, an identifier is used as a unique identifier for a natural person. When handling it, it is crucial to consider the fact that it constitutes personal data, and its processing is subject to restrictions stipulated by the law on the processing of personal data (GDPR in the EU context, or equivalent national legislation).
 
-A unique identifier value assigned by some of the Dispensing Points. Rule for birth numbers: Minimum length: 9 characters, maximum length: 10 characters and must be a number that matches this expression:
+Personal Identification Numbers (Birth Numbers) are assigned to:
+- A natural person at birth or upon the adoption of a minor.
+- A citizen who has not yet been assigned a Personal Identification Number, and to a foreigner with a residence permit in the territory of the Czech Republic.
+- A foreigner who has been granted international protection in the territory of the Czech Republic in the form of asylum or subsidiary protection.
+- A foreigner who has applied for the assignment of a Personal Identification Number to fulfill requirements under specific legal regulations, e.g., university studies, employment, etc.
+- A natural person for whom the Czech Social Security Administration or a District Social Security Administration has applied for the assignment of a Personal Identification Number according to specific legal regulations.
+
+It is required that the namespace be filled with the value: `https://ncez.mzcr.cz/fhir/sid/rcis`.
+
+An identifier represents a unique value assigned by one of the issuing authorities. According to "č. 133/2000 Sb.", on the Register of Residents and Personal Identification Numbers and on Amendments to Certain Acts, specifically according to Section "§14", the issuing authorities for Personal Identification Numbers are as follows:
+
+- Registry Offices (Matriční úřady):
+  - Assign Personal Identification Numbers to natural persons born in the territory of the Czech Republic.
+- Special Registry Office (Zvláštní matrika):
+  - Assigns Personal Identification Numbers to citizens born abroad.
+- Ministry of the Interior (Ministerstvo vnitra):
+  - Assigns Personal Identification Numbers to:
+    - citizens who have not yet been assigned a Personal Identification Number.
+    - foreigners with a residence permit in the territory of the Czech Republic.
+    - foreigners who have been granted asylum in the territory of the Czech Republic.
+    - foreigners who have applied for the assignment of a Personal Identification Number to fulfill requirements under specific legal regulations.
+  - The Ministry of the Interior, specifically the Department of Administrative Activities (odbor správních činností), also processes changes to Personal Identification Numbers assigned before the effective date of this Act.
+
+It is subject to a clear definition of its format (according to "č. 133/2000 Sb."), which must be adhered to during its generation. For historical reasons, it makes sense to limit the format rules for the electronic form to:
+* Minimum length: 9 characters
+* Maximum length: 10 characters
+* It must be a number that corresponds to the following regular expression:
 ~~~
 [0-9]{2}(?:[0257][1-9]|[1368][ 0-2])(?:0[1-9]|[12][0-9]|3[01])[0-9]{3,4}
 ~~~
 
-###### Passport Number
+##### Passport Number
+
 Passport Number is a unique ID number that confirms that a person is a citizen of a given country.
 
-Name space according to the passport issuer. Standard Passport Namespaces are required to be used. FHIR registers namespaces for passports in the format http://hl7.org/fhir/sid/passport-XXX, where XXX is the ISO 3166 three-letter country code.
+Name space according to the passport issuer. Standard Passport Namespaces are required to be used. FHIR registers namespaces for passports in the format http://hl7.org/fhir/sid/passport-XXX, where XXX is the ISO 3166 three-letter country code. For example: `http://hl7.org/fhir/sid/passport-CZE`.
 
-###### Identity Card Number
-Identity Card Number is is assigned when the identity card is created. The identifier namespace in this case is presented by the value from this: https://ncez.mzcr.cz/fhir/sid/op.
+##### Identity Card Number
 
-###### Health Insurance Number
-It is a number which is created by heath insurance provider. The identifier namespace in this case is presented by the value from this: https://ncez.mzcr.cz/fhir/sid/cpoj
+Identity Card Number is is assigned when the identity card is created.
 
-##### Device Identifier
+The identifier namespace in this case is presented by the value from this: `https://ncez.mzcr.cz/fhir/sid/op`.
+
+##### Health Insurance Number
+
+It is a number which is created by heath insurance provider.
+
+The identifier namespace in this case is presented by the value from this: `https://ncez.mzcr.cz/fhir/sid/cpoj`.
+
+---
+
+#### Device Identifier
+
 This is a unique device identifier that is standardized according to EU Regulation 2017/745. The ‘Unique Device Identifier’ (knows as‘UDI’) is a series of numeric or alphanumeric characters that is created through a globally accepted device identification and coding standard. It allows the unambiguous identification of a specific device on the market. The UDI is comprised of the UDI-DI and the UDI-PI.
 
 The UDI-DI is a unique numeric or alphanumeric code specific to a model of device and that is also used as the ‘access key’ to information stored in a UDI database.
 
-The UDI-PI is a numeric or alphanumeric code that identifies the unit of device production.
-The different types of UDI-PIs include serial number, lot number, software identification and manufacturing or expiry date or both types of date.
+The UDI-PI is a numeric or alphanumeric code that identifies the unit of device production. The different types of UDI-PIs include serial number, lot number, software identification and manufacturing or expiry date or both types of date.
 
-The word ‘Unique’ does not imply serialisation of individual production units.
+---
 
-##### Document Identifier
+#### Document Identifier
+
 The document identifier enables the unique identification of medical documentation. It is recommended to use identifiers of the UUID type (preferred). The document identifier is generally defined as a simple string of characters. The primary condition is that it must be unique in a given namespace. To ensure interoperability, it is also necessary that the document can be searched for using this identifier, in combination with the namespace.
 
-##### Organization Identifier
-Within the organization, it is necessary to use at least one national unique Identifier, which is used to identify the organization. Typically, the NRPZS value and/or the IČO value are stated. It is allowed to include information from other identification systems. The use of the identifier NRPZS is preferred.
+---
 
-###### KRPZS
-This identification is according to the National Register of Health Service Providers. The identifier namespace in this case is presented by the value: https://ncez.mzcr.cz/fhir/sid/krpzs.
+#### Organization Identifier
+
+Within the organization, it is important to use one national unique identifier to identify the organization.
+
+##### KRPZS
+
+The Sector-Specific Identifier of a Healthcare Provider – the provider's identifier is the Organization Identification Number (IČO) from the Register of Persons (ROS), which is an eight-digit number that may start with a zero. In the case of healthcare providers, this identifier should be registered under the namespace of the Master Register of Healthcare Providers (KRPZS).
+
+The identifier namespace in this case is presented by the value: `https://ncez.mzcr.cz/fhir/sid/krpzs`.
+
 The format must match this regular expression:
 ~~~
 \d{8}
 ~~~
-###### IČO
-Identification number of a person using the eight-digit identification number of a legal entity, a natural person doing business or an organizational component of the state. The identifier namespace in this case is presented by the value: https://ncez.mzcr.cz/fhir/sid/ico.
+
+##### IČO
+
+For the identification of organizations, it is also possible to use the Organization Identification Number (IČO) via the eight-digit identification number of a legal entity, a self-employed individual (entrepreneur), or a state organizational unit.
+
+In the case of organizations that do not fall under the Master Register of Healthcare Providers (KRPZS), this identifier is mandatory.
+
+The identifier namespace in this case is presented by the value: `https://ncez.mzcr.cz/fhir/sid/ico`.
+
 The format must match this regular expression:
 ~~~
 \d{8}
 ~~~
 
-###### KP (Health Insurance Company Code)
-Identification number of a health insurance companies using the three-digit identification number of a company. The identifier namespace in this case is presented by the value: https://www.dastacr.cz/dasta/nclp_data/ds_UZIS/ZdravotniPojistovna.xml.
-The format must match this regular expression:
-~~~
-\d{3}
-~~~
+##### KP (Health Insurance Company Code)
 
-###### Others
-There are two other possible types of identifier according to IČZ (Namespace: https://ncez.mzcr.cz/fhir/sid/icz) and IČP (Namespace: https://ncez.mzcr.cz/fhir/sid/icp). However, these identifiers are not required.
-IČZ is the identification number of the healthcare provider. IČP is the identification number of the workplace (or doctor) within one IČZ.
-IČZ and IČP are assigned exclusively by VZP ČR for the needs of all health insurance companies in the Czech Republic. Therefore, an application for assignment of IČZ and IČP is always submitted to VZP ČR, regardless of which health insurance company will pay for the provided emergency care.
-There may be several different IČPs within an IČZ. IČZ usually ends with 000, IČP has the first 5 characters identical to IČZ and the last three digits different, but this may not always be the case.
+The regulatory authority governing the health insurance sector and publishing official information about insurers and their identifiers is the Ministry of Health of the Czech Republic.
 
-##### Practitioner Identifier
+Identification number of a health insurance companies using the three-digit identification number of a company.
+
+The identifier namespace in this case is presented by the value: `https://ncez.mzcr.cz/fhir/sid/kp`.
+
+##### Others
+
+There are two other possible types of identifier according to:
+- **IČZ** with namespace: `https://ncez.mzcr.cz/fhir/sid/icz`
+- **IČP** with namespace: `https://ncez.mzcr.cz/fhir/sid/icp`
+  
+**IČZ** is the identification number of a healthcare service provider. **IČP** is the identification number of a specific facility (or physician) operating under a single IČZ.
+
+IČZ and IČP are assigned exclusively by VZP ČR (Všeobecná zdravotní pojišťovna České republiky - General Health Insurance Company of the Czech Republic) for the purposes of all health insurance companies in the Czech Republic. Therefore, the application for the assignment of IČZ and IČP is always submitted to VZP ČR, regardless of which health insurance company the provided urgent care will be billed to.
+
+**Structure and Relationship**
+
+Multiple different IČPs can exist within a single IČZ. Typically, an IČZ ends in 000; an IČP shares the first 5 characters with the corresponding IČZ and has different last three digits, although this may not always be the case.
+
+---
+
+#### Healthcare worker (Practitioner) Identifier
+
 It is used to identify medical and non-medical workers according to "č. 372/2011 Sb.". It is necessary to use at least one national unique identifier within the organization. The preferred identifier is the KRZP type identifier.
 
-###### KRZP
-Unique identifier is registered within the Master Register of Healthcare Professionals (KRZP). The healthcare professional identifier is assigned by the Ministry when a healthcare professional is registered in the Master Register of Healthcare Professionals (KRZP). Each healthcare professional is identified by only one identifier. The healthcare professional identifier cannot be changed after assignment, unless otherwise provided by law (e.g.: in the event of duplicate identifiers, when previous ones are cancelled and new unique identifiers are generated for individual entities). Its format is a meaningless nine-digit number that must not start with a zero. In this case, the identifier namespace is presented by the value: https://ncez.mzcr.cz/fhir/sid/krzp
+##### KRZP
+
+Unique identifier is registered within the Master Register of Healthcare Professionals (KRZP). The healthcare professional identifier is assigned by the Ministry when a healthcare professional is registered in the Master Register of Healthcare Professionals (KRZP). Each healthcare professional is identified by only one identifier.
+
+The healthcare professional identifier cannot be changed after assignment, unless otherwise provided by law (e.g.: in the event of duplicate identifiers, when previous ones are cancelled and new unique identifiers are generated for individual entities). Its format is a meaningless nine-digit number that must not start with a zero.
+
+In this case, the identifier namespace is presented by the value: `https://ncez.mzcr.cz/fhir/sid/krzp`.
+
 The format must correspond to this regular expression:
 ~~~
 [1-9]\d{8}
 ~~~
 
-###### ČLK
-Identification number of a healthcare professional according to ČLK. The identifier namespace is presented in this case by the value: https://ncez.mzcr.cz/fhir/sid/clk
+##### ČLK
 
-###### ČLek
-Identification number of a healthcare professional (pharmacist) according to ČLek. The identifier namespace is presented in this case by the value: https://ncez.mzcr.cz/fhir/sid/clek
+Identification number of a healthcare professional according to ČLK (Česká lékařská komora - Czech Medical Chamber).
+
+The identifier namespace is presented in this case by the value: `https://ncez.mzcr.cz/fhir/sid/clk`.
+
+##### ČLék
+
+Identification number of a healthcare professional (pharmacist) according to ČLék (Česká lékárnická komora - Czech Chamber of Pharmacists).
+
+The identifier namespace is presented in this case by the value: `https://ncez.mzcr.cz/fhir/sid/clek`.
+
+---
+
+### Summary of the list of national identifiers
+
+| Area             | Name                           | Namespace                            |
+| ---------------- | ------------------------------ | ------------------------------------ |
+| **Patient**      | National Healthcare Identifier | https://ncez.mzcr.cz/fhir/sid/rid    |
+| Patient          | Birth Number                   | https://ncez.mzcr.cz/fhir/sid/rcis   |
+| Patient          | Passport Number                | http://hl7.org/fhir/sid/passport-CZE |
+| Patient          | Identity Card Number           | https://ncez.mzcr.cz/fhir/sid/op     |
+| Patient          | Health Insurance Number        | https://ncez.mzcr.cz/fhir/sid/cpoj   |
+| **Organization** | KRPZS                          | https://ncez.mzcr.cz/fhir/sid/krpzs  |
+| Organization     | IČO                            | https://ncez.mzcr.cz/fhir/sid/ico    |
+| Organization     | KP                             | https://ncez.mzcr.cz/fhir/sid/kp     |
+| Organization     | IČZ                            | https://ncez.mzcr.cz/fhir/sid/icz    |
+| Organization     | IČP                            | https://ncez.mzcr.cz/fhir/sid/icp    |
+| **Practitioner** | KRZP                           | https://ncez.mzcr.cz/fhir/sid/krzp   |
+| Practitioner     | ČLK                            | https://ncez.mzcr.cz/fhir/sid/clk    |
+| Practitioner     | ČLeK                           | https://ncez.mzcr.cz/fhir/sid/clek   |
+
