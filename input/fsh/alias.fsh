@@ -24,6 +24,9 @@ Alias: $sex-for-clinical-use = http://hl7.org/fhir/StructureDefinition/patient-s
 Alias: $recordedSexOrGender = http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender
 Alias: $nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
 Alias: $registering-provider = https://hl7.cz/fhir/core/StructureDefinition/registering-provider-cz
+Alias: $bodyStructure-laterality-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-BodyStructure.includedStructure.laterality
+Alias: $bodySite-reference = http://hl7.org/fhir/StructureDefinition/bodySite
+Alias: $specimen-container-device-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Specimen.container.device
 
 // Valuesets:
 Alias: $CZ_AdministrativegenderVS = https://hl7.cz/fhir/ValueSet/administrative-gender-cz-vs
@@ -38,6 +41,9 @@ Alias: $hl7AllergyintoleranceCategory = http://hl7.org/fhir/ValueSet/allergy-int
 Alias: $hl7MedicationStatementStatus = http://hl7.org/fhir/ValueSet/medication-statement-status
 Alias: $SNOMEDCTMedicationCodes = http://hl7.org/fhir/ValueSet/medication-codes
 Alias: $hl7OrganizationType = http://hl7.org/fhir/ValueSet/organization-type
+Alias: $PassportNSVS = http://hl7.org/fhir/ValueSet/passport-ns
+Alias: $hl7BodySite = http://hl7.org/fhir/ValueSet/body-site
+Alias: $hl7BodyStructure = http://hl7.org/fhir/ValueSet/bodystructure-code
 
 // Profiles:
 Alias: $Organization-eu-core = http://hl7.eu/fhir/base/StructureDefinition/OrganizationEuCore
@@ -45,7 +51,6 @@ Alias: $Patient-eu-core = http://hl7.eu/fhir/base/StructureDefinition/PatientEuC
 Alias: $Practitioner-eu-core = http://hl7.eu/fhir/base/StructureDefinition/PractitionerEuCore
 Alias: $PractitionerRole-eu-core = http://hl7.eu/fhir/base/StructureDefinition/PractitionerRoleEuCore
 Alias: $RelatedPerson = http://hl7.org/fhir/StructureDefinition/RelatedPerson
-//Alias: $bodySite = http://hl7.org/fhir/StructureDefinition/bodySite
 //Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail
 //Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
 

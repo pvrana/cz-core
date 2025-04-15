@@ -2,8 +2,8 @@ Instance: cz-patient-addr-example-1
 InstanceOf: cz-patient-core
 Usage: #example
 Description: "Address of both typu (physical and delivery)"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
-* identifier[=].value = "4567891237"
+* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid"
+* identifier[RID].value = "4567891237"
 * name.family = "Příklad"
 * name.given = "Adam"
 * birthDate = "1971-11-26"
@@ -24,8 +24,8 @@ InstanceOf: cz-patient-core
 Usage: #example
 Description: "Address of P.O.Boxem"
 
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
-* identifier[=].value = "4567891237"
+* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid"
+* identifier[RID].value = "4567891237"
 * name.family = "Příklad"
 * name.given = "Adam"
 * birthDate = "1971-11-26"
@@ -44,8 +44,8 @@ InstanceOf: cz-patient-core
 Usage: #example
 Description: "Address of permanent residence"
 
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
-* identifier[=].value = "4567891237"
+* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid"
+* identifier[RID].value = "4567891237"
 * name.family = "Příklad"
 * name.given = "Adam"
 * birthDate = "1971-11-26"
@@ -66,8 +66,8 @@ InstanceOf: cz-patient-core
 Usage: #example
 Description: "Address of permanent residence outside the Czech Republic"
 
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
-* identifier[=].value = "4567891237"
+* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid"
+* identifier[RID].value = "4567891237"
 * name.family = "Příklad"
 * name.given = "Adam"
 * birthDate = "1971-11-26"
@@ -87,8 +87,8 @@ Instance: cz-patient-addr-example-5
 InstanceOf: cz-patient-core
 Usage: #example
 Description: "Address indicating the place of address according to RUIAN"
-* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
-* identifier[=].value = "4567891237"
+* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid"
+* identifier[RID].value = "4567891237"
 * name.family = "Příklad"
 * name.given = "Adam"
 * birthDate = "1971-11-26"
