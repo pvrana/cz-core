@@ -24,8 +24,8 @@ InstanceOf: cz-patient-core
 Usage: #example
 Description: "Address of P.O.Boxem"
 
-* identifier[RID].system = "https://ncez.mzcr.cz/fhir/sid/rid"
-* identifier[RID].value = "4567891237"
+* identifier[+].system = "https://ncez.mzcr.cz/fhir/sid/rid"
+* identifier[=].value = "4567891237"
 * name.family = "Příklad"
 * name.given = "Adam"
 * birthDate = "1971-11-26"
